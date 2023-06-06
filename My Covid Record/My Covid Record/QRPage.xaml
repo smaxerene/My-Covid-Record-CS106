@@ -5,35 +5,66 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:My_Covid_Record"
         mc:Ignorable="d"
-          d:DesignHeight="700" d:DesignWidth="800"
-      Title="QRPage" >
+        Title="QRPage" Height="1024" Width="1440">
+
+    <Window.Resources>
+        <ControlTemplate x:Key="RoundTextboxCornterTemplate" TargetType="{x:Type TextBoxBase}">
+            <Border Background="{TemplateBinding Background}"   
+         x:Name="Bd" BorderBrush="Black"  
+         BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
+                <ScrollViewer x:Name="PART_ContentHost"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="Width" Value="Auto">
+                    <Setter Property="MinWidth" Value="100"/>
+                </Trigger>
+                <Trigger Property="Height" Value="Auto">
+                    <Setter Property="MinHeight" Value="20"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
 
     <Grid Margin="0,0,-6,0">
         <Image HorizontalAlignment="Left" Height="54" VerticalAlignment="Top" Width="56"
-               Source="/Resources/images/NZ Gov Logo.png" Margin="10,16,0,0"/>
-        <Image HorizontalAlignment="Right" Height="44" VerticalAlignment="Top" Width="173" 
-               Grid.Column="2" Margin="0,22,10,0"
+               Source="/Resources/images/NZ Gov Logo.png" Margin="24,26,0,0"/>
+        <Image HorizontalAlignment="Right" Height="44" VerticalAlignment="Top" Width="173" Margin="0,26,36.6,0"
                Source="/Resources/images/NZ Gov.png"/>
 
-        <Image Source="/Resources/images/My Covid Record Logo.png" Margin="195,80,539.6,545.4" RenderTransformOrigin="0.86,-0.004" />
-        <Label Content="My Covid Record" HorizontalAlignment="Left" Height="50" Margin="260,75,0,0" 
-               VerticalAlignment="Top" Width="330" FontFamily="Inter" FontWeight="Bold" FontSize="40"/>
+        <Image Source="/Resources/images/My Covid Record Logo.png" Margin="270,164,1024.6,730.4" RenderTransformOrigin="0.86,-0.004" Height="100" />
+        <Label Content="My Covid Record" HorizontalAlignment="Left" Height="111" Margin="440,164,0,0" 
+               VerticalAlignment="Top" Width="652" FontFamily="Inter" FontWeight="Bold" FontSize="80"/>
 
-        <Button Name="HomeButton" Width="50" Height="30" Margin="40,175,710,495" Opacity="0.995" BorderThickness="0" Background="White">
+        <Button Name="HomeButton" Margin="55,330,1324.6,624.4" Opacity="0.995" BorderThickness="0" Background="White">
             <Image Source="/Resources/images/homeButton.png" RenderTransformOrigin="0.674,-0.028"></Image>
         </Button>
-        <Label Content="Your QR Code: " HorizontalAlignment="Left" Height="35" Margin="40,205,0,0" 
-            VerticalAlignment="Top" Width="330" FontFamily="Inter" FontWeight="Bold" FontSize="20"/>
 
-        <Rectangle Fill="#FFCC00" HorizontalAlignment="Left" Height="360" Margin="278,245,0,0" Stroke="Black" VerticalAlignment="Top" Width="235"/>
-        <Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="41"
-            Source="/Resources/images/NZ Gov Logo.png" Margin="373,265,0,0"/>
-        <Image HorizontalAlignment="Right" Height="44" VerticalAlignment="Top" Width="173" 
-            Margin="0,310,317,0"
-            Source="/Resources/images/NZ Gov.png"/>
-        <Rectangle Fill="#FFFFFF" HorizontalAlignment="Left" Height="160" Margin="310,400,0,0" Stroke="Black" VerticalAlignment="Top" Width="173"/>
+        <TextBox Template="{StaticResource RoundTextboxCornterTemplate}" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="430" Margin="115,330,0,0" FontSize="25"/>
+        <Button Name="SearchButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42" Margin="500,334,0,0" Height="31" BorderThickness="0"  Background="White">
+            <Image Source="/Resources/images/searchbutton.png" RenderTransformOrigin="0.674,-0.028"></Image>
+        </Button>
 
-        <Button Content="Generate QR Code" FontWeight="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Width="210" Margin="175,631,0,0"  Background="#3A89FF" Foreground="White" FontFamily="Roboto" Height="34" FontSize="16" BorderThickness="0">
+        <Button Content="Account" FontWeight="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Margin="1275,329,0,0" Height="36" FontSize="25" BorderThickness="0"  Background="White" FontFamily="Roboto"/>
+
+        <Label Content="Your QR Code: " HorizontalAlignment="Left" Height="50" Margin="55,390,0,0" 
+            VerticalAlignment="Top" Width="330" FontFamily="Inter" FontWeight="Bold" FontSize="32"/>
+
+        <Rectangle Fill="#FFCC00" HorizontalAlignment="Left" Height="446" Margin="610,442,0,0" Stroke="Black" VerticalAlignment="Top" Width="297"/>
+        <Image HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="57"
+            Source="/Resources/images/NZ Gov Logo.png" Margin="730,469,0,0"/>
+        <Image HorizontalAlignment="Right" Height="49" VerticalAlignment="Top" Width="237" 
+            Margin="0,535,564.6,0"
+            Source="/Resources/images/NZGovNameMaori.png"/>
+        <Image HorizontalAlignment="Right" Height="18" VerticalAlignment="Top" Width="149" 
+            Margin="0,566,604.6,0"
+            Source="/Resources/images/NZGovName.png"/>
+        <Rectangle Fill="#FFFFFF" HorizontalAlignment="Left" Height="160" Margin="675,671,0,0" Stroke="Black" VerticalAlignment="Top" Width="173"/>
+
+        <Button Content="Generate QR Code" FontWeight="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Width="210" Margin="530,916,0,0"  Background="#3A89FF" Foreground="White" FontFamily="Roboto" Height="34" FontSize="16" BorderThickness="0">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="8"></Setter>
@@ -41,15 +72,15 @@
             </Button.Resources>
         </Button>
 
-        <Button Content="Download QR Code" FontWeight="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Width="210" Margin="415,631,0,0"  Background="#3A89FF" Foreground="White" FontFamily="Roboto" Height="34" FontSize="16" UseLayoutRounding="True" BorderThickness="0">
+        <Button Content="Download QR Code" FontWeight="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Width="210" Margin="770,916,0,0"  Background="#3A89FF" Foreground="White" FontFamily="Roboto" Height="34" FontSize="16" UseLayoutRounding="True" BorderThickness="0">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="8"></Setter>
                 </Style>
             </Button.Resources>
         </Button>
-        <Label Content="My Covid Record QR Code" HorizontalAlignment="Left" Height="30" Margin="290,359,0,0" 
-            VerticalAlignment="Top" Width="215" FontFamily="Inter" FontWeight="Bold" FontSize="16"/>
+        <Label Content="My Covid Record QR Code" HorizontalAlignment="Left" Height="41" Margin="630,614,0,0" 
+            VerticalAlignment="Top" Width="260" FontFamily="Inter" FontWeight="Bold" FontSize="20"/>
 
     </Grid>
 </Window>

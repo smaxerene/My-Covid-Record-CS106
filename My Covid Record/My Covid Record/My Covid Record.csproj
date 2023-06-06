@@ -122,5 +122,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\Custom_COVID-19_Logo-removebg-preview.png" />
+    <Resource Include="Resources\images\Flie_Icon-removebg-preview.png" />
+    <Resource Include="Resources\images\homeButton.png" />
+    <Resource Include="Resources\images\My Covid Record Logo.png" />
+    <Resource Include="Resources\images\NZ Gov Logo.png" />
+    <Resource Include="Resources\images\NZ Gov.png" />
+    <Resource Include="Resources\images\NZGovNameMaori.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

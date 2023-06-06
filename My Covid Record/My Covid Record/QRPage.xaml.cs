@@ -23,5 +23,7 @@ namespace My_Covid_Record
         {
             InitializeComponent();
         }
+
+
     }
 }
