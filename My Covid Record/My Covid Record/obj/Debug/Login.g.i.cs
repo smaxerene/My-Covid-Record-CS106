@@ -113,7 +113,7 @@ namespace My_Covid_Record {
             return;
             case 5:
             
-            #line 36 "..\..\Login.xaml"
+            #line 42 "..\..\Login.xaml"
             ((System.Windows.Documents.Hyperlink)(target)).Click += new System.Windows.RoutedEventHandler(this.buttonRegister_Click);
             
             #line default

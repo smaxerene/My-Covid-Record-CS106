@@ -41,7 +41,7 @@ namespace My_Covid_Record {
     public partial class QRPage : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 21 "..\..\QRPage.xaml"
+        #line 22 "..\..\QRPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button HomeButton;
         

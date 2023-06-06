@@ -1,0 +1,23 @@
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.csprojAssemblyReference.cache
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\Homepage.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\Login.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\MainWindow.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\QRPage.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\SignUp.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\App.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record_MarkupCompile.cache
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record_MarkupCompile.lref
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\bin\Debug\My Covid Record.exe.config
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\bin\Debug\My Covid Record.exe
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\bin\Debug\My Covid Record.pdb
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\Homepage.baml
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\Login.baml
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\MainWindow.baml
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\QRPage.baml
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\SignUp.baml
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.g.resources
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My_Covid_Record.Properties.Resources.resources
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.csproj.GenerateResource.cache
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.csproj.CoreCompileInputs.cache
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.exe
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.pdb

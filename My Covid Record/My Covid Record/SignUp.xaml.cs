@@ -100,6 +100,8 @@ namespace My_Covid_Record
         //Cancel
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
+            Login login = new Login();
+            login.Show();
             Close();
         }
 
