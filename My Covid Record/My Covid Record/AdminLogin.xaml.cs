@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace My_Covid_Record
 {
     /// <summary>
-    /// Interaction logic for QRPage.xaml
+    /// Interaction logic for AdminLogin.xaml
     /// </summary>
-    public partial class QRPage : Window
+    public partial class AdminLogin : Window
     {
-        public QRPage()
+        public AdminLogin()
         {
             InitializeComponent();
-        }
-
-        private void QR_Click(object sender, RoutedEventArgs e)
-        {
-            
         }
     }
 }

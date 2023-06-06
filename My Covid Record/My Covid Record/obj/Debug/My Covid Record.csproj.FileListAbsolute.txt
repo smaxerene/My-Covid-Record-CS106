@@ -21,3 +21,5 @@ C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My
 C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.csproj.CoreCompileInputs.cache
 C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.exe
 C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.pdb
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\AdminLogin.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\AdminLogin.baml

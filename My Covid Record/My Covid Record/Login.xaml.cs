@@ -76,5 +76,12 @@ namespace My_Covid_Record
             signup.Show();
             Close();
         }
+
+        private void AdminLogin_Click(object sender, RoutedEventArgs e)
+        {
+            AdminLogin adminlogin = new AdminLogin();
+            adminlogin.Show();
+            Close();
+        }
     }
 }
