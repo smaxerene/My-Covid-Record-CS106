@@ -26,7 +26,21 @@ namespace My_Covid_Record
 
         private void QR_Click(object sender, RoutedEventArgs e)
         {
-            
+
+        }
+
+        private void btnClosePopup_Click(object sender, RoutedEventArgs e)
+        {
+            myPopup.IsOpen = false;
+        }
+
+        private void btnShowPopup_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender == btnShowPopup)
+            {
+
+                myPopup.IsOpen = true;
+            }
         }
     }
 }

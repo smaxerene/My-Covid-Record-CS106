@@ -42,15 +42,31 @@ namespace My_Covid_Record
                 EmailTextBox.Select(0, EmailTextBox.Text.Length);
                 EmailTextBox.Focus();
             }
-            //full name
-            //username
-            //phone number
+            //Full name
+            else if (FullNameTextBox.Text.Length == 0)
+            {
+                errormessage.Text = "Enter your full name.";
+                FullNameTextBox.Focus();
+            }
+            //Username
+            else if (UsernameTextBox.Text.Length == 0)
+            {
+                errormessage.Text = "Enter a username.";
+                UsernameTextBox.Focus();
+            }
+            //Phone number
+            else if (PhoneTextBox.Text.Length == 0)
+            {
+                errormessage.Text = "Enter your phone number.";
+                PhoneTextBox.Focus();
+            }
             else
             {
-                string fullName = FullNameTextBox.Text;
-                string userName = UsernameTextBox.Text;
-                string email = EmailTextBox.Text;
-                string password = PasswordPassBox.Password;
+                string FullName = FullNameTextBox.Text;
+                string UserName = UsernameTextBox.Text;
+                string EmailAdd = EmailTextBox.Text;
+                string Password = PasswordPassBox.Password;
+                string ConfirmPass = ConfirmPassPassBox.Password;
 
                 if (PasswordPassBox.Password.Length == 0)
                 {
@@ -69,15 +85,20 @@ namespace My_Covid_Record
                 }
                 else
                 {
-                    errormessage.Text = "";
-                    string phoneNo = PhoneTextBox.Text;
+                    using (var db = new DataContext())
+                    {
+                        // var list = (from u in db.user select u).ToList();
+                        User userregister = new User();
+                        userregister.FullName = FullNameTextBox.Text;
+                        userregister.UserName = UsernameTextBox.Text;
+                        userregister.Email = EmailTextBox.Text;
+                        userregister.PhoneNo = PhoneTextBox.Text;
+                        userregister.Password = PasswordPassBox.Password;
 
-                    SqlConnection con = new SqlConnection("Data Source=TESTPURU;Initial Catalog=Data;User ID=sa;Password=wintellect");
-                    con.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into Registration (Fullname,Username,Email,PhoneNumber,Password) values('" + fullName + "','" + userName + "','" + email + "','" + phoneNo + "','" + password + "')", con);
-                    cmd.CommandType = CommandType.Text;
-                    cmd.ExecuteNonQuery();
-                    con.Close();
+
+                        db.Users.Add(userregister);
+                        db.SaveChanges();
+                    }
                     errormessage.Text = "You have Registered successfully.";
                     Reset();
                 }

@@ -42,34 +42,36 @@ namespace My_Covid_Record
             }
             else
             {
-                string email = textBoxEmail.Text;
-                string password = passwordBox1.Password;
-
-                SqlConnection con = new SqlConnection("Data Source=TESTPURU;Initial Catalog=Data;User ID=sa;Password=wintellect");
-                con.Open();
-                SqlCommand cmd = new SqlCommand("Select * from Registration where Email='" + email + "'  and password='" + password + "'", con);
-                cmd.CommandType = CommandType.Text;
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                adapter.SelectCommand = cmd;
-                DataSet dataSet = new DataSet();
-                adapter.Fill(dataSet);
-
-                if (dataSet.Tables[0].Rows.Count > 0)
+                using (var db = new DataContext())
                 {
-                    string username = dataSet.Tables[0].Rows[0]["FirstName"].ToString() + " " + dataSet.Tables[0].Rows[0]["LastName"].ToString();
+                    User isUserThere = db.Users.Where(
+                        x => x.Email == textBoxEmail.Text &&
+                        x.Password == passwordBox1.Password
+                        ).FirstOrDefault();
 
-                    //For homepage
-                    // welcome.TextBlockName.Text = username;//Sending value from one form to another form.  
-                    //welcome.Show();
-                    //Close();
+                    //Wrong Email or Passwprd
+                    if (isUserThere == null || isUserThere.Email != textBoxEmail.Text || isUserThere.Password != passwordBox1.Password)
+                    {
+                        errormessage.Text = "Incorrect Email or Password.";
+                        textBoxEmail.Focus();
+                    }
+                    else
+                    {
+
+                        //Homepage homepage = new Homepage();
+                        //homepage.Show();
+                        //Close();
+
+                        //For Testing Account Button
+                        QRPage qrpage = new QRPage();
+                        qrpage.Show();
+                        Close();
+                    }
+
                 }
-                else
-                {
-                    errormessage.Text = "Sorry! Please enter existing emailid/password.";
-                }
-                con.Close();
             }
         }
+
         private void buttonRegister_Click(object sender, RoutedEventArgs e)
         {
             SignUp signup = new SignUp();
