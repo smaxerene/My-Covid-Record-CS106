@@ -65,7 +65,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Height="39" HorizontalAlignment="Left" Margin="604,533,0,0" x:Name ="errormessage"  FontSize="25" VerticalAlignment="Top" Width="247"  OpacityMask="Crimson" Foreground="#FFE5572C" Grid.Column="1" TextAlignment="Center" />
+        <TextBlock Height="39" HorizontalAlignment="Left" Margin="493,533,0,0" x:Name ="errormessage"  FontSize="25" VerticalAlignment="Top" Width="496"  OpacityMask="Crimson" Foreground="#FFE5572C" Grid.Column="1" TextAlignment="Center" />
 
         <Image HorizontalAlignment="Left" Height="75" VerticalAlignment="Top" Width="78"
                Source="/Resources/images/NZ Gov Logo.png" Margin="70,81,0,0" Grid.Column="1"/>
