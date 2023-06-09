@@ -13,6 +13,20 @@ namespace My_Covid_Record
             InitializeComponent();
         }
 
+        private void btnClosePopup_Click(object sender, RoutedEventArgs e)
+        {
+            myPopup.IsOpen = false;
+        }
+
+        private void btnShowPopup_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender == btnShowPopup)
+            {
+
+                myPopup.IsOpen = true;
+            }
+        }
+
         private void GenerateQRCode_Click(object sender, RoutedEventArgs e)
         {
             string inputData = txtInput.Text.Trim();
