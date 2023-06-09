@@ -18,7 +18,7 @@ namespace My_Covid_Record
     /// <summary>
     /// Interaction logic for AdminRecords.xaml
     /// </summary>
-    public partial class AdminRecords : Page
+    public partial class AdminRecords : Window
     {
         public AdminRecords()
         {

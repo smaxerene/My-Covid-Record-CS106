@@ -189,3 +189,4 @@ C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid 
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.exe
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.pdb
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\QRCoder.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\AdminRecords.g.cs

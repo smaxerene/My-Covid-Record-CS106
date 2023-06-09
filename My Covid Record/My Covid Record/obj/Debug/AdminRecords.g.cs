@@ -48,14 +48,6 @@ namespace My_Covid_Record {
         #line default
         #line hidden
         
-        
-        #line 53 "..\..\AdminRecords.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button HomeButton;
-        
-        #line default
-        #line hidden
-        
         private bool _contentLoaded;
         
         /// <summary>
@@ -88,17 +80,6 @@ namespace My_Covid_Record {
             {
             case 1:
             this.SearchButton = ((System.Windows.Controls.Button)(target));
-            return;
-            case 2:
-            this.HomeButton = ((System.Windows.Controls.Button)(target));
-            return;
-            case 3:
-            
-            #line 71 "..\..\AdminRecords.xaml"
-            ((System.Windows.Controls.ListView)(target)).SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.ListView_SelectionChanged);
-            
-            #line default
-            #line hidden
             return;
             }
             this._contentLoaded = true;
