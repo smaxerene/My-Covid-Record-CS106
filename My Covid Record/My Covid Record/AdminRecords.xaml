@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:My_Covid_Record"
         mc:Ignorable="d"
         Title="Login Page" Height="1424" Width="1440">
-
+    
     <Window.Resources>
         <ControlTemplate x:Key="RoundTextboxCornerTemplate" TargetType="{x:Type TextBoxBase}">
             <Border Background="{TemplateBinding Background}"   
@@ -27,21 +27,26 @@
                 </Trigger>
             </ControlTemplate.Triggers>
         </ControlTemplate>
-        
         <Style x:Key="RoundTextboxStyle" TargetType="{x:Type TextBox}">
             <Setter Property="Background" Value="White"/>
             <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="CornerRadius" Value="5"/>
             <Setter Property="Padding" Value="5"/>
         </Style>
-
+        
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <!-- Add the correct path to your resource dictionary file -->
-                <ResourceDictionary Source="PathToYourResourceDictionary.xaml"/>
+                <ResourceDictionary Source="ResourceDictionary.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            <ControlTemplate x:Key="RoundTextboxCornerTemplate" TargetType="{x:Type TextBoxBase}">
+                <!-- Template definition here -->
+            </ControlTemplate>
+            <Style x:Key="RoundTextboxStyle" TargetType="{x:Type TextBox}">
+                <!-- Style definition here -->
+            </Style>
         </ResourceDictionary>
+
     </Window.Resources>
 
     <Grid>
