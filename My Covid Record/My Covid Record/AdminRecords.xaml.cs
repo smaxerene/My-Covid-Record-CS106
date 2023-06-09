@@ -1,38 +1,68 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data.SqlClient;
 
 namespace My_Covid_Record
 {
-    /// <summary>
-    /// Interaction logic for AdminRecords.xaml
-    /// </summary>
-    public partial class AdminRecords : Window
+    public partial class AdminRecords : System.Web.UI.Page
     {
-        public AdminRecords()
+        protected void Page_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
+            if (!IsPostBack)
+            {
+                // Retrieve data from the database
+                List<DataItem> data = GetDataFromDatabase();
+
+                // Bind the data to the ItemsControl
+                DataList.DataSource = data;
+                DataList.DataBind();
+            }
         }
 
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private List<DataItem> GetDataFromDatabase()
         {
+            List<DataItem> data = new List<DataItem>();
 
+            // TODO: Replace with your database connection string
+            string connectionString = "Your Database Connection String";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT Year, Month, Day, Weekday FROM YourTable";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    // Create a new DataItem object and populate its properties
+                    DataItem item = new DataItem();
+                    item.Year = reader.GetString(0);
+                    item.Month = reader.GetString(1);
+                    item.Day = reader.GetString(2);
+                    item.Weekday = reader.GetString(3);
+
+                    // Add the item to the data list
+                    data.Add(item);
+                }
+
+                reader.Close();
+            }
+
+            return data;
         }
+    }
 
-        private void ListViewItem_Selected(object sender, RoutedEventArgs e)
-        {
-
-        }
+    public class DataItem
+    {
+        public string Year { get; set; }
+        public string Month { get; set; }
+        public string Day { get; set; }
+        public string Weekday { get; set; }
     }
 }
