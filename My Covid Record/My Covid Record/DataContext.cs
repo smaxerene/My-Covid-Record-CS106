@@ -18,6 +18,7 @@ namespace My_Covid_Record
 
     }
 
+
     public class User
     {
         [Key]
