@@ -82,7 +82,7 @@
         <TextBlock FontWeight="Medium" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" RenderTransformOrigin="4.073,14.231" Margin="560,657,0,0" FontFamily="Roboto" FontSize="24" Grid.Column="1" Height="29" Width="131"/>
         <PasswordBox Name="passwordBox1" Style="{StaticResource roundcornerpassword}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="378" Margin="560,686,0,0" Height="40" Grid.Column="1" FontSize="25"/>
 
-        <Button Content="Log In" HorizontalAlignment="Left" VerticalAlignment="Top" Width="378" Margin="559,746,0,0" Height="34" Background="#FF3A89FF" Foreground="White" FontFamily="Roboto" FontSize="18" Grid.Column="1">
+        <Button Content="Log In" HorizontalAlignment="Left" VerticalAlignment="Top" Width="378" Margin="559,746,0,0" Height="34" Background="#FF3A89FF" Foreground="White" FontFamily="Roboto" FontSize="18" Grid.Column="1" Click="Button_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="8"></Setter>

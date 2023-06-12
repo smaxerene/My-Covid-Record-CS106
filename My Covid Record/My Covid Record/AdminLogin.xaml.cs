@@ -23,5 +23,10 @@ namespace My_Covid_Record
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

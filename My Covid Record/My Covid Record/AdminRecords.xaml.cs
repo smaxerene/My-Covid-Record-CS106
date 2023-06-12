@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 
 namespace My_Covid_Record
@@ -17,9 +13,9 @@ namespace My_Covid_Record
                 // Retrieve data from the database
                 List<DataItem> data = GetDataFromDatabase();
 
-                // Bind the data to the ItemsControl
-                DataList.DataSource = data;
-                DataList.DataBind();
+                // Bind the data to the DataRepeater control
+                DataRepeater.DataSource = data;
+                DataRepeater.DataBind();
             }
         }
 
