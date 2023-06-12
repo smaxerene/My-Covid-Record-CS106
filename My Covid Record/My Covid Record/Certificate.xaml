@@ -1,11 +1,11 @@
-﻿<Window x:Class="My_Covid_Record.QRPage"
+﻿<Window x:Class="My_Covid_Record.Certificate"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:My_Covid_Record"
-        xmlns:qrcoder="clr-namespace:QRCoder;assembly=QRCoder"
-        Title="QRPage" Height="1024" Width="1440">
+        mc:Ignorable="d"
+         Title="Certificate" Height="1226" Width="1440">
 
     <Window.Resources>
         <ControlTemplate x:Key="RoundTextboxCornterTemplate" TargetType="{x:Type TextBoxBase}">
@@ -29,6 +29,7 @@
         </ControlTemplate>
     </Window.Resources>
 
+
     <StackPanel Margin="20">
         <!--NZ Government Logo-->
         <Grid >
@@ -37,9 +38,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Image HorizontalAlignment="Left" Height="60" 
-               Source="/Resources/images/NZ Gov Logo.png"/>
-
+            <Image HorizontalAlignment="Left" Height="60" Source="/Resources/images/NZ Gov Logo.png"/>
             <Image Grid.Column="1" HorizontalAlignment="Right" Height="44" Source="/Resources/images/NZ Gov.png"/>
         </Grid>
 
@@ -136,44 +135,110 @@
             </StackPanel>
         </Grid>
 
-        <!--Your QR Code-->
+        <!--Your Covid-19 Certificate-->
         <Grid>
-            <Label Content="Your QR Code: " HorizontalAlignment="Left" Height="50" FontFamily="Inter" FontWeight="Bold" FontSize="32"/>
+            <Label Content="Your Covid-19 Certificate: " HorizontalAlignment="Left" Height="50" FontFamily="Inter" FontWeight="Bold" FontSize="32"/>
         </Grid>
 
-        <!--QR-->
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+        <!--Certificate-->
+        <Grid Margin="15">
+            <Rectangle Fill="#D9D9D9" Opacity="0.4" HorizontalAlignment="Left" Height="677" Stroke="Black" VerticalAlignment="Top" Width="1091" Margin="140,10,0,-29.8" StrokeThickness="0"/>
+            <Rectangle Fill="White" HorizontalAlignment="Left" Height="640" Stroke="Black" VerticalAlignment="Top" Width="1050" Margin="165,29,0,-11.8" StrokeThickness="0"/>
 
-            <StackPanel Grid.Column="1">
+            <StackPanel>
                 <Grid>
-                    <Rectangle Fill="#FFCC00" Height="426" Stroke="Black" VerticalAlignment="Top" Width="297" Margin="58,10,57.8,0"/>
-                    <Image Height="57" Source="/Resources/images/NZ Gov Logo.png" Margin="58,28,57.8,363" />
-                    <Image Height="30" Source="/Resources/images/NZGovNameMaori.png" Margin="10,85,-10.2,333"/>
-                    <Image  Height="18" Source="/Resources/images/NZGovName.png" Margin="0,117,-0.2,313"/>
-                    <Rectangle Fill="#FFFFFF" Height="160" Stroke="Black"  Width="173" Margin="120,232,119.8,54.4"/>
-                    <TextBlock  TextAlignment="Center" Width="260" FontFamily="Inter" FontWeight="Bold" FontSize="25" Margin="75,157,77.8,231"><Run Text="My Covid Record"/><LineBreak/><Run Text="QR Code"/></TextBlock>
+                    <Image VerticalAlignment="Top" Source="/Resources/images/NZ.png" Margin="180,44,898.2,0" Height="75"/>
                 </Grid>
+
+                <Grid>
+                    <TextBlock Text="My Covid Record Certificate" FontWeight="ExtraBold" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Inter" FontSize="48"/>
+                </Grid>
+
+                <!--Personal Details-->
+                <Grid Margin="25">
+                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="196" Stroke="Black" VerticalAlignment="Center" Width="987" Margin="170,10,0,-11.2" Opacity="0.3"/>
+
+                    <StackPanel>
+                        <Grid  Margin="2,20,0,0">
+                            <TextBlock Text="Personal Details" FontWeight="ExtraBold" TextWrapping="Wrap" TextAlignment="Left" FontFamily="Inter" FontSize="28" Margin="183,0,147.6,-1.2" />
+                        </Grid>
+
+                        <Grid>
+                            <Grid Margin="10,5,0,0">
+                                <!--<Ellipse Fill="White" HorizontalAlignment="Left" Height="100" Stroke="Black" VerticalAlignment="Top" Width="100" Margin="180,19,0,0"/> -->
+                                <Image Source="/Resources/images/My Covid Record Logo.png"  Height="130" Margin="180,0,1003.6,0" />
+
+                            </Grid>
+
+                            <Grid>
+                                <Grid Margin="330,0,158.6,0.4">
+                                    <Grid>
+                                        <TextBlock Text="Name" Margin="0,20,554.8,90.4" FontFamily="Roboto" FontWeight="Medium" FontSize="20"/>
+                                        <!--Name from database-->
+                                    </Grid>
+
+                                    <Grid>
+                                        <TextBlock Text="Address" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="280,19,273.8,90.4"/>
+                                        <!--Address from database-->
+                                    </Grid>
+
+                                    <Grid>
+                                        <TextBlock Text="Certificate ID" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="559,19,-0.2,90.4"/>
+                                        <!--Generate ID from database-->
+                                    </Grid>
+                                </Grid>
+
+                                <Grid>
+                                    <Grid Margin="330,0,158.6,0.4">
+                                        <Grid>
+                                            <TextBlock Text="Date of Birth" Margin="0,74,554.8,36.4" FontFamily="Roboto" FontWeight="Medium" FontSize="20"/>
+                                            <!--Name from database-->
+                                        </Grid>
+
+                                        <Grid>
+                                            <TextBlock Text="Passport" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="280,74,273.8,35.4"/>
+                                            <!--Address from database-->
+                                        </Grid>
+
+                                        <Grid>
+                                            <TextBlock Text="Date Issued" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="559,74,-0.2,35.4"/>
+                                            <!--Generate ID from database-->
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+
+                <!--Vaccine Record-->
+                <Grid  Margin="25,0,25,25">
+                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="209" Stroke="Black" VerticalAlignment="Center" Width="987" Margin="170,10,0,-11.2" Opacity="0.3"/>
+
+                    <StackPanel>
+                        <Grid>
+
+                        </Grid>
+                        <Grid>
+
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+
             </StackPanel>
         </Grid>
 
         <!--Buttons-->
-
-        <Grid Margin="10">
+        <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-
-            <StackPanel Margin="6.4,25,363.6,-292.6" Orientation="Horizontal" Grid.Column="1" Grid.ColumnSpan="2">
-                <Grid Margin="5,5,5,5.4" Width="791">
-                    <Button Content="Generate QR Code" FontWeight="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" FontSize="16" FontFamily="Roboto" Width="210"  Click="GenerateQRCode_Click" Background="#3A89FF" Foreground="White"  UseLayoutRounding="True" BorderThickness="0">
+            <StackPanel Margin="6.8,25,23.2,25" Orientation="Horizontal" Grid.Column="1">
+                <Grid Margin="5">
+                    <Button Content="Edit Certificate" FontWeight="Medium" Width="210"  Background="#3A89FF" Foreground="White" FontFamily="Roboto" Height="34" FontSize="16" BorderThickness="0" Click="Edit_Click">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="8"></Setter>
@@ -182,21 +247,16 @@
                     </Button>
                 </Grid>
                 <Grid Margin="5">
-                    <Button Content="Download QR Code" FontWeight="Medium" HorizontalAlignment="Left" Height="34" Width="210" Background="#3A89FF" Foreground="White" FontFamily="Roboto" FontSize="16" UseLayoutRounding="True" BorderThickness="0" Click="DownloadQRCode_Click" Margin="-569,-2,0,876.4" RenderTransformOrigin="0.5,0.5">
+                    <Button Content="Download Certificate" FontWeight="Medium" Width="205"  Background="#3A89FF" Foreground="White" FontFamily="Roboto" Height="34" FontSize="16" UseLayoutRounding="True" BorderThickness="0" Margin="0,0,0,-0.4" Click="Download_Click">
                         <Button.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="CornerRadius" Value="8"/>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="8"></Setter>
                             </Style>
                         </Button.Resources>
                     </Button>
                 </Grid>
-
-                <TextBox x:Name="txtInput"  Text="My_Covid_Record"  Foreground="White" Width="300" Height="30"  TextChanged="txtInput_TextChanged"/>
-                <Image x:Name="imgQRCode" Height="200"/>
             </StackPanel>
         </Grid>
-
-        <Label Content="My Covid Record QR Code" HorizontalAlignment="Left" Height="41" Width="260" FontFamily="Inter" FontWeight="Bold" FontSize="20"/>
 
     </StackPanel>
 </Window>
