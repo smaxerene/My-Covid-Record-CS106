@@ -8,12 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images/custom_covid-19_logo-removebg-preview.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images/flie_icon-removebg-preview.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images/homebutton.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images/my%20covid%20record%20logo.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images/nz%20gov%20logo.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images/nz%20gov.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images/nzgovnamemaori.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images/searchbutton.png")]
 
 
