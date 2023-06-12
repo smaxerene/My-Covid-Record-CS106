@@ -8,7 +8,6 @@
        Title="Login Page" Height="1024" Width="1440">
 
     <Window.Resources>
-        <!--Email textbox design-->
         <ControlTemplate x:Key="RoundTextboxCornterTemplate" TargetType="{x:Type TextBoxBase}">
             <Border Background="{TemplateBinding Background}"   
          x:Name="Bd" BorderBrush="Black"  

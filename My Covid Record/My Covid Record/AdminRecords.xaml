@@ -36,7 +36,6 @@
 
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <!-- Add the correct path to your resource dictionary file -->
                 <ResourceDictionary Source="Resources/ResourceDictionary.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
