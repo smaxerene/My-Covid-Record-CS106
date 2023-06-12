@@ -113,11 +113,11 @@
 								</Grid>
 
 								<Grid Margin="0,0,0,0" Width="116">
-									<Button Content="Personal Details"  HorizontalAlignment="Center"  Background="White" Margin="-57,100,-50,220" Width="223" FontFamily="Inter"/>
-									<Button Content="Generate QR Code"  HorizontalAlignment="Center"   Background="White" Margin="-57,125,-50,195" Width="223"/>
+									<Button Content="Personal Details"  Click="PersonalDeets_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,100,-50,220" Width="223" FontFamily="Inter"/>
+									<Button Content="Generate QR Code" Click="GenerateQR_Click" HorizontalAlignment="Center"   Background="White" Margin="-57,125,-50,195" Width="223"/>
 									<Button Content="Notifcations"  HorizontalAlignment="Center"   Background="White" Margin="-57,150,-50,170" Width="223"/>
-									<Button Content="Generate Vaccine Certificate"   HorizontalAlignment="Center"  Background="White" Margin="-57,175,-50,145" Width="223"/>
-									<Button Content="Report an Issue"   HorizontalAlignment="Center"  Background="White" Margin="-57,200,-50,121" Width="223"/>
+									<Button Content="Generate Vaccine Certificate"  Click="Certficate_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,175,-50,145" Width="223"/>
+									<Button Content="Report an Issue" HorizontalAlignment="Center"  Background="White" Margin="-57,200,-50,121" Width="223"/>
 									<Button Content="Settings"   HorizontalAlignment="Center"  Background="White" Margin="-57,224,-50,97" Width="223"/>
 								</Grid>
 

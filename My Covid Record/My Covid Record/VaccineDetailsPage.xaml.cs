@@ -45,6 +45,28 @@ namespace My_Covid_Record
             }
         }
 
+        private void PersonalDeets_Click(object sender, RoutedEventArgs e)
+        {
+            UserProfile userprofile = new UserProfile();
+            userprofile.Show();
+            Close();
+        }
+
+        private void GenerateQR_Click(object sender, RoutedEventArgs e)
+        {
+            QRPage qrpage = new QRPage();
+            qrpage.Show();
+            Close();
+        }
+
+        private void Certficate_Click(object sender, RoutedEventArgs e)
+        {
+            Certificate certificate = new Certificate();
+            certificate.Show();
+            Close();
+        }
+
+        //Buttons
         private void EditUpload_Click(object sender, RoutedEventArgs e)
         {
 

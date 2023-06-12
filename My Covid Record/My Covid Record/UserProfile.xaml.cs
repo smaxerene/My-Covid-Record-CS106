@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace My_Covid_Record
 {
     /// <summary>
-    /// Interaction logic for Certificate.xaml
+    /// Interaction logic for UserProfile.xaml
     /// </summary>
-    public partial class Certificate : Window
+    public partial class UserProfile : Window
     {
-        public Certificate()
+        public UserProfile()
         {
             InitializeComponent();
         }
@@ -65,18 +65,5 @@ namespace My_Covid_Record
             certificate.Show();
             Close();
         }
-
-        //Buttons
-        private void Edit_Click(object sender, RoutedEventArgs e)
-        {
-            VaccineDetailsPage details = new VaccineDetailsPage();
-            details.Show();
-            Close();
-        }
-        private void Download_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
     }
 }

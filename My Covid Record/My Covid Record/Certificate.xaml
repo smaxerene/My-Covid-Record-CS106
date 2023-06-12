@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:My_Covid_Record"
         mc:Ignorable="d"
-         Title="Certificate" Height="1226" Width="1440">
+       Title="Certificate" Height="1226" Width="1440">
 
     <Window.Resources>
         <ControlTemplate x:Key="RoundTextboxCornterTemplate" TargetType="{x:Type TextBoxBase}">
@@ -112,11 +112,11 @@
                                 </Grid>
 
                                 <Grid Margin="0,0,0,0" Width="116">
-                                    <Button Content="Personal Details"  HorizontalAlignment="Center"  Background="White" Margin="-57,100,-50,220" Width="223" FontFamily="Inter"/>
-                                    <Button Content="Generate QR Code"  HorizontalAlignment="Center"   Background="White" Margin="-57,125,-50,195" Width="223"/>
+                                    <Button Content="Personal Details"  Click="PersonalDeets_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,100,-50,220" Width="223" FontFamily="Inter"/>
+                                    <Button Content="Generate QR Code" Click="GenerateQR_Click" HorizontalAlignment="Center"   Background="White" Margin="-57,125,-50,195" Width="223"/>
                                     <Button Content="Notifcations"  HorizontalAlignment="Center"   Background="White" Margin="-57,150,-50,170" Width="223"/>
-                                    <Button Content="Generate Vaccine Certificate"   HorizontalAlignment="Center"  Background="White" Margin="-57,175,-50,145" Width="223"/>
-                                    <Button Content="Report an Issue"   HorizontalAlignment="Center"  Background="White" Margin="-57,200,-50,121" Width="223"/>
+                                    <Button Content="Generate Vaccine Certificate"  Click="Certficate_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,175,-50,145" Width="223"/>
+                                    <Button Content="Report an Issue" HorizontalAlignment="Center"  Background="White" Margin="-57,200,-50,121" Width="223"/>
                                     <Button Content="Settings"   HorizontalAlignment="Center"  Background="White" Margin="-57,224,-50,97" Width="223"/>
                                 </Grid>
 
@@ -137,7 +137,7 @@
 
         <!--Your Covid-19 Certificate-->
         <Grid>
-            <Label Content="Your Covid-19 Certificate: " HorizontalAlignment="Left" Height="50" FontFamily="Inter" FontWeight="Bold" FontSize="32"/>
+            <Label Content="Your Covid-19 Certificate: " HorizontalAlignment="Left" Height="50" FontFamily="Inter" FontWeight="Bold" FontSize="32" Margin="20,0,0,-0.4"/>
         </Grid>
 
         <!--Certificate-->
@@ -192,17 +192,17 @@
                                     <Grid Margin="330,0,158.6,0.4">
                                         <Grid>
                                             <TextBlock Text="Date of Birth" Margin="0,74,554.8,36.4" FontFamily="Roboto" FontWeight="Medium" FontSize="20"/>
-                                            <!--Name from database-->
+                                            <!--DOB from database-->
                                         </Grid>
 
                                         <Grid>
-                                            <TextBlock Text="Passport" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="280,74,273.8,35.4"/>
-                                            <!--Address from database-->
+                                            <TextBlock Text="Passport No." FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="280,74,273.8,35.4"/>
+                                            <!--Passport from database-->
                                         </Grid>
 
                                         <Grid>
                                             <TextBlock Text="Date Issued" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="559,74,-0.2,35.4"/>
-                                            <!--Generate ID from database-->
+                                            <!---->
                                         </Grid>
                                     </Grid>
                                 </Grid>
@@ -216,11 +216,12 @@
                     <Rectangle Fill="White" HorizontalAlignment="Left" Height="209" Stroke="Black" VerticalAlignment="Center" Width="987" Margin="170,10,0,-11.2" Opacity="0.3"/>
 
                     <StackPanel>
-                        <Grid>
-
-                        </Grid>
-                        <Grid>
-
+                        <Grid Height="72" Margin="170,0,158.6,0" >
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" FontWeight="Medium" Text="Dose No." VerticalAlignment="Top" Margin="26,27,0,0" FontFamily="Roboto"/>
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Date of Vaccination" FontWeight="Medium" VerticalAlignment="Top" Margin="130,27,0,0" FontFamily="Roboto"/>
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Vaccine" FontWeight="Medium" VerticalAlignment="Top" Margin="340,27,0,0" FontFamily="Roboto"/>
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Brand" FontWeight="Medium" VerticalAlignment="Top" Margin="570,27,0,0" FontFamily="Roboto"/>
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" FontWeight="Medium" VerticalAlignment="Top" Margin="816,27,0,0" FontFamily="Roboto"><Run Text="Country of Vaccination"/><LineBreak/><Run/></TextBlock>
                         </Grid>
                     </StackPanel>
                 </Grid>
@@ -257,6 +258,5 @@
                 </Grid>
             </StackPanel>
         </Grid>
-
     </StackPanel>
 </Window>

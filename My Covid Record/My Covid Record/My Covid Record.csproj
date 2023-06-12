@@ -169,6 +169,9 @@
     <Compile Include="SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserProfile.xaml.cs">
+      <DependentUpon>UserProfile.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VaccineDetailsPage.xaml.cs">
       <DependentUpon>VaccineDetailsPage.xaml</DependentUpon>
     </Compile>
@@ -220,6 +223,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="VaccineDetailsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -263,6 +270,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller Folder\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\NZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\NZGovName.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\searchbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\profile.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
