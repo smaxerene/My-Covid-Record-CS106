@@ -34,6 +34,19 @@ namespace My_Covid_Record
             this.DataContext = this;
         }
 
+        //Account 
+        private void btnClosePopup_Click(object sender, RoutedEventArgs e)
+        {
+            myPopup.IsOpen = false;
+        }
+
+        private void btnShowPopup_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender == btnShowPopup)
+            {
+                myPopup.IsOpen = true;
+            }
+        }
         // Flag indicating whether to show comments
         private bool ShowComments
         {
