@@ -133,6 +133,21 @@ namespace My_Covid_Record
             Country.Text = "";
         }
 
+        private void Update_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Remove_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RemoveAll_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void Certficate_Click(object sender, RoutedEventArgs e)
         {
             Certificate certificate = new Certificate();
