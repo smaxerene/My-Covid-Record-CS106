@@ -13,11 +13,11 @@ namespace My_Covid_Record
     public class DataContext : DbContext
     {
         public DbSet<User> Users { get; set; }
+        public DbSet<UserDetails> UserDetails { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
            => optionsBuilder.UseNpgsql("Host=rosie.db.elephantsql.com;Database=zbjbtgnq;Username=zbjbtgnq;Password=PKNbH0np9lpE1enC8hxK4ye3X7xMeuf-");
 
     }
-
 
     public class User
     {
@@ -29,4 +29,16 @@ namespace My_Covid_Record
         public string PhoneNo { get; set; }
         public string Password { get; set; }
     }
+
+    public class UserDetails
+    {
+        public int Id { get; set; }
+        public int UserId { get; set; }
+        public string DoseNo { get; set; }
+        public string Date { get; set; }
+        public string Vaccine { get; set; }
+        public string Brand { get; set; }
+        public string Country { get; set; }
+    }
+
 }

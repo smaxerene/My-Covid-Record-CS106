@@ -59,6 +59,80 @@ namespace My_Covid_Record
             Close();
         }
 
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            //Email
+            if (Dose.Text.Length == 0)
+            {
+                errormessage.Text = "Enter Dose Number.";
+                Dose.Focus();
+            }
+            //Date
+            else if (Date.Text.Length == 0)
+            {
+                errormessage.Text = "Enter Date of Vaccination.";
+                Date.Focus();
+            }
+            //Vaccine
+            else if (Vaccine.Text.Length == 0)
+            {
+                errormessage.Text = "Enter Vaccine.";
+                Vaccine.Focus();
+            }
+            //Brand
+            else if (Brand.Text.Length == 0)
+            {
+                errormessage.Text = "Enter the Brand of the Vaccine.";
+                Brand.Focus();
+            }
+            //Country
+            else if (Country.Text.Length == 0)
+            {
+                errormessage.Text = "Enter Country of Vaccination.";
+                Country.Focus();
+            }
+            else
+            {
+                string DoseNo = Dose.Text;
+                string DateVacc = Date.Text;
+                string Vacc = Vaccine.Text;
+                string BrandVacc = Brand.Text;
+                string CountryVacc = Country.Text;
+
+                using (var db = new DataContext())
+                {
+                    UserDetails userdetails = new UserDetails();
+                    userdetails.DoseNo = Dose.Text;
+                    userdetails.Date = Date.Text;
+                    userdetails.Vaccine = Vaccine.Text;
+                    userdetails.Brand = Brand.Text;
+                    userdetails.Country = Country.Text;
+
+                    db.UserDetails.Add(userdetails);
+                    db.SaveChanges();
+
+                }
+
+                errormessage.Text = "You have successfully added details.";
+                Reset();
+            }
+        }
+
+
+        private void New_Click(object sender, RoutedEventArgs e)
+        {
+            Reset();
+        }
+
+        public void Reset()
+        {
+            Dose.Text = "";
+            Date.Text = "";
+            Vaccine.Text = "";
+            Brand.Text = "";
+            Country.Text = "";
+        }
+
         private void Certficate_Click(object sender, RoutedEventArgs e)
         {
             Certificate certificate = new Certificate();
