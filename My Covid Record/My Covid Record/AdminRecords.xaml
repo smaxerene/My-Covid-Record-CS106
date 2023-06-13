@@ -34,18 +34,18 @@
             <Setter Property="Padding" Value="5"/>
         </Style>
         
-        <ResourceDictionary>
+        <!--<ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <!-- Add the correct path to your resource dictionary file -->
+                --><!-- Add the correct path to your resource dictionary file --><!--
                 <ResourceDictionary Source="ResourceDictionary.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <ControlTemplate x:Key="RoundTextboxCornerTemplate" TargetType="{x:Type TextBoxBase}">
-                <!-- Template definition here -->
+                --><!-- Template definition here --><!--
             </ControlTemplate>
             <Style x:Key="RoundTextboxStyle" TargetType="{x:Type TextBox}">
-                <!-- Style definition here -->
+                --><!-- Style definition here --><!--
             </Style>
-        </ResourceDictionary>
+        </ResourceDictionary>-->
 
     </Window.Resources>
 

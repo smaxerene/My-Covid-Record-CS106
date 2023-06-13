@@ -58,14 +58,11 @@ namespace My_Covid_Record
                     else
                     {
 
-                        //Homepage homepage = new Homepage();
-                        //homepage.Show();
-                        //Close();
-
-                        //For Testing Account Button
-                        QRPage qrpage = new QRPage();
-                        qrpage.Show();
+                        Homepage homepage = new Homepage();
+                        homepage.Show();
                         Close();
+
+
                     }
 
                 }

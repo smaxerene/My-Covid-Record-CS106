@@ -27,6 +27,11 @@ namespace My_Covid_Record
             }
         }
 
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+          
+        }
+
         private void GenerateQRCode_Click(object sender, RoutedEventArgs e)
         {
             string inputData = txtInput.Text.Trim();
