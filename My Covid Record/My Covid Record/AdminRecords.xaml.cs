@@ -34,6 +34,11 @@ namespace My_Covid_Record
             // Set the data context for the Window
             DataContext = this;
         }
+
+        private void RecordsDataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            // Handle selection changed event
+        }
     }
 
     public class Record
