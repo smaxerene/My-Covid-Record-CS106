@@ -155,7 +155,6 @@
     </Compile>
     <Compile Include="AdminRecords.xaml.cs">
       <DependentUpon>AdminRecords.xaml</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="DataContext.cs" />
     <Compile Include="Homepage.xaml.cs">
@@ -230,6 +229,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

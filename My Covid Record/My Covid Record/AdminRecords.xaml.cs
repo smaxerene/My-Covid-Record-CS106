@@ -1,82 +1,58 @@
-<<<<<<< Updated upstream
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-=======
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Web;
-//using System.Web.UI;
-//using System.Web.UI.WebControls;
-//using System.Data.SqlClient;
->>>>>>> Stashed changes
+using System.Windows;
 
-//namespace My_Covid_Record
-//{
-//    public partial class AdminRecords : System.Web.UI.Page
-//    {
-//        protected void Page_Load(object sender, EventArgs e)
-//        {
-//            if (!IsPostBack)
-//            {
-//                // Retrieve data from the database
-//                List<DataItem> data = GetDataFromDatabase();
+namespace My_Covid_Record
+{
+    public partial class AdminRecords : Window
+    {
+        public List<Record> Records { get; set; }
 
-<<<<<<< Updated upstream
-                // Bind the data to the DataRepeater control
-                DataRepeater.DataSource = data;
-                DataRepeater.DataBind();
-            }
+        public AdminRecords()
+        {
+            InitializeComponent();
+            InitializeData();
         }
-=======
-//                // Bind the data to the ItemsControl
-//                DataList.DataSource = data;
-//                DataList.DataBind();
-//            }
-//        }
->>>>>>> Stashed changes
 
-//        private List<DataItem> GetDataFromDatabase()
-//        {
-//            List<DataItem> data = new List<DataItem>();
+        private void InitializeData()
+        {
+            Records = new List<Record>();
 
-//            // TODO: Replace with your database connection string
-//            string connectionString = "Your Database Connection String";
+            // Generate sample data
+            Random random = new Random();
+            for (int i = 1; i <= 10; i++)
+            {
+                string name = $"Person {i}";
+                int index = random.Next(1, 100);
+                string vaccineDetails = $"Vaccine details for {name}";
+                DateTime lastDose = DateTime.Now.AddDays(-random.Next(1, 30));
+                string status = "Vaccinated";
 
-//            using (SqlConnection connection = new SqlConnection(connectionString))
-//            {
-//                string query = "SELECT Year, Month, Day, Weekday FROM YourTable";
-//                SqlCommand command = new SqlCommand(query, connection);
+                Records.Add(new Record(index, name, vaccineDetails, lastDose, status));
+            }
 
-//                connection.Open();
-//                SqlDataReader reader = command.ExecuteReader();
+            // Set the data context for the Window
+            DataContext = this;
+        }
+    }
 
-//                while (reader.Read())
-//                {
-//                    // Create a new DataItem object and populate its properties
-//                    DataItem item = new DataItem();
-//                    item.Year = reader.GetString(0);
-//                    item.Month = reader.GetString(1);
-//                    item.Day = reader.GetString(2);
-//                    item.Weekday = reader.GetString(3);
+    public class Record
+    {
+        public int Index { get; set; }
+        public string Name { get; set; }
+        public string VaccineDetails { get; set; }
+        public DateTime LastDose { get; set; }
+        public string Status { get; set; }
 
-//                    // Add the item to the data list
-//                    data.Add(item);
-//                }
+        public List<string> StatusOptions { get; set; } = new List<string> { "Vaccinated", "Unvaccinated", "Partial" };
 
-//                reader.Close();
-//            }
-
-//            return data;
-//        }
-//    }
-
-//    public class DataItem
-//    {
-//        public string Year { get; set; }
-//        public string Month { get; set; }
-//        public string Day { get; set; }
-//        public string Weekday { get; set; }
-//    }
-//}
+        public Record(int index, string name, string vaccineDetails, DateTime lastDose, string status)
+        {
+            Index = index;
+            Name = name;
+            VaccineDetails = vaccineDetails;
+            LastDose = lastDose;
+            Status = status;
+        }
+    }
+}
