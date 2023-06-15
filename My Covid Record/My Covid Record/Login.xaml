@@ -8,6 +8,7 @@
          Title="Login Page" Height="1024" Width="1440">
 
     <Window.Resources>
+        
         <!--Email textbox design-->
         <ControlTemplate x:Key="RoundTextboxCornterTemplate" TargetType="{x:Type TextBoxBase}">
             <Border Background="{TemplateBinding Background}"   
@@ -58,8 +59,8 @@
         </Style>
     </Window.Resources>
 
-
-    <Grid>
+    <ScrollViewer>
+            <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
@@ -102,4 +103,7 @@
         </Button>
 
     </Grid>
+    </ScrollViewer>
+
+
 </Window>

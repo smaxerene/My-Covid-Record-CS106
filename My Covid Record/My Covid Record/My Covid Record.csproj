@@ -290,5 +290,8 @@
   <ItemGroup>
     <Resource Include="Resources\images\searchbutton.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\QR_Placeholder_Code-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

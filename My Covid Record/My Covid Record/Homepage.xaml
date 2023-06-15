@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:My_Covid_Record"
         mc:Ignorable="d"
         WindowState="Maximized"
-        Title="Homepage" >
+        Title="Homepage"  >
     <ScrollViewer>
 
         <StackPanel Margin="20">
@@ -412,10 +412,11 @@
                         <Label Content="Show comments" FontSize="20" FontWeight="Bold" Grid.Column="3"/>
                         <Border BorderThickness="2" Width="50" 
                                 Height="22" Grid.Column="4" Margin="10,0,0,0"
-                                CornerRadius="11" BorderBrush="Black" Background="{Binding BackgroundValue, UpdateSourceTrigger=PropertyChanged}">
-                            <Button Height="18" Width="18" HorizontalAlignment="{Binding HorizontalAlignmentValue, UpdateSourceTrigger=PropertyChanged}"
-                                    Click="Button_Click"
-                                    >
+                                CornerRadius="11" BorderBrush="Black" 
+                                Background="{Binding BackgroundValue, UpdateSourceTrigger=PropertyChanged}">
+                            <Button Height="18" Width="18" 
+                                    HorizontalAlignment="{Binding HorizontalAlignmentValue, UpdateSourceTrigger=PropertyChanged}"
+                                    Click="SliderButton_Click" >
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="23"/>

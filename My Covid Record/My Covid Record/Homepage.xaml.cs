@@ -19,7 +19,7 @@ namespace My_Covid_Record
     /// <summary>
     /// Interaction logic for Homepage.xaml
     /// </summary>
-    public partial class Homepage : Window
+    public partial class Homepage : Window, INotifyPropertyChanged
     {
         public Homepage()
         {
@@ -85,6 +85,11 @@ namespace My_Covid_Record
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void SliderButton_Click(object sender, RoutedEventArgs e)
         {
             // This method is triggered when the Button is clicked
             if (ShowComments == false)
