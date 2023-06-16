@@ -84,9 +84,18 @@ namespace My_Covid_Record
             // You can add custom logic here if needed
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void QR_Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            QRPage qrpage = new QRPage();
+            qrpage.Show();
+            Close();
+        }
+
+        private void Vaccine_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Certificate certificate = new Certificate();
+            certificate.Show();
+            Close();
         }
 
         private void SliderButton_Click(object sender, RoutedEventArgs e)

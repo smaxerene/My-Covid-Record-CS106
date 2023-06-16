@@ -186,7 +186,7 @@
                         Height="87" Width="292" 
                         VerticalAlignment="Center" 
                         HorizontalAlignment="Right"
-                        Click="Button_Click" FontFamily="Inter" 
+                        FontFamily="Inter" 
                         Background="White" FontSize="10">
                     <Button.Content>
                         <StackPanel>
@@ -206,7 +206,7 @@
                         VerticalAlignment="Center" 
                         HorizontalAlignment="Center"
                         Margin="20,0"
-                        Click="Button_Click" FontFamily="Inter" 
+                        FontFamily="Inter" 
                         Background="White" FontSize="10">
                     <Button.Content>
                         <StackPanel>
@@ -225,7 +225,7 @@
                         Height="87" Width="292" 
                         VerticalAlignment="Center" 
                         HorizontalAlignment="Left"
-                        Click="Button_Click" FontFamily="Inter" 
+                        FontFamily="Inter" 
                         Background="White" FontSize="10">
                     <Button.Content>
                         <StackPanel>
@@ -336,14 +336,14 @@
                 <Button Content="Generate QR Code" Grid.Column="1" 
                         HorizontalAlignment="Center" Height="41" 
                         Grid.Row="1" VerticalAlignment="Top" 
-                        Width="292" Click="Button_Click" FontFamily="Inter" 
+                        Width="292" Click="QR_Button_Click" FontFamily="Inter" 
                         Background="Black" FontSize="17" 
                         Foreground="White" FontWeight="Bold"
                         Margin="0,0,500,50"/>
 
                 <Button Content="Generate Vaccine Certificate" Grid.Column="1" 
                         HorizontalAlignment="Center" Height="41" Grid.Row="1" 
-                        VerticalAlignment="Top" Width="292" Click="Button_Click" 
+                        VerticalAlignment="Top" Width="292" Click="Vaccine_Button_Click" 
                         FontFamily="Inter" Background="Black" FontSize="17" 
                         Foreground="White" FontWeight="Bold"
                         Margin="500,0,0,50"/>
@@ -384,7 +384,7 @@
                         VerticalAlignment="Center" 
                         HorizontalAlignment="Left"
                         FontWeight="Bold"
-                        Click="Button_Click" FontFamily="Inter" 
+                        FontFamily="Inter" 
                         Background="White" FontSize="10">
 
                             <Button.Resources>
@@ -400,7 +400,7 @@
                         VerticalAlignment="Center" 
                         HorizontalAlignment="Left"
                         FontWeight="Bold" Margin="100,0,0,0"
-                        Click="Button_Click" FontFamily="Inter" 
+                        FontFamily="Inter" 
                         Background="White" FontSize="10">
 
                             <Button.Resources>
@@ -772,7 +772,7 @@
                         VerticalAlignment="Center" 
                         HorizontalAlignment="Center"
                         Margin="40,0"
-                        Click="Button_Click" FontFamily="Inter" 
+                        FontFamily="Inter" 
                         Background="#3A89FF" FontSize="25" BorderBrush="#3A89FF">
                         <Button.Content>
                             <StackPanel>
