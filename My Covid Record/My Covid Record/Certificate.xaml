@@ -140,136 +140,137 @@
                        Height="50" FontFamily="Inter" FontWeight="Bold" FontSize="32" Margin="50,0,0,0"/>
             </Grid>
 
-            <!--Certificate-->
-            <Grid Margin="15">
-                <Rectangle Fill="#D9D9D9" Opacity="0.4" HorizontalAlignment="Left" Height="677" Stroke="Black" VerticalAlignment="Top" Width="1091" Margin="140,10,0,-29.8" StrokeThickness="0"/>
-                <Rectangle Fill="White" HorizontalAlignment="Left" Height="640" Stroke="Black" VerticalAlignment="Top" Width="1050" Margin="165,29,0,-11.8" StrokeThickness="0"/>
+            <Grid >
+                <Rectangle Fill="White" HorizontalAlignment="Center" Height="196" Stroke="Black"
+                                   VerticalAlignment="Center" Width="987" Margin="0,10,0,-11.2" Opacity="0.3"/>
+                            <!--Certificate-->
+                <Grid Margin="15">
+                    <Rectangle Fill="#D9D9D9" Opacity="0.4" HorizontalAlignment="Left" Height="677" Stroke="Black" VerticalAlignment="Top" Width="1091" Margin="140,10,0,-29.8" StrokeThickness="0"/>
+                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="640" Stroke="Black" VerticalAlignment="Top" Width="1050" Margin="165,29,0,-11.8" StrokeThickness="0"/>
 
-                <StackPanel>
-                    <Grid>
-                        <Image VerticalAlignment="Top" Source="/Resources/images/NZ.png" Margin="180,44,898.2,0" Height="75"/>
-                    </Grid>
+                    <StackPanel>
+                        <Grid>
+                            <Image VerticalAlignment="Top" Source="/Resources/images/NZ.png" Margin="180,44,898.2,0" Height="75"/>
+                        </Grid>
 
-                    <Grid>
-                        <Image Source="/Resources/images/My Covid Record Logo.png" Height="110" Margin="0,0,800,0"/>
-                        <TextBlock Text="My Covid Record Certificate" FontWeight="ExtraBold" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center" FontFamily="Inter" FontSize="48"/>
-                    </Grid>
+                        <Grid>
+                            <Image Source="/Resources/images/My Covid Record Logo.png" Height="110" Margin="0,0,800,0"/>
+                            <TextBlock Text="My Covid Record Certificate" FontWeight="ExtraBold" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center" FontFamily="Inter" FontSize="48"/>
+                        </Grid>
 
-                    <!--Personal Details-->
-                    <Grid Margin="25">
-                        <Rectangle Fill="White" HorizontalAlignment="Center" Height="196" Stroke="Black"
+                        <!--Personal Details-->
+                        <Grid Margin="25">
+                            <Rectangle Fill="White" HorizontalAlignment="Center" Height="196" Stroke="Black"
                                    VerticalAlignment="Center" Width="987" Margin="0,10,0,-11.2" Opacity="0.3"/>
 
-                        <StackPanel HorizontalAlignment="Center">
-                            <Grid  Margin="2,20,0,0">
-                                <TextBlock Text="Personal Details" FontWeight="ExtraBold" TextWrapping="Wrap" TextAlignment="Left" FontFamily="Inter" FontSize="28" Margin="183,0,147.6,-1.2" />
-                            </Grid>
-
-                            <Grid>
-                                <Grid Margin="10,5,0,0">
-                                    <!--<Ellipse Fill="White" HorizontalAlignment="Left" Height="100" Stroke="Black" VerticalAlignment="Top" Width="100" Margin="180,19,0,0"/> -->
-                                    <Image Source="/Resources/images/QR_Placeholder_Code-removebg-preview.png"  Height="130" Margin="180,0,1003.6,0" />
-
+                            <StackPanel HorizontalAlignment="Center">
+                                <Grid  Margin="2,20,0,0">
+                                    <TextBlock Text="Personal Details" FontWeight="ExtraBold" TextWrapping="Wrap" TextAlignment="Left" FontFamily="Inter" FontSize="28" Margin="183,0,147.6,-1.2" />
                                 </Grid>
 
                                 <Grid>
-                                    <Grid Margin="330,0,158.6,0.4">
-                                        <Grid>
-                                            <TextBlock Text="Name" Margin="0,20,554.8,90.4" FontFamily="Roboto" FontWeight="Medium" FontSize="20"/>
-                                            <!--Name from database-->
-                                        </Grid>
+                                    <Grid Margin="10,5,0,0">
+                                        <!--<Ellipse Fill="White" HorizontalAlignment="Left" Height="100" Stroke="Black" VerticalAlignment="Top" Width="100" Margin="180,19,0,0"/> -->
+                                        <Image Source="/Resources/images/QR_Placeholder_Code-removebg-preview.png"  Height="130" Margin="180,0,1003.6,0" />
 
-                                        <Grid>
-                                            <TextBlock Text="Address" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="280,19,273.8,90.4"/>
-                                            <!--Address from database-->
-                                        </Grid>
-
-                                        <Grid>
-                                            <TextBlock Text="Certificate ID" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="559,19,-0.2,90.4"/>
-                                            <!--Generate ID from database-->
-                                        </Grid>
                                     </Grid>
 
                                     <Grid>
                                         <Grid Margin="330,0,158.6,0.4">
                                             <Grid>
-                                                <TextBlock Text="Date of Birth" Margin="0,74,554.8,36.4" FontFamily="Roboto" FontWeight="Medium" FontSize="20"/>
+                                                <TextBlock Text="Name" Margin="0,20,554.8,90.4" FontFamily="Roboto" FontWeight="Medium" FontSize="20"/>
                                                 <!--Name from database-->
                                             </Grid>
 
                                             <Grid>
-                                                <TextBlock Text="Passport" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="280,74,273.8,35.4"/>
+                                                <TextBlock Text="Address" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="280,19,273.8,90.4"/>
                                                 <!--Address from database-->
                                             </Grid>
 
                                             <Grid>
-                                                <TextBlock Text="Date Issued" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="559,74,-0.2,35.4"/>
+                                                <TextBlock Text="Certificate ID" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="559,19,-0.2,90.4"/>
                                                 <!--Generate ID from database-->
+                                            </Grid>
+                                        </Grid>
+
+                                        <Grid>
+                                            <Grid Margin="330,0,158.6,0.4">
+                                                <Grid>
+                                                    <TextBlock Text="Date of Birth" Margin="0,74,554.8,36.4" FontFamily="Roboto" FontWeight="Medium" FontSize="20"/>
+                                                    <!--Name from database-->
+                                                </Grid>
+
+                                                <Grid>
+                                                    <TextBlock Text="Date Issued" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="280,74,273.8,35.4"/>
+                                                    <!--Generate ID from database-->
+                                                </Grid>
                                             </Grid>
                                         </Grid>
                                     </Grid>
                                 </Grid>
-                            </Grid>
-                        </StackPanel>
-                    </Grid>
+                            </StackPanel>
+                        </Grid>
 
-                    <!--Vaccine Record-->
-                    <Grid  Margin="25,0,25,25">
-                        <Border Background="White" HorizontalAlignment="Center" Height="209" 
+                        <!--Vaccine Record-->
+                        <Grid  Margin="25,0,25,25">
+                            <Border Background="White" HorizontalAlignment="Center" Height="209" 
                                 BorderThickness="1"
                                BorderBrush="Black" VerticalAlignment="Center" Width="987" 
                                Margin="0,10,0,-11.2" Opacity="0.3">
-                            <ListView Margin="10" Name="lvUsers">
-                                <ListView.View>
-                                    <GridView>
-                                        <GridViewColumn>
-                                            <TextBlock Text="Dose No." Foreground="Black" FontWeight="Bold" FontSize="11" Width="70"/>
-                                        </GridViewColumn>
-                                        <GridViewColumn>
-                                            <TextBlock Text="Date of Vaccination" Foreground="Black" FontWeight="Bold" FontSize="11" Width="120"/>
-                                        </GridViewColumn>
-                                        <GridViewColumn>
-                                            <TextBlock Text="Vaccine" Foreground="Black" FontWeight="Bold" FontSize="11" Width="70"/>
-                                        </GridViewColumn>
-                                        <GridViewColumn>
-                                            <TextBlock Text="Brand" Foreground="Black" FontWeight="Bold" FontSize="11" Width="70"/>
-                                        </GridViewColumn>
-                                        <GridViewColumn>
-                                            <TextBlock Text="Country of Vaccination" Foreground="Black" FontWeight="Bold" FontSize="11" />
-                                        </GridViewColumn>
-                                    </GridView>
-                                </ListView.View>
-                            </ListView>
-                        </Border>
+                                <ListView Margin="10" Name="lvUsers">
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridViewColumn>
+                                                <TextBlock Text="Dose No." Foreground="Black" FontWeight="Bold" FontSize="11" Width="70"/>
+                                            </GridViewColumn>
+                                            <GridViewColumn>
+                                                <TextBlock Text="Date of Vaccination" Foreground="Black" FontWeight="Bold" FontSize="11" Width="120"/>
+                                            </GridViewColumn>
+                                            <GridViewColumn>
+                                                <TextBlock Text="Vaccine" Foreground="Black" FontWeight="Bold" FontSize="11" Width="70"/>
+                                            </GridViewColumn>
+                                            <GridViewColumn>
+                                                <TextBlock Text="Brand" Foreground="Black" FontWeight="Bold" FontSize="11" Width="70"/>
+                                            </GridViewColumn>
+                                            <GridViewColumn>
+                                                <TextBlock Text="Country of Vaccination" Foreground="Black" FontWeight="Bold" FontSize="11" />
+                                            </GridViewColumn>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                            </Border>
 
-                        <StackPanel>
-                            <Grid>
+                            <StackPanel>
+                                <Grid>
 
-                            </Grid>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition/>
-                                </Grid.RowDefinitions>
+                                </Grid>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
 
 
-                                <!--<Label Content="Dose No." FontWeight="Bold" FontFamily="Inter" Grid.Column="0"/>
+                                    <!--<Label Content="Dose No." FontWeight="Bold" FontFamily="Inter" Grid.Column="0"/>
                             <Label Content="Date of Vaccination" FontWeight="Bold" FontFamily="Inter" Grid.Column="1"/>
                             <Label Content="Vaccine" FontWeight="Bold" FontFamily="Inter" Grid.Column="2" />
                             <Label Content="Brand" FontWeight="Bold" FontFamily="Inter" Grid.Column="3"/>
                             <Label Content="Country of Vaccination" FontWeight="Bold" FontFamily="Inter" Grid.Column="4"/>-->
-                            </Grid>
-                        </StackPanel>
-                    </Grid>
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
 
-                </StackPanel>
+                    </StackPanel>
+                </Grid>
             </Grid>
+
+
 
             <!--Buttons-->
             <Grid >
