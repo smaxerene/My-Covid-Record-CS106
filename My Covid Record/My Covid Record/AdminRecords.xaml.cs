@@ -1,63 +1,115 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Windows;
 
 namespace My_Covid_Record
 {
-    public partial class AdminRecords : Window
+    public partial class AdminRecords : Window, INotifyPropertyChanged
     {
-        public List<Record> Records { get; set; }
+        private List<Record> items;
+
+        public List<Record> Items
+        {
+            get { return items; }
+            set
+            {
+                if (items != value)
+                {
+                    items = value;
+                    NotifyPropertyChanged("Items");
+                }
+            }
+        }
 
         public AdminRecords()
         {
             InitializeComponent();
             InitializeData();
+            DataContext = this;
         }
 
         private void InitializeData()
         {
-            Records = new List<Record>();
+            Items = new List<Record>();
 
             // Generate sample data
             Random random = new Random();
             for (int i = 1; i <= 10; i++)
             {
                 string name = $"Person {i}";
-                int index = random.Next(1, 100);
-                string vaccineDetails = $"Vaccine details for {name}";
-                DateTime lastDose = DateTime.Now.AddDays(-random.Next(1, 30));
+                string description = $"Vaccine details for {name}";
                 string status = "Vaccinated";
 
-                Records.Add(new Record(index, name, vaccineDetails, lastDose, status));
+                Items.Add(new Record(name, description, status));
             }
-
-            // Set the data context for the Window
-            DataContext = this;
         }
 
-        private void RecordsDataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void NotifyPropertyChanged(string propertyName)
         {
-            // Handle selection changed event
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 
-    public class Record
+    public class Record : INotifyPropertyChanged
     {
-        public int Index { get; set; }
-        public string Name { get; set; }
-        public string VaccineDetails { get; set; }
-        public DateTime LastDose { get; set; }
-        public string Status { get; set; }
+        private string name;
+        private string description;
+        private string status;
 
-        public List<string> StatusOptions { get; set; } = new List<string> { "Vaccinated", "Unvaccinated", "Partial" };
-
-        public Record(int index, string name, string vaccineDetails, DateTime lastDose, string status)
+        public string Name
         {
-            Index = index;
+            get { return name; }
+            set
+            {
+                if (name != value)
+                {
+                    name = value;
+                    NotifyPropertyChanged("Name");
+                }
+            }
+        }
+
+        public string Description
+        {
+            get { return description; }
+            set
+            {
+                if (description != value)
+                {
+                    description = value;
+                    NotifyPropertyChanged("Description");
+                }
+            }
+        }
+
+        public string Status
+        {
+            get { return status; }
+            set
+            {
+                if (status != value)
+                {
+                    status = value;
+                    NotifyPropertyChanged("Status");
+                }
+            }
+        }
+
+        public Record(string name, string description, string status)
+        {
             Name = name;
-            VaccineDetails = vaccineDetails;
-            LastDose = lastDose;
+            Description = description;
             Status = status;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void NotifyPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

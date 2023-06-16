@@ -36,7 +36,7 @@
         <Image HorizontalAlignment="Right" Height="44" VerticalAlignment="Top" Width="173" Margin="0,26,36.6,0"
                Source="/Resources/images/NZ Gov.png"/>
         <!--***************************************************************************-->
-        <Image Source="/Resources/images/My Covid Record Logo.png" Margin="270,164,1024.6,730.4" RenderTransformOrigin="0.86,-0.004" Height="100" />
+        <Image Source="/Resources/images/My Covid Record Logo.png" Margin="254,175,1040,733" RenderTransformOrigin="0.86,-0.004" Height="100" />
         <!--***************************************************************************-->
 
 
@@ -51,7 +51,7 @@
         <!--***************************************************************************-->
 
 
-        <TextBox Template="{StaticResource RoundTextboxCornterTemplate}" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="430" Margin="115,330,0,0" FontSize="25"/>
+        <TextBox Template="{StaticResource RoundTextboxCornterTemplate}" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="430" Margin="115,330,0,0" FontSize="25" TextChanged="TextBox_TextChanged"/>
         <!--***************************************************************************-->
 
 

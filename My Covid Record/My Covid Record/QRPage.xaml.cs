@@ -89,5 +89,10 @@ namespace My_Covid_Record
         {
 
         }
+
+        private void TextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+
+        }
     }
 }
