@@ -117,25 +117,32 @@ namespace WpfApp1
             };
 
             DataContext = this;
+
+
         }
 
 
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
+
 
         private void FilterItems()
         {
             if (Items != null)
             {
                 ICollectionView view = CollectionViewSource.GetDefaultView(Items);
-                view.Filter = item => string.IsNullOrWhiteSpace(SearchText) ||
-                                      ((Item)item).Name.Contains(SearchText, 
-                                      StringComparison.
-                                      OrdinalIgnoreCase);
+                view.Filter = item =>
+                {
+                    if (item is Item currentItem)
+                    {
+                        return string.IsNullOrWhiteSpace(SearchText) ||
+                            currentItem.Name.IndexOf(SearchText, StringComparison.OrdinalIgnoreCase) >= 0;
+                    }
+
+                    return false;
+                };
             }
         }
+
+
 
         //private void dataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         //{
