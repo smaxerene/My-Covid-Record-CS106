@@ -1,0 +1,209 @@
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.csprojAssemblyReference.cache
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\Homepage.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\Login.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\MainWindow.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\QRPage.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\SignUp.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\App.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record_MarkupCompile.cache
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record_MarkupCompile.lref
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\bin\Debug\My Covid Record.exe.config
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\bin\Debug\My Covid Record.exe
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\bin\Debug\My Covid Record.pdb
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\Homepage.baml
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\Login.baml
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\MainWindow.baml
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\QRPage.baml
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\SignUp.baml
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.g.resources
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My_Covid_Record.Properties.Resources.resources
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.csproj.GenerateResource.cache
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.csproj.CoreCompileInputs.cache
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.exe
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.pdb
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\AdminLogin.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106Final\My Covid Record\My Covid Record\obj\Debug\AdminLogin.baml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\My Covid Record.exe.config
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\My Covid Record.exe
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\My Covid Record.pdb
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.EntityFrameworkCore.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Npgsql.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Buffers.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Collections.Immutable.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Memory.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Text.Json.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.ValueTuple.dll
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.EntityFrameworkCore.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.EntityFrameworkCore.Relational.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Npgsql.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Buffers.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Collections.Immutable.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Memory.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Text.Json.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.ValueTuple.xml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.csprojAssemblyReference.cache
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\AdminLogin.g.cs
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\Homepage.g.cs
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\Login.g.cs
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\MainWindow.g.cs
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\QRPage.g.cs
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\SignUp.g.cs
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\App.g.cs
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record_MarkupCompile.cache
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record_MarkupCompile.lref
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\AdminLogin.baml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\Homepage.baml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\Login.baml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\MainWindow.baml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\QRPage.baml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\SignUp.baml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.g.resources
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My_Covid_Record.Properties.Resources.resources
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.csproj.GenerateResource.cache
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.csproj.CoreCompileInputs.cache
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.csproj.CopyComplete
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.exe
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.pdb
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\My Covid Record.exe.config
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\My Covid Record.exe
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\My Covid Record.pdb
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.EntityFrameworkCore.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Npgsql.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\QRCoder.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Buffers.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Collections.Immutable.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Memory.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Text.Json.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.ValueTuple.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.EntityFrameworkCore.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.EntityFrameworkCore.Relational.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\Npgsql.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Buffers.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Collections.Immutable.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Memory.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Text.Json.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\System.ValueTuple.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.csprojAssemblyReference.cache
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\AdminLogin.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\Homepage.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\Login.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\MainWindow.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\QRPage.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\SignUp.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\App.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record_MarkupCompile.cache
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record_MarkupCompile.lref
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\AdminLogin.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\Homepage.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\Login.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\MainWindow.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\QRPage.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\SignUp.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.g.resources
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My_Covid_Record.Properties.Resources.resources
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.csproj.GenerateResource.cache
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.csproj.CoreCompileInputs.cache
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.csproj.CopyComplete
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.exe
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record.pdb
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\bin\Debug\QRCoder.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\AdminRecords.g.cs
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\ResourceDictionary.baml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\AdminRecords.g.cs
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\Certificate.g.cs
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\VaccineDetailsPage.g.cs
+C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\ResourceDictionary.baml
+C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\AdminLogin.g.cs
+C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\AdminRecords.g.cs
+C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\Certificate.g.cs
+C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\Homepage.g.cs
+C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\Login.g.cs
+C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\MainWindow.g.cs
+C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\QRPage.g.cs
+C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\SignUp.g.cs
+C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\VaccineDetailsPage.g.cs
+C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\App.g.cs
+C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record_MarkupCompile.cache
+C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\My Covid Record_MarkupCompile.lref

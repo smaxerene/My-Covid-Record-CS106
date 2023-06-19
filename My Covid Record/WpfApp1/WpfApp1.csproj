@@ -301,5 +301,33 @@
   <ItemGroup>
     <Resource Include="Resources\images\Vaccine Details Icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\Appointments Icon.png" />
+    <Resource Include="Resources\images\Comment Image.png" />
+    <Resource Include="Resources\images\COVID19_SouthAfrica_Hospital_2021_ChrisAllen_MSB56360_3800px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\Discussions.png" />
+    <Resource Include="Resources\images\Doctors.png" />
+    <Resource Include="Resources\images\FaceBook_Icon-removebg-preview.png" />
+    <Resource Include="Resources\images\Hands_Together_Emoji-removebg-preview.png" />
+    <Resource Include="Resources\images\Ministry of Health Icon.png" />
+    <Resource Include="Resources\images\Overview Icon.png" />
+    <Resource Include="Resources\images\Paperplane_Icon-removebg-preview.png" />
+    <Resource Include="Resources\images\Redit_Icon-removebg-preview.png" />
+    <Resource Include="Resources\images\Shield_Pic-removebg-preview.png" />
+    <Resource Include="Resources\images\Sick_Emoji-removebg-preview.png" />
+    <Resource Include="Resources\images\Twitter_Icon-removebg-preview.png" />
+    <Resource Include="Resources\images\Vaccine Details Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\NZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\NZGovName.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\searchbutton.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
