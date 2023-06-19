@@ -112,22 +112,22 @@
                                 </Grid>
 
                                 <Grid Margin="0,0,0,0" Width="116">
-                                    <Button Content="Personal Details"  Click="PersonalDeets_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,100,-50,220" Width="223" FontFamily="Inter"/>
+                                    <Button Content="Personal Details" Click="PersonalDeets_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,100,-50,220" Width="223" FontFamily="Inter"/>
                                     <Button Content="Generate QR Code" Click="GenerateQR_Click" HorizontalAlignment="Center"   Background="White" Margin="-57,125,-50,195" Width="223"/>
-                                    <Button Content="Notifcations"  HorizontalAlignment="Center"   Background="White" Margin="-57,150,-50,170" Width="223"/>
-                                    <Button Content="Generate Vaccine Certificate"  Click="Certficate_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,175,-50,145" Width="223"/>
-                                    <Button Content="Report an Issue" HorizontalAlignment="Center"  Background="White" Margin="-57,200,-50,121" Width="223"/>
-                                    <Button Content="Settings"   HorizontalAlignment="Center"  Background="White" Margin="-57,224,-50,97" Width="223"/>
+                                    <Button Content="Generate Vaccine Certificate" Click="Certificate_Click" HorizontalAlignment="Center"  Background="White"  Margin="-57,150,-50,170" Width="223"/>
+                                    <Button Content="Vaccine Details" Click="Notif_Click" HorizontalAlignment="Center"   Background="White"  Margin="-57,175,-50,145" Width="223"/>
+                                    <Button Content="Report an Issue" Click="Report_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,200,-50,121" Width="223"/>
+                                    <Button Content="Settings" Click="Settings_Click"  HorizontalAlignment="Center"  Background="White" Margin="-57,224,-50,97" Width="223"/>
                                 </Grid>
 
                                 <Grid>
                                     <Button Click="btnClosePopup_Click" Content="Close" Margin="17,255,248,44" 
                                 HorizontalAlignment="Center"  BorderThickness="0" Background="#3A89FF" Foreground="White" MaxHeight="23" RenderTransformOrigin="0.087,0.689" Width="39"/>
 
-                                    <Button Click="btnClosePopup_Click" Content="Logout" Margin="242,255,17,44" 
+                                    <Button Content="Logout" Click="Logout_Click" Margin="242,255,17,44" 
                                  HorizontalAlignment="Center" BorderThickness="0" Background="#3A89FF" Foreground="White" MaxHeight="23" RenderTransformOrigin="0.574,0.693" Width="45" FontFamily="Inter"/>
-
                                 </Grid>
+
                             </Grid>
                         </DockPanel>
                     </Border>

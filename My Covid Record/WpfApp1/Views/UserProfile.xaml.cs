@@ -61,7 +61,7 @@ namespace WpfApp1.Views
 
         private void Notif_Click(object sender, RoutedEventArgs e)
         {
-
+            App.Current.MainWindow.Content = new VaccineDetailsPage();
         }
 
         private void Report_Click(object sender, RoutedEventArgs e)

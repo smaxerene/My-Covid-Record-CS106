@@ -116,7 +116,7 @@
                                     <Button Content="Personal Details" Click="PersonalDeets_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,100,-50,220" Width="223" FontFamily="Inter"/>
                                     <Button Content="Generate QR Code" Click="GenerateQR_Click" HorizontalAlignment="Center"   Background="White" Margin="-57,125,-50,195" Width="223"/>
                                     <Button Content="Generate Vaccine Certificate" Click="Certificate_Click" HorizontalAlignment="Center"  Background="White"  Margin="-57,150,-50,170" Width="223"/>
-                                    <Button Content="Notifcations" Click="Notif_Click" HorizontalAlignment="Center"   Background="White"  Margin="-57,175,-50,145" Width="223"/>
+                                    <Button Content="Vaccine Details" Click="Notif_Click" HorizontalAlignment="Center"   Background="White"  Margin="-57,175,-50,145" Width="223"/>
                                     <Button Content="Report an Issue" Click="Report_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,200,-50,121" Width="223"/>
                                     <Button Content="Settings" Click="Settings_Click"  HorizontalAlignment="Center"  Background="White" Margin="-57,224,-50,97" Width="223"/>
                                 </Grid>
@@ -143,48 +143,110 @@
         <!--Greeting-->
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="75*"/>
-                <ColumnDefinition Width="1319*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Image Source="/Resources/images/profile.png" Margin="25,12,10.2,10"/>
-            <TextBlock TextWrapping="Wrap" FontWeight="Medium" Text="Hi, " Grid.ColumnSpan="2" Margin="75,19,1273.6,9.8" FontFamily="Roboto" FontSize="30"/>
+            
+            <StackPanel Orientation="Horizontal">
+                <Grid Margin="10,10,0,0">
+                     <Image Source="/Resources/images/profile.png" Height="40"/>
+                </Grid>
+                <Grid  Margin="10,15,0,0">
+                    <TextBlock TextWrapping="Wrap" FontWeight="Medium" Text="Hi, " Grid.ColumnSpan="2" FontFamily="Roboto" FontSize="30"/>
+                </Grid>
+            </StackPanel>
+           
             <!--Name from database-->
         </Grid>
 
-        <!--Profile-->
-        <Grid>
-            <Rectangle Fill="#FFDD54" HorizontalAlignment="Center" Height="393" Stroke="Black" VerticalAlignment="Top" Width="630" Margin="380,-16,383.6,-0.2" StrokeThickness="0"/>
-
-            <TextBlock HorizontalAlignment="Left" FontWeight="Medium" TextWrapping="Wrap" VerticalAlignment="Top" Margin="410,29,0,0" FontFamily="Roboto" Height="30" Width="135" FontSize="25"><Run Text="Full Name"/><LineBreak/><Run/></TextBlock>
-            <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="380" Margin="595,24,0,0"/>
-
-            <TextBlock HorizontalAlignment="Left" FontWeight="Medium" TextWrapping="Wrap" VerticalAlignment="Top" Margin="410,89,0,0" FontFamily="Roboto" Height="30" Width="135" FontSize="25" Text="Username"/>
-            <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="380" Margin="595,84,0,0"/>
-
-            <TextBlock HorizontalAlignment="Left" FontWeight="Medium" TextWrapping="Wrap" VerticalAlignment="Top" Margin="410,149,0,0" FontFamily="Roboto" Height="30" Width="185" FontSize="25" Text="Email Address"/>
-            <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="380" Margin="595,144,0,0"/>
-
-            <TextBlock HorizontalAlignment="Left" FontWeight="Medium" TextWrapping="Wrap" VerticalAlignment="Top" Margin="410,209,0,0" FontFamily="Roboto" Height="30" Width="185" FontSize="25" Text="Phone Number"/>
-            <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="380" Margin="595,204,0,0"/>
-
-            <TextBlock HorizontalAlignment="Left" FontWeight="Medium" TextWrapping="Wrap" VerticalAlignment="Top" Margin="410,274,0,0" FontFamily="Roboto" Height="30" Width="185" FontSize="25" Text="JOINED"/>
-            <Rectangle Fill="Black" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="425" Margin="550,269,0,0"/>
-
-            <Image Source="/Resources/images/key.png" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="25" Margin="615,333,0,0"/>
-            <Button Content="Forgot Password" Background="#FFDD54" FontWeight="Bold" VerticalAlignment="Top" Margin="640,333,618.6,0" BorderThickness="0" FontFamily="Inter" FontSize="16"/>
-
-
-        </Grid>
-
-        <!--Buttons-->
-        <Grid Height="122" Margin="0,0,-0.4,0">
+        <!--Details-->
+        <Grid Margin="0,10,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Margin="6.8,25,23.2,25" Orientation="Horizontal" Grid.Column="1">
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="1">
+                    <Rectangle Fill="#FFCC00" HorizontalAlignment="Center" Height="340" Stroke="Black" Width="630" StrokeThickness="0"/>
+
+                    <StackPanel>
+                        <StackPanel Margin="20" Orientation="Horizontal">
+                            <StackPanel  Margin="20,0,0,0" Orientation="Vertical">
+                                <Grid Margin="0,8,0,0">
+                                    <TextBlock HorizontalAlignment="Left" FontWeight="Medium" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Roboto" Height="30" Width="135" FontSize="25"><Run Text="Full Name"/><LineBreak/><Run/></TextBlock>
+                                </Grid>
+                                <Grid Margin="0,18,0,0">
+                                    <TextBlock HorizontalAlignment="Left" FontWeight="Medium" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Roboto" Height="30" Width="135" FontSize="25" Text="Username"/>
+                                </Grid>
+                                <Grid Margin="0,23,0,0">
+                                    <TextBlock HorizontalAlignment="Left" FontWeight="Medium" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Roboto" Height="30" Width="185" FontSize="25" Text="Email Address"/>
+                                </Grid>
+                                <Grid  Margin="0,20,0,0">
+                                    <TextBlock HorizontalAlignment="Left" FontWeight="Medium" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Roboto" Height="30" Width="185" FontSize="25" Text="Phone Number"/>
+                                </Grid>
+                                <Grid Margin="0,20,0,0">
+                                    <TextBlock HorizontalAlignment="Left" FontWeight="Medium" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Roboto" Height="30" Width="185" FontSize="25" Text="JOINED"/>
+                                </Grid>
+                            </StackPanel>
+
+                            <StackPanel  Margin="10,0,20,0" Orientation="Vertical">
+                                <Grid>
+                                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="400"/>
+                                </Grid>
+                                <Grid Margin="0,10,0,0">
+                                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="400"/>
+                                </Grid>
+                                <Grid Margin="0,10,0,0">
+                                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="400"/>
+                                </Grid>
+                                <Grid  Margin="0,10,0,0">
+                                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="400"/>
+                                </Grid>
+                                <Grid Margin="0,10,0,0">
+                                    <Rectangle Fill="Black" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="400"/>
+                                </Grid>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <StackPanel>
+                            <Grid Margin="10" Grid.Column="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                                    <Image Source="/Resources/images/key.png" Height="20" Margin="0,0,5,0" />
+                                    <Button Content="Forgot Password" Background="#FFCC00" FontWeight="Bold" BorderThickness="0" FontFamily="Inter" FontSize="16"/>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                        
+                    </StackPanel>
+                </Grid>
+
+            </Grid>
+        </Grid>
+        
+
+        <!--Buttons-->
+        <Grid Height="122">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="1">
                 <Grid Margin="5">
                     <Button Content="Edit Profile" FontWeight="Medium" Width="210"  Background="#3A89FF" Foreground="White" FontFamily="Roboto" Height="34" FontSize="16" BorderThickness="0">
                         <Button.Resources>
