@@ -1,0 +1,794 @@
+﻿<Window x:Class="WpfApp1.Homepage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        Title="Homepage"  >
+    <ScrollViewer>
+
+        <StackPanel Margin="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image HorizontalAlignment="Left" 
+                   VerticalAlignment="Center" 
+                   Width="60"
+               Source="/Resources/images/NZ Gov Logo.png" />
+
+                <Image Height="60" 
+                   Grid.Column="1"
+                   HorizontalAlignment="Right"
+                    VerticalAlignment="Center" 
+                   Source="/Resources/images/NZ Gov.png"/>
+
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image 
+                Source="/Resources/images/My Covid Record Logo.png"  
+                Height="120"
+                HorizontalAlignment="Right"
+                />
+
+                <Label Content="My Covid Record" 
+               Grid.Column="1" Grid.Row="1" 
+               VerticalAlignment="Center" 
+                FontFamily="Inter" 
+                Margin="30,0"
+                FontWeight="Bold" FontSize="70"/>
+
+            </Grid>
+
+            <Label Content="Welcome back" 
+               HorizontalAlignment="Center" 
+               FontFamily="Inter" FontSize="20"/>
+
+            <StackPanel Margin="60,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox HorizontalAlignment="Left" Height="30"   VerticalAlignment="Center" 
+                             x:Name="SearchTermTextBox" Width="253" TextChanged="TextBox_TextChanged" FontFamily="Inter"
+                             Padding="8,0,0,0"
+                             VerticalContentAlignment="Center"
+                             />
+
+                    <TextBlock IsHitTestVisible="False" Text="Enter Search Term Here" 
+                               VerticalAlignment="Center" HorizontalAlignment="Left" 
+                               FontFamily="Inter"
+                               Margin="10,0,0,0" Foreground="DarkGray">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=SearchTermTextBox}" Value="">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+
+                    <StackPanel Grid.ColumnSpan="2" Height="74" VerticalAlignment="Top" >
+                        <Button Name="btnShowPopup" Content="Account" FontWeight="Medium"  HorizontalAlignment="Right" VerticalAlignment="Top" Width="105" Height="74" 
+                Click="btnShowPopup_Click" FontSize="25" BorderThickness="0"  Background="White" FontFamily="Roboto" Grid.Column="1" Margin="0,0,0,0">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="8"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+
+
+
+                        <Popup AllowsTransparency="True" HorizontalOffset="1cm" x:Name="myPopup" 
+                   Placement="Relative" StaysOpen="True" PlacementTarget="{Binding ElementName=btnShowPopup}"
+                       Margin="0"
+>
+                            <Border Width="304" Height="301">
+                                <DockPanel Background="#3A89FF" LastChildFill="True" Margin="0,0,0,-39.2"  Grid.ColumnSpan="3" Grid.RowSpan="1" RenderTransformOrigin="0.522,0.549" Height="340" VerticalAlignment="Top">
+                                    <DockPanel.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform AngleX="0.268"/>
+                                            <RotateTransform/>
+                                            <TranslateTransform X="0.873"/>
+                                        </TransformGroup>
+                                    </DockPanel.RenderTransform>
+                                    <Grid>
+                                        <Grid>
+                                            <TextBlock Background="#3A89FF" Foreground="White" DockPanel.Dock="Top" 
+                                   FontSize="16"  HorizontalAlignment="Center"  
+                                   Margin="30,40,215,270" Text="Account" />
+                                        </Grid>
+
+
+
+                                        <Grid Margin="0,0,0,0" Width="116">
+                                            <Button Content="Personal Details"  HorizontalAlignment="Center"  Background="White" Margin="-57,100,-50,220" Width="223" FontFamily="Inter"/>
+                                            <Button Content="Generate QR Code"  HorizontalAlignment="Center"   Background="White" Margin="-57,125,-50,195" Width="223"/>
+                                            <Button Content="Notifcations"  HorizontalAlignment="Center"   Background="White" Margin="-57,150,-50,170" Width="223"/>
+                                            <Button Content="Generate Vaccine Certificate"   HorizontalAlignment="Center"  Background="White" Margin="-57,175,-50,145" Width="223"/>
+                                            <Button Content="Report an Issue"   HorizontalAlignment="Center"  Background="White" Margin="-57,200,-50,121" Width="223"/>
+                                            <Button Content="Settings"   HorizontalAlignment="Center"  Background="White" Margin="-57,224,-50,97" Width="223"/>
+                                        </Grid>
+
+
+
+                                        <Grid>
+                                            <Button Click="btnClosePopup_Click" Content="Close" Margin="17,255,248,44" 
+                                HorizontalAlignment="Center"  BorderThickness="0" Background="#3A89FF" Foreground="White" MaxHeight="23" RenderTransformOrigin="0.087,0.689" Width="39"/>
+
+
+
+                                            <Button Click="btnClosePopup_Click" Content="Logout" Margin="242,255,17,44" 
+                                 HorizontalAlignment="Center" BorderThickness="0" Background="#3A89FF" Foreground="White" MaxHeight="23" RenderTransformOrigin="0.574,0.693" Width="45" FontFamily="Inter"/>
+
+
+
+                                        </Grid>
+                                    </Grid>
+                                </DockPanel>
+                            </Border>
+                        </Popup>
+                    </StackPanel>
+                </Grid>
+
+            </StackPanel>
+
+            <StackPanel Margin="60,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="/Resources/images/COVID19_SouthAfrica_Hospital_2021_ChrisAllen_MSB56360_3800px.png" 
+                       HorizontalAlignment="Center" Margin="0,30,0,0" />
+
+                </Grid>
+
+            </StackPanel>
+
+            <StackPanel Margin="60,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Your COVID Details:" HorizontalAlignment="Left" 
+                       Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" 
+                       FontFamily="Inter" Height="42" Width="290" 
+                       FontSize="30" FontWeight="Bold" Margin="0,50,0,0"/>
+
+                </Grid>
+
+            </StackPanel>
+
+            <Grid Margin="0,30" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button
+                        Height="87" Width="292" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Right"
+                        Click="Button_Click" FontFamily="Inter" 
+                        Background="White" FontSize="10">
+                    <Button.Content>
+                        <StackPanel>
+                            <Image Source="/Resources/images/Overview Icon.png" Stretch="UniformToFill" Height="50" Width="40" />
+                            <Label Content="Overview"/>
+                        </StackPanel>
+                    </Button.Content>
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <Button Grid.Column="1"
+                        Height="87" Width="292" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Center"
+                        Margin="20,0"
+                        Click="Button_Click" FontFamily="Inter" 
+                        Background="White" FontSize="10">
+                    <Button.Content>
+                        <StackPanel>
+                            <Image Source="/Resources/images/Appointments Icon.png" Stretch="UniformToFill" Height="50" Width="40" />
+                            <Label Content="Appointments"/>
+                        </StackPanel>
+                    </Button.Content>
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <Button Grid.Column="2"
+                        Height="87" Width="292" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Left"
+                        Click="Button_Click" FontFamily="Inter" 
+                        Background="White" FontSize="10">
+                    <Button.Content>
+                        <StackPanel>
+                            <Image Source="/Resources/images/Vaccine Details Icon.png" Stretch="UniformToFill" Height="50" Width="50" />
+                            <Label Content="Vaccine Details"/>
+                        </StackPanel>
+                    </Button.Content>
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+
+            </Grid>
+
+            <Grid>
+
+                <Label Content="Why Covid Vaccine?" 
+                       HorizontalAlignment="Left" Grid.Column="1" 
+                       Grid.Row="1" Margin="90,0,0,0" 
+                       VerticalAlignment="Top" Width="180" 
+                       FontFamily="Inter" FontSize="18" FontWeight="Bold"/>
+
+            </Grid>
+
+            <Grid>
+
+                <StackPanel Orientation="Horizontal" Margin="105,0,0,0">
+                    <Image Source="/Resources/images/Shield_Pic-removebg-preview.png" Height="40"/>
+
+
+                </StackPanel>
+
+                <Label Content="Protect Yourself" HorizontalAlignment="Left" 
+                       Grid.Column="1" Grid.Row="1" Margin="150,0,0,0" 
+                       VerticalAlignment="Top" Width="151" FontFamily="Inter" 
+                       FontSize="15"/>
+
+                <Label Content="Be immune to the disease" 
+                       HorizontalAlignment="Left" Grid.Column="1" 
+                       Grid.Row="1" Margin="150,20,0,0" 
+                       VerticalAlignment="Top" Width="151" 
+                       FontFamily="Inter" Foreground="#FF858585"/>
+
+            </Grid>
+
+            <Grid>
+
+                <StackPanel Orientation="Horizontal" Margin="105,0,0,0">
+                    <Image Source="/Resources/images/Hands_Together_Emoji-removebg-preview.png" Height="30" />
+
+
+                </StackPanel>
+
+                <Label Content="Protect the Community" HorizontalAlignment="Left" 
+                       Grid.Column="1" Grid.Row="1" Margin="150,0,0,0" 
+                       VerticalAlignment="Top" Width="165" FontFamily="Inter" 
+                       FontSize="15"/>
+
+                <Label Content="Stop the spread of Covid" 
+                       HorizontalAlignment="Left" Grid.Column="1" 
+                       Grid.Row="1" Margin="150,20,0,0" 
+                       VerticalAlignment="Top" Width="151" 
+                       FontFamily="Inter" Foreground="#FF858585"/>
+
+            </Grid>
+
+            <Grid>
+
+                <StackPanel Orientation="Horizontal" Margin="105,0,0,0">
+                    <Image Source="/Resources/images/Sick_Emoji-removebg-preview.png" Height="30"/>
+
+
+                </StackPanel>
+
+                <Label Content="Reduce Symptoms" HorizontalAlignment="Left" 
+                       Grid.Column="1" Grid.Row="1" Margin="150,0,0,0" 
+                       VerticalAlignment="Top" Width="165" FontFamily="Inter" 
+                       FontSize="15"/>
+
+                <Label Content="Experience milder symptoms" 
+                       HorizontalAlignment="Left" Grid.Column="1" 
+                       Grid.Row="1" Margin="150,20,0,0" 
+                       VerticalAlignment="Top" Width="151" 
+                       FontFamily="Inter" Foreground="#FF858585"/>
+
+            </Grid>
+
+            <Grid>
+
+                <Label Content="Vaccination Certificate" 
+                       HorizontalAlignment="Center" Grid.Column="1" 
+                       Grid.Row="1" VerticalAlignment="Top" Width="187" 
+                       FontFamily="Inter" FontSize="16" Margin="500,0,0,0"
+                       FontWeight="Bold"/>
+
+                <Label Content="Unique QR Code" HorizontalAlignment="Center" 
+                       Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" 
+                       Width="187" FontFamily="Inter" FontSize="16" 
+                       FontWeight="Bold" Margin="0,0,500,0"/>
+
+            </Grid>
+
+            <Grid>
+
+                <Button Content="Generate QR Code" Grid.Column="1" 
+                        HorizontalAlignment="Center" Height="41" 
+                        Grid.Row="1" VerticalAlignment="Top" 
+                        Width="292" Click="Button_Click" FontFamily="Inter" 
+                        Background="Black" FontSize="17" 
+                        Foreground="White" FontWeight="Bold"
+                        Margin="0,0,500,50"/>
+
+                <Button Content="Generate Vaccine Certificate" Grid.Column="1" 
+                        HorizontalAlignment="Center" Height="41" Grid.Row="1" 
+                        VerticalAlignment="Top" Width="292" Click="Button_Click" 
+                        FontFamily="Inter" Background="Black" FontSize="17" 
+                        Foreground="White" FontWeight="Bold"
+                        Margin="500,0,0,50"/>
+
+            </Grid>
+
+            <Grid Margin="0,0,60,100">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Source="/Resources/images/Discussions.png" Height="300"
+                       HorizontalAlignment="Left" Margin="100,0" Grid.Column="0"/>
+
+                <Border Background="#3A89FF" BorderBrush="#3A89FF" 
+                        BorderThickness="1,1,1,1" CornerRadius="30,30,30,30" 
+                        Padding="20,10,20,20" Grid.Column="1" Margin="0,0,0,0">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+
+                        <Button Grid.Column="0"
+                        Content="Top Comments" 
+                        Height="20" Width="90" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Left"
+                        FontWeight="Bold"
+                        Click="Button_Click" FontFamily="Inter" 
+                        Background="White" FontSize="10">
+
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="10"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+
+                        <Button Grid.Column="0"
+                        Content="Newest Comments" 
+                        Height="20" Width="100" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Left"
+                        FontWeight="Bold" Margin="100,0,0,0"
+                        Click="Button_Click" FontFamily="Inter" 
+                        Background="White" FontSize="10">
+
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="10"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                        <Label Content="Show comments" FontSize="20" FontWeight="Bold" Grid.Column="3"/>
+                        <Border BorderThickness="2" Width="50" 
+                                Height="22" Grid.Column="4" Margin="10,0,0,0"
+                                CornerRadius="11" BorderBrush="Black" 
+                                Background="{Binding BackgroundValue, UpdateSourceTrigger=PropertyChanged}">
+                            <Button Height="18" Width="18" 
+                                    HorizontalAlignment="{Binding HorizontalAlignmentValue, UpdateSourceTrigger=PropertyChanged}"
+                                    Click="SliderButton_Click" >
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="23"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+
+                        </Border>
+
+                        <ListView HorizontalAlignment="Stretch" Grid.Row="1" 
+                                  Grid.Column="0" Grid.ColumnSpan="5" 
+                                  Background="#3A89FF" BorderBrush="#3A89FF">
+                            <ListView.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"/>
+                                </ItemsPanelTemplate>
+                            </ListView.ItemsPanel>
+
+                            <ListViewItem >
+                                <StackPanel>
+                                    <Rectangle Width="330" Height="200">
+                                        <Rectangle.Fill>
+                                            <ImageBrush ImageSource="/Resources/images/Comment Image.png" />
+                                        </Rectangle.Fill>
+                                    </Rectangle>
+                                </StackPanel>
+                            </ListViewItem>
+
+                            <ListViewItem >
+                                <StackPanel>
+                                    <Rectangle Width="330" Height="200">
+                                        <Rectangle.Fill>
+                                            <ImageBrush ImageSource="/Resources/images/Comment Image.png" />
+                                        </Rectangle.Fill>
+                                    </Rectangle>
+                                </StackPanel>
+                            </ListViewItem>
+
+                            <ListViewItem >
+                                <StackPanel>
+                                    <Rectangle Width="330" Height="200">
+                                        <Rectangle.Fill>
+                                            <ImageBrush ImageSource="/Resources/images/Comment Image.png" />
+                                        </Rectangle.Fill>
+                                    </Rectangle>
+                                </StackPanel>
+                            </ListViewItem>
+
+                            <ListViewItem >
+                                <StackPanel>
+                                    <Rectangle Width="330" Height="200">
+                                        <Rectangle.Fill>
+                                            <ImageBrush ImageSource="/Resources/images/Comment Image.png" />
+                                        </Rectangle.Fill>
+                                    </Rectangle>
+                                </StackPanel>
+                            </ListViewItem>
+
+                            <ListViewItem >
+                                <StackPanel>
+                                    <Rectangle Width="330" Height="200">
+                                        <Rectangle.Fill>
+                                            <ImageBrush ImageSource="/Resources/images/Comment Image.png" />
+                                        </Rectangle.Fill>
+                                    </Rectangle>
+                                </StackPanel>
+                            </ListViewItem>
+                        </ListView>
+
+                    </Grid>
+
+                </Border>
+
+            </Grid>
+
+            <Grid Margin="100,0">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Border Background="#3A89FF" BorderBrush="#3A89FF" BorderThickness="1,1,1,1" CornerRadius="30,30,30,30" Padding="20,10,20,20">
+                    <StackPanel>
+
+                        <Label Content="1/ What is My Covid Record?" FontSize="20" FontWeight="Bold" Foreground="White"/>
+
+                        <TextBlock 
+                                   FontSize="14" TextWrapping="Wrap" Foreground="White">
+                            <TextBlock.Inlines>
+                                <Run FontWeight="Bold" Text="My" /> Covid Record is a secure and user-friendly
+                                <Run FontWeight="Bold" Text="NZ COVID" /> Vaccine Information System that allows you to effortlessly manage your test and vaccine records.
+                            </TextBlock.Inlines>
+                        </TextBlock>
+
+                        <Label Content="2/ Is My Covid Record safe?" FontSize="20" FontWeight="Bold" Foreground="White"/>
+
+                        <TextBlock 
+                                   FontSize="14" TextWrapping="Wrap" Foreground="White">
+                            <TextBlock.Inlines>
+                                Absolutely! We prioritize your safety by ensuring a clean and secure browsing experience. 
+                                We only have one non-intrusive ad to cover server costs, and we continuously monitor and scan ads 24/7 to remove any suspicious content.
+                            </TextBlock.Inlines>
+                        </TextBlock>
+
+                        <Label Content="3/ What makes My Covid Record the ultimate vaccine information system?" FontSize="20" FontWeight="Bold" Foreground="White"/>
+
+                        <TextBlock 
+                                   FontSize="14" TextWrapping="Wrap" Foreground="White">
+                            <TextBlock.Inlines>
+                                Before developing My Covid Record, we extensively researched existing systems and learned from 
+                                their strengths and weaknesses. We carefully selected the best features and removed any shortcomings, 
+                                resulting in a superior platform for managing your health records. Here's why we confidently 
+                                claim to be the best vaccine information system:
+                                <LineBreak />
+                                <LineBreak />
+                                <Run FontWeight="Bold" Text="Safety" /> : Our top priority is to provide a safe browsing experience, 
+                                free from harmful content. Comprehensive Content: My Covid Record focuses exclusively on health records, 
+                                offering a wide range of COVID-19 test and vaccine information. You'll find comprehensive records across 
+                                various categories, ensuring all your health-related data is in one place.
+                                <LineBreak />
+                                <LineBreak />
+                                <Run FontWeight="Bold" Text="Quality and Accuracy" /> : We ensure that all records are of the highest quality and 
+                                accuracy. My Covid Record allows you to view and download your certificates in the best resolution 
+                                available, ensuring clarity and readability.
+                                <LineBreak/>
+                                <LineBreak/>
+                                <Run FontWeight="Bold" Text="Effortless User Experience" /> : Compared to other systems, My Covid 
+                                Record offers faster loading speeds and a seamless streaming experience. You can easily access 
+                                and download your records for offline use, making it convenient for reference or travel requirements.
+                                <LineBreak/>
+                                <LineBreak/>
+                                <Run FontWeight="Bold" Text="Regular Updates" /> : We regularly update our database with the latest 
+                                test results and vaccine information, ensuring you always have the most up-to-date records at your fingertips.
+                                <LineBreak/>
+                                <LineBreak/>
+                                <Run FontWeight="Bold" Text="User-Friendly Interface" /> : Our intuitive UI and UX design make navigating 
+                                My Covid Record a breeze for users of all backgrounds. Whether you're searching for specific records 
+                                or exploring categories, our site is designed to be user-friendly and accessible.
+                                <LineBreak/>
+                                <LineBreak/>
+                                <Run FontWeight="Bold" Text="Compatibility" /> : My Covid Record is optimized for both desktop 
+                                and mobile devices, allowing you to access your health records anytime, anywhere.
+                                <LineBreak/>
+                                <LineBreak/>
+                                <Run FontWeight="Bold" Text="Dedicated Customer Support" /> : Our customer support team is 
+                                available 24/7 to assist you with any inquiries, concerns, or technical issues. 
+                                We pride ourselves on providing exceptional support to ensure a smooth and satisfactory 
+                                user experience. If you're seeking a reliable and secure vaccine information system, 
+                                we invite you to experience VaxTrackNZ. Help us spread the word and bookmark our site 
+                                to stay connected with the latest health updates.
+                            </TextBlock.Inlines>
+                        </TextBlock>
+
+                        <Label Content="4/ Can't access My Covid Record? Here's what to do:" FontSize="20" FontWeight="Bold" Foreground="White"/>
+
+                        <TextBlock 
+                                   FontSize="14" TextWrapping="Wrap" Foreground="White">
+                            <TextBlock.Inlines>
+                                If your ISP has blocked the My Covid Record.to domain, you can still access My Covid 
+                                Record through our Proxy sites network. Simply visit https://VaxTrackNZ.net for uninterrupted 
+                                access. We continuously update the list of domains, so be sure to bookmark My Covid Record.net 
+                                to stay informed.
+                                <LineBreak/>
+                                <LineBreak/>
+                                Thank you for choosing My Covid Record, and please help us spread the word by bookmarking our site and sharing it with others.
+                            </TextBlock.Inlines>
+                        </TextBlock>
+
+                    </StackPanel>
+                </Border>
+
+                <StackPanel Orientation="Horizontal" Margin="0,50,0,0" Grid.Row="1">
+                    <Image Source="/Resources/images/Custom_COVID-19_Logo-removebg-preview.png" 
+                       Height="120" HorizontalAlignment="Left" />
+
+                    <TextBlock FontSize="9" FontWeight="Bold" VerticalAlignment="Center" Margin="5,0">
+                        Join
+                        <LineBreak/>
+                        Now
+                    </TextBlock>
+
+                    <Image Source="/Resources/images/FaceBook_Icon-removebg-preview.png" 
+                           Height="30" VerticalAlignment="Center" Margin="5,0"/>
+
+                    <Image Source="/Resources/images/Twitter_Icon-removebg-preview.png" 
+                           Height="30" VerticalAlignment="Center" Margin="5,0"/>
+
+                    <Image Source="/Resources/images/Redit_Icon-removebg-preview.png"  
+                           Height="30" VerticalAlignment="Center" Margin="5,0"/>
+
+                    <Image Source="/Resources/images/Paperplane_Icon-removebg-preview.png"   
+                           Height="30" VerticalAlignment="Center" Margin="5,0"/>
+
+                </StackPanel>
+
+
+                <StackPanel Grid.Column="1" Grid.Row="0" >
+                    <Image Source="/Resources/images/Doctors.png" Height="200"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                       />
+
+                    <Label Content="Trending Posts" HorizontalAlignment="Left" 
+                       Grid.Column="2" Grid.Row="1" Margin="50,20,0,10" 
+                       VerticalAlignment="Center" FontFamily="Inter"  
+                       FontSize="26" FontWeight="Bold"/>
+
+
+                    <Border Background="#E4E4E4" BorderBrush="#E4E4E4" BorderThickness="1,1,1,1" 
+                        CornerRadius="30,30,30,30" Padding="20,10,20,20" Grid.Column="2" Grid.Row="2"
+                        Margin="100,0,100,20">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Resources/images/Ministry of Health Icon.png" Height="40"/>
+
+                                <Grid Margin="10,0,0,0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="2*"/>
+                                        <RowDefinition Height="3*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Content="Ministry of Health" FontSize="22" FontWeight="Bold" Padding="0"  />
+                                    <TextBlock Grid.Row="1" 
+                                       FontSize="7" TextWrapping="Wrap">
+                                        <TextBlock.Inlines>
+                                            Click here: https://covid19.govt.nz/news-and-data/latest-news/covid-19-media-conference-23-february-2023/
+                                        </TextBlock.Inlines>
+                                    </TextBlock>
+                                </Grid>
+                            </StackPanel>
+
+                            <Label Content="COVID-19 media conference — 23 February 2023" FontSize="20" FontWeight="Bold"/>
+
+                            <TextBlock 
+                                   FontSize="12" TextWrapping="Wrap">
+                                <TextBlock.Inlines>
+                                    23 Feb 2023
+                                </TextBlock.Inlines>
+                            </TextBlock>
+
+                            <TextBlock 
+                                   FontSize="10" TextWrapping="Wrap">
+                                <TextBlock.Inlines>
+                                    The Government is reiterating advice to international travellers to test if they have COVID-19 symptoms when they arrive and to take free RATs at the airport.
+                                </TextBlock.Inlines>
+                            </TextBlock>
+
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="#E4E4E4" BorderBrush="#E4E4E4" BorderThickness="1,1,1,1" 
+                        CornerRadius="30,30,30,30" Padding="20,10,20,20" Grid.Column="2" Grid.Row="3"
+                        Margin="100,0,100,20">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Resources/images/Ministry of Health Icon.png" Height="40"/>
+
+                                <Grid Margin="10,0,0,0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="2*"/>
+                                        <RowDefinition Height="3*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Content="Ministry of Health" FontSize="22" FontWeight="Bold" Padding="0"  />
+                                    <TextBlock Grid.Row="1" 
+                                       FontSize="7" TextWrapping="Wrap">
+                                        <TextBlock.Inlines>
+                                            Click here: https://covid19.govt.nz/news-and-data/latest-news/government-reminds-international-arrivals-to-test-for-covid-19/
+                                        </TextBlock.Inlines>
+                                    </TextBlock>
+                                </Grid>
+                            </StackPanel>
+
+                            <Label Content="New booster plan in time for winter" FontSize="20" FontWeight="Bold"/>
+
+                            <TextBlock 
+                                   FontSize="12" TextWrapping="Wrap">
+                                <TextBlock.Inlines>
+                                    23 Feb 2023
+                                </TextBlock.Inlines>
+                            </TextBlock>
+
+                            <TextBlock 
+                                   FontSize="10" TextWrapping="Wrap">
+                                <TextBlock.Inlines>
+                                    Watch the COVID-19 bivalent vaccine rollout announcement. Speakers:
+
+                                    <LineBreak/>
+                                    <BulletDecorator Margin="10,0,0,0">
+                                        <BulletDecorator.Bullet>
+                                            <Ellipse Height="5" Width="5" Fill="Black"/>
+                                        </BulletDecorator.Bullet>
+
+                                    </BulletDecorator> Minister of Health Ayesha Verrall.
+                                </TextBlock.Inlines>
+                            </TextBlock>
+
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="#E4E4E4" BorderBrush="#E4E4E4" BorderThickness="1,1,1,1" 
+                        CornerRadius="30,30,30,30" Padding="20,10,20,20" Grid.Column="2" Grid.Row="4"
+                        Margin="100,0,100,20">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Resources/images/Ministry of Health Icon.png" Height="40"/>
+
+                                <Grid Margin="10,0,0,0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="2*"/>
+                                        <RowDefinition Height="3*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Content="Ministry of Health" FontSize="22" FontWeight="Bold" Padding="0"  />
+                                    <TextBlock Grid.Row="1" 
+                                       FontSize="7" TextWrapping="Wrap">
+                                        <TextBlock.Inlines>
+                                            Click here: https://covid19.govt.nz/news-and-data/latest-news/government-reminds-international-arrivals-to-test-for-covid-19/
+                                        </TextBlock.Inlines>
+                                    </TextBlock>
+                                </Grid>
+                            </StackPanel>
+
+                            <Label Content="Government reminds international arrivals to test for COVID-19" FontSize="20" FontWeight="Bold"/>
+
+                            <TextBlock 
+                                   FontSize="12" TextWrapping="Wrap">
+                                <TextBlock.Inlines>
+                                    23 Feb 2023
+                                </TextBlock.Inlines>
+                            </TextBlock>
+
+                            <TextBlock 
+                                   FontSize="10" TextWrapping="Wrap">
+                                <TextBlock.Inlines>
+                                    The Government is reiterating advice to international travellers to test if they have COVID-19 symptoms when they arrive and to take free RATs at the airport.
+                                </TextBlock.Inlines>
+                            </TextBlock>
+
+                        </StackPanel>
+                    </Border>
+
+                    <Button Height="50" Width="500" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Center"
+                        Margin="40,0"
+                        Click="Button_Click" FontFamily="Inter" 
+                        Background="#3A89FF" FontSize="25" BorderBrush="#3A89FF">
+                        <Button.Content>
+                            <StackPanel>
+                                <Label Content="Read more" Foreground="White"/>
+                            </StackPanel>
+                        </Button.Content>
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="25"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+
+                </StackPanel>
+
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</Window>
