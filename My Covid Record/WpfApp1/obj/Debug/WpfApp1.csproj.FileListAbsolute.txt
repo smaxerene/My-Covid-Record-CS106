@@ -378,8 +378,6 @@ C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid 
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.pdb
-C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Memory.dll
-C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Text.Encodings.Web.dll
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\MainWindow.g.cs
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\AdminLogin.g.cs
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\AdminRecording.g.cs
@@ -430,8 +428,10 @@ C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid 
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Collections.Immutable.dll
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.ComponentModel.Annotations.dll
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Memory.dll
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Text.Encodings.Web.dll
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Text.Json.dll
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.ValueTuple.dll
@@ -467,3 +467,6 @@ C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid 
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\ReportIssue.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\ReportIssue.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
