@@ -56,6 +56,31 @@ namespace WpfApp1.Views
             App.Current.MainWindow.Content = new QRPage();
         }
 
+        private void Certificate_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Content = new Certificate();
+        }
+
+        private void Notif_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Report_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Content = new Login();
+        }
+
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             using (var db = new DataContext())
