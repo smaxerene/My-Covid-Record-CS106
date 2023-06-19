@@ -13,16 +13,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp1.Views.Users
+namespace WpfApp1.Views.Admin
 {
     /// <summary>
-    /// Interaction logic for SignUp.xaml
+    /// Interaction logic for AdminLogin.xaml
     /// </summary>
-    public partial class SignUp : Page
+    public partial class AdminLogin : Page
     {
-        public SignUp()
+        public AdminLogin()
         {
             InitializeComponent();
+            int abc = 0;
         }
     }
 }

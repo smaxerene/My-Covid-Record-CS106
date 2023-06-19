@@ -12,7 +12,7 @@ namespace WpfApp1
     public class DataContext : DbContext
     {
         public DbSet<User> Users { get; set; }
-        // public DbSet<UserDetails> UserDetails { get; set; }
+        public DbSet<UserDetails> UserDetails { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
            => optionsBuilder.UseNpgsql("Host=rosie.db.elephantsql.com;Database=zbjbtgnq;Username=zbjbtgnq;Password=PKNbH0np9lpE1enC8hxK4ye3X7xMeuf-");
 
@@ -33,7 +33,6 @@ namespace WpfApp1
     {
         public int Id { get; set; }
         public int UserId { get; set; }
-        public string Passport { get; set; }
         public string DoseNo { get; set; }
         public string Date { get; set; }
         public string Vaccine { get; set; }
@@ -42,3 +41,4 @@ namespace WpfApp1
     }
 
 }
+
