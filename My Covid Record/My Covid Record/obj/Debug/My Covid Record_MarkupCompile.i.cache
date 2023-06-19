@@ -4,16 +4,28 @@
 winexe
 C#
 .cs
+<<<<<<< Updated upstream
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\
+=======
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\obj\Debug\
+>>>>>>> Stashed changes
 My_Covid_Record
 none
 false
 DEBUG;TRACE
+<<<<<<< Updated upstream
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\App.xaml
 101304672722
 
 1636075236
 49898096833
+=======
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\My Covid Record\App.xaml
+101304672722
+
+1636075236
+491006994150
+>>>>>>> Stashed changes
 AdminLogin.xaml;AdminRecords.xaml;Certificate.xaml;ResourceDictionary.xaml;Homepage.xaml;Login.xaml;MainWindow.xaml;QRPage.xaml;SignUp.xaml;VaccineDetailsPage.xaml;
 
 False
