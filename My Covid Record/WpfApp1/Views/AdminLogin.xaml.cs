@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp1.Views.Admin
+namespace WpfApp1.Views
 {
     /// <summary>
     /// Interaction logic for AdminLogin.xaml
@@ -23,7 +23,11 @@ namespace WpfApp1.Views.Admin
         public AdminLogin()
         {
             InitializeComponent();
-            int abc = 0;
+        }
+
+        private void AdminLogin_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Content = new UserProfile();
         }
     }
 }

@@ -144,37 +144,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AdminLogin.xaml.cs">
+    <Compile Include="DataContext.cs" />
+    <Compile Include="Views\AdminLogin.xaml.cs">
       <DependentUpon>AdminLogin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AdminRecording.xaml.cs">
-      <DependentUpon>AdminRecording.xaml</DependentUpon>
+    <Compile Include="Views\Certificate.xaml.cs">
+      <DependentUpon>Certificate.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DataContext.cs" />
-    <Compile Include="Login.xaml.cs">
+    <Compile Include="Views\Homepage.xaml.cs">
+      <DependentUpon>Homepage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="QRPage.xaml.cs">
+    <Compile Include="Views\QRPage.xaml.cs">
       <DependentUpon>QRPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SignUp.xaml.cs">
+    <Compile Include="Views\SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VaccineDetailsPage.xaml.cs">
+    <Compile Include="Views\UserProfile.xaml.cs">
+      <DependentUpon>UserProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VaccineDetailsPage.xaml.cs">
       <DependentUpon>VaccineDetailsPage.xaml</DependentUpon>
     </Compile>
-    <Page Include="AdminLogin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="AdminRecording.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Login.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -187,17 +181,37 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="QRPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>XamlIntelliSenseFileGenerator</Generator>
-    </Page>
-    <Page Include="SignUp.xaml">
+    <Page Include="Views\AdminLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="VaccineDetailsPage.xaml">
+    <Page Include="Views\Certificate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Homepage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\QRPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SignUp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserProfile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\VaccineDetailsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -335,6 +349,35 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\images\searchbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\Appointments Icon.png" />
+    <Resource Include="Resources\images\Comment Image.png" />
+    <Resource Include="Resources\images\COVID19_SouthAfrica_Hospital_2021_ChrisAllen_MSB56360_3800px.png" />
+    <Resource Include="Resources\images\Discussions.png" />
+    <Resource Include="Resources\images\Doctors.png" />
+    <Resource Include="Resources\images\FaceBook_Icon-removebg-preview.png" />
+    <Resource Include="Resources\images\Hands_Together_Emoji-removebg-preview.png" />
+    <Resource Include="Resources\images\Ministry of Health Icon.png" />
+    <Resource Include="Resources\images\Overview Icon.png" />
+    <Resource Include="Resources\images\Paperplane_Icon-removebg-preview.png" />
+    <Resource Include="Resources\images\Redit_Icon-removebg-preview.png" />
+    <Resource Include="Resources\images\Shield_Pic-removebg-preview.png" />
+    <Resource Include="Resources\images\Sick_Emoji-removebg-preview.png" />
+    <Resource Include="Resources\images\Twitter_Icon-removebg-preview.png" />
+    <Resource Include="Resources\images\Vaccine Details Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\NZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\NZGovName.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\searchbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\QR_Placeholder_Code-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

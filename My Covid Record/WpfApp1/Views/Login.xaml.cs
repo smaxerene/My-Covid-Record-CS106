@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -14,8 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
-namespace WpfApp1.Views.Users
+using WpfApp1.Views;
+namespace WpfApp1.Views
 {
     /// <summary>
     /// Interaction logic for Login.xaml
@@ -72,7 +70,7 @@ namespace WpfApp1.Views.Users
         //Sign Up Here Button
         private void AdminLogin_Click(object sender, RoutedEventArgs e)
         {
-            //App.Current.MainWindow.Content = new ();
+            App.Current.MainWindow.Content = new AdminLogin();
         }
     }
 }
