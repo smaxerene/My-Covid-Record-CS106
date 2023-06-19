@@ -48,6 +48,43 @@ namespace WpfApp1.Views
                 myPopup.IsOpen = true;
             }
         }
+
+        private void PersonalDeets_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Content = new UserProfile();
+        }
+
+        private void GenerateQR_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Content = new QRPage();
+        }
+
+        private void Certificate_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Content = new Certificate();
+        }
+
+        private void Notif_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Report_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Content = new Login();
+        }
+
+
         // Flag indicating whether to show comments
         private bool ShowComments
         {
