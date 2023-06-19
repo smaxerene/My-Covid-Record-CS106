@@ -9,9 +9,9 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace AdminRecording
+namespace WpfApp1
 {
-    public partial class MainWindow : Window, INotifyPropertyChanged
+    public partial class AdminRecording : Window, INotifyPropertyChanged
     {
         private Item selectedItem;
         public Item SelectedItem
@@ -90,7 +90,7 @@ namespace AdminRecording
             }
         }
 
-        public MainWindow()
+        public AdminRecording()
         {
             InitializeComponent();
 
@@ -119,28 +119,28 @@ namespace AdminRecording
             DataContext = this;
         }
 
+
         private void InitializeComponent()
         {
             throw new NotImplementedException();
         }
+
         private void FilterItems()
         {
             if (Items != null)
             {
                 ICollectionView view = CollectionViewSource.GetDefaultView(Items);
                 view.Filter = item => string.IsNullOrWhiteSpace(SearchText) ||
-                                      ((Item)item).Name.Contains(SearchText, StringComparison.OrdinalIgnoreCase);
-                                       ((Item)item).Name.Contains(SearchText, 
-                                                                    StringComparison.OrdinalIgnoreCase);
-
-
+                                      ((Item)item).Name.Contains(SearchText, 
+                                      StringComparison.
+                                      OrdinalIgnoreCase);
             }
         }
 
-        private void dataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
-        {
-            SelectedItem = (Item)dataGrid.SelectedItem;
-        }
+        //private void dataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        //{
+        //    SelectedItem = (Item)dataGrid.SelectedItem;
+        //}
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
