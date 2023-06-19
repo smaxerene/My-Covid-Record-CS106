@@ -145,7 +145,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DataContext.cs" />
-    <Compile Include="ReportIssue.xaml.cs">
+    <Compile Include="Views\UserReports.xaml.cs">
+      <DependentUpon>UserReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReportIssue.xaml.cs">
       <DependentUpon>ReportIssue.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\AdminLogin.xaml.cs">
@@ -187,7 +190,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ReportIssue.xaml">
+    <Page Include="Views\UserReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ReportIssue.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

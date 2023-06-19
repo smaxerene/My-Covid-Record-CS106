@@ -467,6 +467,8 @@ C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid 
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.exe
-C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\ReportIssue.g.cs
-C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\ReportIssue.baml
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\UserReports.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\ReportIssue.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\UserReports.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\ReportIssue.baml
