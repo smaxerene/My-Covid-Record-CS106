@@ -147,6 +147,9 @@
     <Compile Include="AdminLogin.xaml.cs">
       <DependentUpon>AdminLogin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AdminRecording.xaml.cs">
+      <DependentUpon>AdminRecording.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DataContext.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
@@ -161,6 +164,10 @@
       <DependentUpon>VaccineDetailsPage.xaml</DependentUpon>
     </Compile>
     <Page Include="AdminLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminRecording.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
