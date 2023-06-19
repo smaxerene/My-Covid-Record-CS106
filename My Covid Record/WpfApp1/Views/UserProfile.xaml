@@ -1,0 +1,212 @@
+﻿<Page x:Class="WpfApp1.Views.UserProfile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserProfile">
+
+    <Page.Resources>
+        <ControlTemplate x:Key="RoundTextboxCornerTemplate" TargetType="{x:Type TextBoxBase}">
+            <Border Background="{TemplateBinding Background}"   
+         x:Name="Bd" BorderBrush="Black"  
+         BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
+                <ScrollViewer x:Name="PART_ContentHost"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="Width" Value="Auto">
+                    <Setter Property="MinWidth" Value="100"/>
+                </Trigger>
+                <Trigger Property="Height" Value="Auto">
+                    <Setter Property="MinHeight" Value="20"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Page.Resources>
+
+    <StackPanel Margin="20">
+        <!--NZ Government Logo-->
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image HorizontalAlignment="Left" Height="60" 
+               Source="/Resources/images/NZ Gov Logo.png"/>
+
+            <Image Grid.Column="1" HorizontalAlignment="Right" Height="44" Source="/Resources/images/NZ Gov.png"/>
+        </Grid>
+
+        <!--My Covid Record-->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <Image Source="/Resources/images/My Covid Record Logo.png"  Height="100" />
+                <Label Content="My Covid Record" 
+                 FontFamily="Inter" FontWeight="Bold" FontSize="80"/>
+            </StackPanel>
+
+        </Grid>
+
+        <!--Home, Searchbar, & Account-->
+        <Grid Margin="40">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Home, Searchbar-->
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="HomeButton" Opacity="0.995" BorderThickness="0" Background="White"  Click="Home_Click">
+                    <Image Source="/Resources/images/homeButton.png"/>
+                </Button>
+
+                <Grid Margin="5,10" Width="529">
+                    <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" FontSize="25" Height="50" Width="512" />
+                    <Button x:Name="SearchButton"  BorderThickness="0" HorizontalAlignment="Right" Background="White" Margin="10,10,12,9.6" >
+                        <Image Source="/Resources/images/searchbutton.png" Width="38" />
+                    </Button>
+                </Grid>
+            </StackPanel>
+
+            <!--Account-->
+            <StackPanel Grid.ColumnSpan="2" Height="74" VerticalAlignment="Top" >
+                <Button Name="btnShowPopup" Content="Account" FontWeight="Medium"  HorizontalAlignment="Right" VerticalAlignment="Top" Width="105" Height="74" 
+                Click="btnShowPopup_Click" FontSize="25" BorderThickness="0"  Background="White" FontFamily="Roboto" Grid.Column="1" Margin="0,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="8"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <Popup AllowsTransparency="True" HorizontalOffset="1cm" x:Name="myPopup" 
+                   Placement="Relative" StaysOpen="True" PlacementTarget="{Binding ElementName=btnShowPopup}"
+                       Margin="0"
+                       >
+                    <Border Width="304" Height="301">
+                        <DockPanel Background="#3A89FF" LastChildFill="True" Margin="0,0,0,-39.2"  Grid.ColumnSpan="3" Grid.RowSpan="1" RenderTransformOrigin="0.522,0.549" Height="340" VerticalAlignment="Top">
+                            <DockPanel.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform AngleX="0.268"/>
+                                    <RotateTransform/>
+                                    <TranslateTransform X="0.873"/>
+                                </TransformGroup>
+                            </DockPanel.RenderTransform>
+                            <Grid>
+                                <Grid>
+                                    <TextBlock Background="#3A89FF" Foreground="White" DockPanel.Dock="Top" 
+                                   FontSize="16"  HorizontalAlignment="Center"  
+                                   Margin="30,40,215,270" Text="Account" />
+                                </Grid>
+
+                                <Grid Margin="0,0,0,0" Width="116">
+                                    <Button Content="Personal Details"  Click="PersonalDeets_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,100,-50,220" Width="223" FontFamily="Inter"/>
+                                    <Button Content="Generate QR Code" Click="GenerateQR_Click" HorizontalAlignment="Center"   Background="White" Margin="-57,125,-50,195" Width="223"/>
+                                    <Button Content="Notifcations"  HorizontalAlignment="Center"   Background="White" Margin="-57,150,-50,170" Width="223"/>
+                                    <Button Content="Generate Vaccine Certificate"  Click="Certficate_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,175,-50,145" Width="223"/>
+                                    <Button Content="Report an Issue" HorizontalAlignment="Center"  Background="White" Margin="-57,200,-50,121" Width="223"/>
+                                    <Button Content="Settings"   HorizontalAlignment="Center"  Background="White" Margin="-57,224,-50,97" Width="223"/>
+                                </Grid>
+
+                                <Grid>
+                                    <Button Click="btnClosePopup_Click" Content="Close" Margin="17,255,248,44" 
+                                HorizontalAlignment="Center"  BorderThickness="0" Background="#3A89FF" Foreground="White" MaxHeight="23" RenderTransformOrigin="0.087,0.689" Width="39"/>
+
+                                    <Button Click="btnClosePopup_Click" Content="Logout" Margin="242,255,17,44" 
+                                 HorizontalAlignment="Center" BorderThickness="0" Background="#3A89FF" Foreground="White" MaxHeight="23" RenderTransformOrigin="0.574,0.693" Width="45" FontFamily="Inter"/>
+
+                                </Grid>
+                            </Grid>
+                        </DockPanel>
+                    </Border>
+                </Popup>
+            </StackPanel>
+        </Grid>
+
+        <!--My Covid Record-->
+        <Grid>
+            <Label Content="Your Profile" HorizontalAlignment="Left" Height="50" FontFamily="Inter" FontWeight="Bold" FontSize="32"/>
+        </Grid>
+
+        <!--Greeting-->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75*"/>
+                <ColumnDefinition Width="1319*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="/Resources/images/profile.png" Margin="25,12,10.2,10"/>
+            <TextBlock TextWrapping="Wrap" FontWeight="Medium" Text="Hi, " Grid.ColumnSpan="2" Margin="75,19,1273.6,9.8" FontFamily="Roboto" FontSize="30"/>
+            <!--Name from database-->
+        </Grid>
+
+        <!--Profile-->
+        <Grid>
+            <Rectangle Fill="#FFDD54" HorizontalAlignment="Center" Height="393" Stroke="Black" VerticalAlignment="Top" Width="630" Margin="380,-16,383.6,-0.2" StrokeThickness="0"/>
+
+            <TextBlock HorizontalAlignment="Left" FontWeight="Medium" TextWrapping="Wrap" VerticalAlignment="Top" Margin="410,29,0,0" FontFamily="Roboto" Height="30" Width="135" FontSize="25"><Run Text="Full Name"/><LineBreak/><Run/></TextBlock>
+            <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="380" Margin="595,24,0,0"/>
+
+            <TextBlock HorizontalAlignment="Left" FontWeight="Medium" TextWrapping="Wrap" VerticalAlignment="Top" Margin="410,89,0,0" FontFamily="Roboto" Height="30" Width="135" FontSize="25" Text="Username"/>
+            <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="380" Margin="595,84,0,0"/>
+
+            <TextBlock HorizontalAlignment="Left" FontWeight="Medium" TextWrapping="Wrap" VerticalAlignment="Top" Margin="410,149,0,0" FontFamily="Roboto" Height="30" Width="185" FontSize="25" Text="Email Address"/>
+            <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="380" Margin="595,144,0,0"/>
+
+            <TextBlock HorizontalAlignment="Left" FontWeight="Medium" TextWrapping="Wrap" VerticalAlignment="Top" Margin="410,209,0,0" FontFamily="Roboto" Height="30" Width="185" FontSize="25" Text="Phone Number"/>
+            <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="380" Margin="595,204,0,0"/>
+
+            <TextBlock HorizontalAlignment="Left" FontWeight="Medium" TextWrapping="Wrap" VerticalAlignment="Top" Margin="410,274,0,0" FontFamily="Roboto" Height="30" Width="185" FontSize="25" Text="JOINED"/>
+            <Rectangle Fill="Black" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="425" Margin="550,269,0,0"/>
+
+            <Image Source="/Resources/images/key.png" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="25" Margin="615,333,0,0"/>
+            <Button Content="Forgot Password" Background="#FFDD54" FontWeight="Bold" VerticalAlignment="Top" Margin="640,333,618.6,0" BorderThickness="0" FontFamily="Inter" FontSize="16"/>
+
+
+        </Grid>
+
+        <!--Buttons-->
+        <Grid Height="122" Margin="0,0,-0.4,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Margin="6.8,25,23.2,25" Orientation="Horizontal" Grid.Column="1">
+                <Grid Margin="5">
+                    <Button Content="Edit Profile" FontWeight="Medium" Width="210"  Background="#3A89FF" Foreground="White" FontFamily="Roboto" Height="34" FontSize="16" BorderThickness="0">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="8"></Setter>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </Grid>
+                <Grid Margin="5">
+                    <Button Content="Save Profile" FontWeight="Medium" Width="205"  Background="#3A89FF" Foreground="White" FontFamily="Roboto" Height="34" FontSize="16" UseLayoutRounding="True" BorderThickness="0" Margin="0,0,0,-0.4">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="8"></Setter>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </Grid>
+            </StackPanel>
+        </Grid>
+
+    </StackPanel>
+</Page>
