@@ -166,7 +166,7 @@
                         <Grid>
                             <Grid Margin="10,5,0,0">
                                 <!--<Ellipse Fill="White" HorizontalAlignment="Left" Height="100" Stroke="Black" VerticalAlignment="Top" Width="100" Margin="180,19,0,0"/> -->
-                                <Image Source="/Resources/images/My Covid Record Logo.png"  Height="130" Margin="180,0,1003.6,0" />
+                                <Image Source="/Resources/images/My Covid Record Logo.png"  Height="130" Margin="180,0,103.6,0" />
 
                             </Grid>
 
@@ -196,7 +196,7 @@
                                         </Grid>
 
                                         <Grid>
-                                            <TextBlock Text="Passport No." FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="280,74,273.8,35.4"/>
+                                            <TextBlock Text="Date Issued" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="280,74,273.8,35.4"/>
                                             <!--Passport from database-->
                                         </Grid>
 

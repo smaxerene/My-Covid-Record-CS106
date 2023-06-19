@@ -141,9 +141,57 @@
         </Grid>
 
         <!--Certificate-->
-        <Grid Margin="15">
-            <Rectangle Fill="#D9D9D9" Opacity="0.4" HorizontalAlignment="Left" Height="677" Stroke="Black" VerticalAlignment="Top" Width="1091" Margin="140,10,0,-29.8" StrokeThickness="0"/>
-            <Rectangle Fill="White" HorizontalAlignment="Left" Height="640" Stroke="Black" VerticalAlignment="Top" Width="1050" Margin="165,29,0,-11.8" StrokeThickness="0"/>
+        <Border Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="10" Margin="200,0" Padding="20">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Image VerticalAlignment="Top" Source="/Resources/images/NZ.png"  Height="75" HorizontalAlignment="Left"/>
+                <StackPanel Orientation="Horizontal" Grid.Row="1" 
+                            HorizontalAlignment="Center">
+                    <Image Source="/Resources/images/Custom_COVID-19_Logo-removebg-preview.png" 
+                           Height="75" Margin="0,0,20,0"/>
+                    <TextBlock Text="My Covid Record Certificate" FontWeight="ExtraBold" 
+                               VerticalAlignment="Center"
+                               TextWrapping="Wrap" TextAlignment="Center" FontFamily="Inter" FontSize="48"/>
+                </StackPanel>
+                <Border Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="10" Padding="20" Grid.Row="2">
+                    <Grid>
+                        <Grid>
+                            <TextBlock Text="Personal Details" FontFamily="Inter" FontWeight="Bold" FontSize="30"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <!--Place the QR Placeholder image here-->
+                            <Image Source="/Resources/images/QR_Placeholder_Code-removebg-preview.png" Height="80" />
+                            
+                            <Grid>
+                                <TextBlock Grid.Row="1" Grid.Column="2" Text="Name"/>
+                            </Grid>
+                            
+                        </Grid>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+        
+        
+        <!--<Grid Margin="15">
+            <Rectangle Fill="#D9D9D9" Opacity="0.4" HorizontalAlignment="Center" Height="677" Stroke="Black" VerticalAlignment="Top" Width="1091" Margin="140,10,0,-29.8" StrokeThickness="0"/>
+            <Rectangle Fill="White" HorizontalAlignment="Center" Height="640" Stroke="Black" VerticalAlignment="Top" Width="1050" Margin="165,29,0,-11.8" StrokeThickness="0"/>
 
             <StackPanel>
                 <Grid>
@@ -154,7 +202,7 @@
                     <TextBlock Text="My Covid Record Certificate" FontWeight="ExtraBold" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Inter" FontSize="48"/>
                 </Grid>
 
-                <!--Personal Details-->
+                --><!--Personal Details--><!--
                 <Grid Margin="25">
                     <Rectangle Fill="White" HorizontalAlignment="Left" Height="196" Stroke="Black" VerticalAlignment="Center" Width="987" Margin="170,10,0,-11.2" Opacity="0.3"/>
 
@@ -165,7 +213,7 @@
 
                         <Grid>
                             <Grid Margin="10,5,0,0">
-                                <!--<Ellipse Fill="White" HorizontalAlignment="Left" Height="100" Stroke="Black" VerticalAlignment="Top" Width="100" Margin="180,19,0,0"/> -->
+                                --><!--<Ellipse Fill="White" HorizontalAlignment="Left" Height="100" Stroke="Black" VerticalAlignment="Top" Width="100" Margin="180,19,0,0"/> --><!--
                                 <Image Source="/Resources/images/My Covid Record Logo.png"  Height="130" Margin="180,0,1003.6,0" />
 
                             </Grid>
@@ -174,17 +222,17 @@
                                 <Grid Margin="330,0,158.6,0.4">
                                     <Grid>
                                         <TextBlock Text="Name" Margin="0,20,554.8,90.4" FontFamily="Roboto" FontWeight="Medium" FontSize="20"/>
-                                        <!--Name from database-->
+                                        --><!--Name from database--><!--
                                     </Grid>
 
                                     <Grid>
                                         <TextBlock Text="Address" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="280,19,273.8,90.4"/>
-                                        <!--Address from database-->
+                                        --><!--Address from database--><!--
                                     </Grid>
 
                                     <Grid>
                                         <TextBlock Text="Certificate ID" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="559,19,-0.2,90.4"/>
-                                        <!--Generate ID from database-->
+                                        --><!--Generate ID from database--><!--
                                     </Grid>
                                 </Grid>
 
@@ -192,17 +240,12 @@
                                     <Grid Margin="330,0,158.6,0.4">
                                         <Grid>
                                             <TextBlock Text="Date of Birth" Margin="0,74,554.8,36.4" FontFamily="Roboto" FontWeight="Medium" FontSize="20"/>
-                                            <!--DOB from database-->
+                                            --><!--DOB from database--><!--
                                         </Grid>
 
                                         <Grid>
-                                            <TextBlock Text="Passport No." FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="280,74,273.8,35.4"/>
-                                            <!--Passport from database-->
-                                        </Grid>
-
-                                        <Grid>
-                                            <TextBlock Text="Date Issued" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="559,74,-0.2,35.4"/>
-                                            <!---->
+                                            <TextBlock Text="Date Issued" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="280,74,273.8,35.4"/>
+                                            --><!--Passport from database--><!--
                                         </Grid>
                                     </Grid>
                                 </Grid>
@@ -211,7 +254,7 @@
                     </StackPanel>
                 </Grid>
 
-                <!--Vaccine Record-->
+                --><!--Vaccine Record--><!--
                 <Grid  Margin="25,0,25,25">
                     <Rectangle Fill="White" HorizontalAlignment="Left" Height="209" Stroke="Black" VerticalAlignment="Center" Width="987" Margin="170,10,0,-11.2" Opacity="0.3"/>
 
@@ -227,10 +270,10 @@
                 </Grid>
 
             </StackPanel>
-        </Grid>
+        </Grid>-->
 
         <!--Buttons-->
-        <Grid>
+        <!--<Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -257,6 +300,6 @@
                     </Button>
                 </Grid>
             </StackPanel>
-        </Grid>
+        </Grid>-->
     </StackPanel>
 </Page>
