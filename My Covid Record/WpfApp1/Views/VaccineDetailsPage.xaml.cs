@@ -24,7 +24,7 @@ namespace WpfApp1.Views
         public VaccineDetailsPage()
         {
             InitializeComponent();
-            ListView.ItemsSource = UserDetails;
+            //ListView.ItemsSource = UserDetails;
         }
 
         private void Home_Click(object sender, RoutedEventArgs e)
@@ -62,26 +62,26 @@ namespace WpfApp1.Views
             {
                 // var list = (from u in db.user select u).ToList();
 
-                UserDetails userdetail = new UserDetails();
+                //UserDetails userdetail = new UserDetails();
 
-                userdetail.DoseNo = Dose.Text;
-                userdetail.Date = Date.Text;
-                userdetail.Vaccine = Vaccine.Text;
-                userdetail.Brand = Brand.Text;
-                userdetail.Country = Country.Text;
+                //userdetail.DoseNo = Dose.Text;
+                //userdetail.Date = Date.Text;
+                //userdetail.Vaccine = Vaccine.Text;
+                //userdetail.Brand = Brand.Text;
+                //userdetail.Country = Country.Text;
 
-                userdetail.Add(new UserDetails()
-                {
-                    DoseNo = Dose.Text,
-                    Date = Date.Text,
-                    Vaccine = Vaccine.Text,
-                    Brand = Brand.Text,
-                    Country = Country.Text
-                });
+                //userdetail.Add(new UserDetails()
+                //{
+                //    DoseNo = Dose.Text,
+                //    Date = Date.Text,
+                //    Vaccine = Vaccine.Text,
+                //    Brand = Brand.Text,
+                //    Country = Country.Text
+                //});
 
-                db.UserDetails.Add(userdetail);
-                db.SaveChanges();
-                Reset();
+                //db.UserDetails.Add(userdetail);
+                //db.SaveChanges();
+                //Reset();
             }
         }
 
