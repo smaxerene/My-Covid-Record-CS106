@@ -10,23 +10,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfApp1.Views
 {
-    /// <summary>
-    /// Interaction logic for AdminLogin.xaml
-    /// </summary>
-    public partial class AdminLogin : Page
+    public partial class UserReports : Window
     {
-        public AdminLogin()
+        public UserReports()
         {
             InitializeComponent();
         }
-        private void AdminLogin_Click(object sender, RoutedEventArgs e)
+
+        private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
-            App.Current.MainWindow.Content = new UserReports();
+            string email = EmailTextBox.Text;
+            string subject = SubjectTextBox.Text;
+            string description = DescriptionTextBox.Text;
+
+            ReportIssue reportIssueWindow = new ReportIssue(email, subject, description);
+            reportIssueWindow.ShowDialog();
         }
+       
     }
 }

@@ -19,9 +19,32 @@ namespace WpfApp1
     /// </summary>
     public partial class ReportIssue : Window
     {
+        public string Email { get; set; }
+        public string Subject { get; set; }
+        public string Description { get; set; }
+
         public ReportIssue()
         {
             InitializeComponent();
         }
+       
+        private string email;
+        private string subject;
+        private string description;
+
+        public ReportIssue(string email, string subject, string description)
+        {
+            this.email = email;
+            this.subject = subject;
+            this.description = description;
+        }
+        public class ReportItem
+        {
+            public string Email { get; set; }
+            public string IssueDate { get; set; }
+            public string Status { get; set; }
+        }
+
     }
+
 }
