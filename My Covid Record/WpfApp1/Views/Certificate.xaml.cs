@@ -23,6 +23,7 @@ namespace WpfApp1.Views
         public Certificate()
         {
             InitializeComponent();
+
         }
 
         private void Home_Click(object sender, RoutedEventArgs e)

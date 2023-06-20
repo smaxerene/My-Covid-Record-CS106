@@ -378,6 +378,8 @@ C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid 
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\App.g.cs
+C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Collections.Immutable.xml
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\MainWindow.g.cs
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\AdminLogin.g.cs
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\Certificate.g.cs
@@ -387,7 +389,6 @@ C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid 
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\SignUp.g.cs
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\UserProfile.g.cs
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\VaccineDetailsPage.g.cs
-C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\App.g.cs
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\MainWindow.baml
@@ -451,7 +452,6 @@ C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid 
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Primitives.xml
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Npgsql.xml
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Buffers.xml
-C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Collections.Immutable.xml
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Memory.xml
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Numerics.Vectors.xml
