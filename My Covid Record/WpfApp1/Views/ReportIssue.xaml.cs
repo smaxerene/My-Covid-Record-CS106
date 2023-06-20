@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp1.Views
+namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for AdminLogin.xaml
+    /// Interaction logic for ReportIssue.xaml
     /// </summary>
-    public partial class AdminLogin : Page
+    public partial class ReportIssue : Window
     {
-        public AdminLogin()
+        public ReportIssue()
         {
             InitializeComponent();
-        }
-
-        private void AdminLogin_Click(object sender, RoutedEventArgs e)
-        {
-            App.Current.MainWindow.Content = new AdminRecording();
         }
     }
 }

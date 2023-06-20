@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,11 +24,12 @@ namespace WpfApp1.Views
     /// </summary>
     public partial class VaccineDetailsPage : Page
     {
+        ObservableCollection<UserDetails> UserDetail = new ObservableCollection<UserDetails>();
 
         public VaccineDetailsPage()
         {
             InitializeComponent();
-            //ListView.ItemsSource = UserDetails;
+            ListView.ItemsSource = UserDetail;
         }
 
         private void Home_Click(object sender, RoutedEventArgs e)
@@ -63,7 +68,7 @@ namespace WpfApp1.Views
 
         private void Notif_Click(object sender, RoutedEventArgs e)
         {
-
+            App.Current.MainWindow.Content = new VaccineDetailsPage();
         }
 
         private void Report_Click(object sender, RoutedEventArgs e)
@@ -83,32 +88,44 @@ namespace WpfApp1.Views
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
+            //To ListView
+            UserDetail.Add(new UserDetails()
+            {
+                DoseNo = Dose.Text,
+                Date = Date.Text,
+                Vaccine = Vaccine.Text,
+                Brand = Brand.Text,
+                Country = Country.Text
+            });
+
+            //To Database
             using (var db = new DataContext())
             {
-                // var list = (from u in db.user select u).ToList();
 
-                //UserDetails userdetail = new UserDetails();
+                UserDetails userdetails = new UserDetails();
 
-                //userdetail.DoseNo = Dose.Text;
-                //userdetail.Date = Date.Text;
-                //userdetail.Vaccine = Vaccine.Text;
-                //userdetail.Brand = Brand.Text;
-                //userdetail.Country = Country.Text;
+                userdetails.DoseNo = Dose.Text;
+                userdetails.Date = Date.Text;
+                userdetails.Vaccine = Vaccine.Text;
+                userdetails.Brand = Brand.Text;
+                userdetails.Country = Country.Text;
 
-                //userdetail.Add(new UserDetails()
-                //{
-                //    DoseNo = Dose.Text,
-                //    Date = Date.Text,
-                //    Vaccine = Vaccine.Text,
-                //    Brand = Brand.Text,
-                //    Country = Country.Text
-                //});
 
-                //db.UserDetails.Add(userdetail);
-                //db.SaveChanges();
-                //Reset();
+                db.UserDetails.Add(userdetails);
+                db.SaveChanges();
+
             }
+            Reset();
         }
+
+        //public class UserDetails
+        //{
+        //    public string DoseNo { get; set; }
+        //    public string Date { get; set; }
+        //    public string Vaccine { get; set; }
+        //    public string Brand { get; set; }
+        //    public string Country { get; set; }
+        //}
 
         private void New_Click(object sender, RoutedEventArgs e)
         {

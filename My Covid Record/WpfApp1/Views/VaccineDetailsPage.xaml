@@ -166,7 +166,7 @@
                                         <Button Content="Personal Details" Click="PersonalDeets_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,100,-50,220" Width="223" FontFamily="Inter"/>
                                         <Button Content="Generate QR Code" Click="GenerateQR_Click" HorizontalAlignment="Center"   Background="White" Margin="-57,125,-50,195" Width="223"/>
                                         <Button Content="Generate Vaccine Certificate" Click="Certificate_Click" HorizontalAlignment="Center"  Background="White"  Margin="-57,150,-50,170" Width="223"/>
-                                        <Button Content="Notifcations" Click="Notif_Click" HorizontalAlignment="Center"   Background="White"  Margin="-57,175,-50,145" Width="223"/>
+                                        <Button Content="Vaccine Details" Click="Notif_Click" HorizontalAlignment="Center"   Background="White"  Margin="-57,175,-50,145" Width="223"/>
                                         <Button Content="Report an Issue" Click="Report_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,200,-50,121" Width="223"/>
                                         <Button Content="Settings" Click="Settings_Click"  HorizontalAlignment="Center"  Background="White" Margin="-57,224,-50,97" Width="223"/>
                                     </Grid>
@@ -199,7 +199,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Grid>
+                <Grid Grid.Column="1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="auto"/>
@@ -237,20 +237,20 @@
 
                             <Grid Margin="15,10,0,0">
                                 <StackPanel Orientation="Horizontal">
-                                    <Grid  Margin="0,0,15,0">
-                                        <TextBox TextWrapping="Wrap" Name="Dose" Height="30" Width="80" FontSize="24" FontFamily="Roboto" BorderThickness="1" Template="{StaticResource RoundTextboxCornterTemplate}"/>
+                                    <Grid  Margin="0,0,20,0">
+                                        <TextBox TextWrapping="Wrap" Name="Dose" VerticalContentAlignment="Center" Height="30" Width="80" FontSize="24" FontFamily="Roboto" BorderThickness="1" Template="{StaticResource RoundTextboxCornterTemplate}"/>
                                     </Grid>
                                     <Grid  Margin="0,0,75,0">
-                                        <TextBox TextWrapping="Wrap" Name="Date"  Height="30" Width="150" FontSize="24" FontFamily="Roboto" BorderThickness="1" Template="{StaticResource RoundTextboxCornterTemplate}"/>
+                                        <TextBox TextWrapping="Wrap" Name="Date" VerticalContentAlignment="Center" Height="30" Width="150" FontSize="20" FontFamily="Roboto" BorderThickness="1" Template="{StaticResource RoundTextboxCornterTemplate}"/>
                                     </Grid>
                                     <Grid  Margin="0,0,20,0">
-                                        <TextBox TextWrapping="Wrap" Name="Vaccine" Height="30" Width="200" FontSize="24" FontFamily="Roboto" BorderThickness="1" Template="{StaticResource RoundTextboxCornterTemplate}"/>
+                                        <TextBox TextWrapping="Wrap" Name="Vaccine" VerticalContentAlignment="Center" Height="30" Width="200" FontSize="16" FontFamily="Roboto" BorderThickness="1" Template="{StaticResource RoundTextboxCornterTemplate}"/>
                                     </Grid>
                                     <Grid  Margin="0,0,20,0">
-                                        <TextBox TextWrapping="Wrap" Name="Brand" Height="30" Width="200" FontSize="24" FontFamily="Roboto" BorderThickness="1" Template="{StaticResource RoundTextboxCornterTemplate}"/>
+                                        <TextBox TextWrapping="Wrap" Name="Brand" VerticalContentAlignment="Center" Height="30" Width="200" FontSize="16" FontFamily="Roboto" BorderThickness="1" Template="{StaticResource RoundTextboxCornterTemplate}"/>
                                     </Grid>
                                     <Grid>
-                                        <TextBox TextWrapping="Wrap" Name="Country"  Height="30" Width="190" FontSize="24" FontFamily="Roboto" BorderThickness="1" Template="{StaticResource RoundTextboxCornterTemplate}"/>
+                                        <TextBox TextWrapping="Wrap" Name="Country" VerticalContentAlignment="Center" Height="30" Width="190" FontSize="16" FontFamily="Roboto" BorderThickness="1" Template="{StaticResource RoundTextboxCornterTemplate}"/>
                                     </Grid>
                                 </StackPanel>
                             </Grid>
