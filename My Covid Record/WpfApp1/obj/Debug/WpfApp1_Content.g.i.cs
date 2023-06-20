@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images/vaccine%20details%20icon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/userreports.xaml")]
 
 
