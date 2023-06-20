@@ -379,3 +379,5 @@ C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid 
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.pdb
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\UserReport.g.cs
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\UserReport.baml

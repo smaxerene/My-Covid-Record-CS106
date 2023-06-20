@@ -320,7 +320,7 @@
                             </Grid>
 
                             <Grid>
-                                <ListView x:Name="ListView" >
+                                <ListView x:Name="ListView" ItemsSource="{Binding MyData}">
                                     <ListView.View>
                                         <GridView>
                                             <GridViewColumn Header="Dose No." Width="100" DisplayMemberBinding="{Binding DoseNo}"/>

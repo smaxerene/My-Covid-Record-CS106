@@ -146,19 +146,19 @@
                                 <Grid>
                                     <StackPanel Margin="20,15,0,0">
                                         <Grid>
-                                            <TextBox Name="FullNameTextBox"  Height="30" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}"/>
+                                            <TextBox x:Name="FullNameTextBox" Height="30" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}"/>
                                         </Grid>
 
                                         <Grid Margin="0,8,0,0">
-                                            <TextBox Name="UsernameTextBox" Height="30" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}"/>
+                                            <TextBox x:Name="UsernameTextBox" Height="30" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}"/>
                                         </Grid>
 
                                         <Grid Margin="0,8,0,0">
-                                            <TextBox Name="EmailTextBox" Height="30" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}"/>
+                                            <TextBox x:Name="EmailTextBox" Height="30" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}"/>
                                         </Grid>
 
                                         <Grid Margin="0,8,0,0">
-                                            <TextBox Name="PhoneTextBox" Height="30"  Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}" />
+                                            <TextBox x:Name="PhoneTextBox" Height="30"  Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}" />
                                         </Grid>
 
                                         <Grid Margin="0,8,0,0">

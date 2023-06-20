@@ -27,7 +27,7 @@ namespace WpfApp1.Views
 
         private void AdminLogin_Click(object sender, RoutedEventArgs e)
         {
-            App.Current.MainWindow.Content = new UserProfile();
+
         }
     }
 }
