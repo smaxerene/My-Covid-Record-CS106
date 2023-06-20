@@ -172,6 +172,9 @@
     <Compile Include="Views\UserProfile.xaml.cs">
       <DependentUpon>UserProfile.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserReport.xaml.cs">
+      <DependentUpon>UserReport.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\VaccineDetailsPage.xaml.cs">
       <DependentUpon>VaccineDetailsPage.xaml</DependentUpon>
     </Compile>
@@ -222,6 +225,10 @@
     <Page Include="Views\UserProfile.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\VaccineDetailsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
