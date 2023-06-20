@@ -145,9 +145,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DataContext.cs" />
-    <Compile Include="ReportIssue.xaml.cs">
-      <DependentUpon>ReportIssue.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\AdminLogin.xaml.cs">
       <DependentUpon>AdminLogin.xaml</DependentUpon>
     </Compile>
@@ -165,6 +162,9 @@
     </Compile>
     <Compile Include="Views\QRPage.xaml.cs">
       <DependentUpon>QRPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReportIssue.xaml.cs">
+      <DependentUpon>ReportIssue.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
@@ -187,10 +187,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ReportIssue.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\AdminLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -212,6 +208,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\QRPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ReportIssue.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

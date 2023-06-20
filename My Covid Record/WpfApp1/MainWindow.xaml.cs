@@ -25,8 +25,7 @@ namespace WpfApp1
         {
             InitializeComponent();
 
-            //this.Content = new Login();
-            this.Content = new Certificate();
+            this.Content = new Login();
 
         }
     }
