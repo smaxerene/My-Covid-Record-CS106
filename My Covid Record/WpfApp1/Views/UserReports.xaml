@@ -10,8 +10,9 @@
     <Grid>
         <Grid Margin="-1219,37.4,729.867,738" Grid.Row="2">
             <Grid.RowDefinitions>
-                <RowDefinition Height="44*"/>
-                <RowDefinition Height="31*"/>
+                <RowDefinition Height="Auto"/>
+                <!-- Add more row definitions if needed -->
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <TextBox x:Name="searchTextBox" Height="30" Margin="1457,181.4,573.733,-97.8"
                      Background="White" BorderBrush="Black" BorderThickness="1" Grid.Row="1">
@@ -40,7 +41,42 @@
             </TextBlock>
         </Grid>
 
-        <StackPanel Background="#FFCC00" Margin="291,582,312.6,10.4"/>
+        <!--Text Box for User to Report-->
+        <StackPanel Background="#FFCC00" Margin="180,577,190.6,10.4">
+            <Border BorderBrush="Silver" BorderThickness="2" Height="358" Margin="42,80,600.2,0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Offset="0" Color="#1E3C72" />
+                        <GradientStop Offset="1" Color="#A6ACAF" />
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Enter your Email:" Foreground="White" FontSize="20" Margin="10,20,9.6,0.6" Grid.RowSpan="2"/>
+                    <TextBox x:Name="EmailTextBox" Margin="167,24,387.6,0.6" Background="WhiteSmoke" Grid.RowSpan="2"/>
+                    <TextBlock Grid.Row="2" Text="Subject:" Foreground="White" FontSize="20" Margin="10,21,9.6,85.6"/>
+                    <TextBox Grid.Row="2" x:Name="SubjectTextBox" Margin="96,18,399.6,85.6" Background="WhiteSmoke"/>
+                    <TextBlock Grid.Row="2" Text="Description:" Foreground="White" FontSize="20" Margin="10,53.4,9.6,53"/>
+                    <TextBox Grid.Row="2" x:Name="DescriptionTextBox" TextWrapping="Wrap" Margin="10,85.4,9.6,10.4" Background="WhiteSmoke" Grid.RowSpan="4"/>
+
+                    <Button Grid.Row="5" Content="Submit" Click="SubmitButton_Click" Margin="280,100.2,376.6,-20.4" Background="White"/>
+                </Grid>
+            </Border>
+        </StackPanel>
+
+        <!--End of code box for user report-->
+        
+
+
+
         <TextBlock Text="Account" FontSize="25
                    " FontWeight="Bold" Margin="1704,377,107.6,642.4" />
         <Button Name="SearchButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="28" Margin="575,383,0,0" Height="25" BorderThickness="0"  Background="White">
@@ -56,7 +92,10 @@
         <Image HorizontalAlignment="Left" Height="144" VerticalAlignment="Top" Width="169" RenderTransformOrigin="3.592,3.258" Margin="862,101,0,0"
                Source="/Resources/images/My Covid Record Logo.png"/>
         <Image Source="/Resources/images/menu.png" Margin="73,362,1679.6,642.4"></Image>
-        <TextBlock FontWeight="Bold" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Report Issues:" VerticalAlignment="Top" Margin="256,537,0,0" FontFamily="Inter" Width="334" FontSize="40" TextAlignment="Center" Height="40"/>
+        <TextBlock FontWeight="Bold" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Report Issues:" VerticalAlignment="Top" Margin="180,537,0,0" FontFamily="Inter" Width="334" FontSize="40" TextAlignment="Center" Height="40"/>
+
+        <TextBlock Text="Describe specifically of your Issue/problem you have encountered:" FontSize="20" Margin="223,620,1041.6,403.4"/>
+
 
 
 

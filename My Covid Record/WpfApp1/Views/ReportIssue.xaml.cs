@@ -19,9 +19,21 @@ namespace WpfApp1
     /// </summary>
     public partial class ReportIssue : Window
     {
-        public ReportIssue()
-        {
-            InitializeComponent();
-        }
+    //    public string Email { get; set; }
+    //    public string Subject { get; set; }
+    //    public string Description { get; set; }
+
+    //    public ReportIssue()
+    //    {
+    //        InitializeComponent();
+    //    }
+
+    //    private void Window_Loaded(object sender, RoutedEventArgs e)
+    //    {
+    //        // Access the report details and display them in the window
+    //        emailTextBlock.Text = Email;
+    //        subjectTextBlock.Text = Subject;
+    //        descriptionTextBlock.Text = Description;
+    //    }
     }
 }
