@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace WpfApp1.Views
 {
     /// <summary>
-    /// Interaction logic for Certificate.xaml
+    /// Interaction logic for UserReport.xaml
     /// </summary>
-    public partial class Certificate : Page
+    public partial class UserReport : Page
     {
-        public Certificate()
+        public UserReport()
         {
             InitializeComponent();
-
         }
 
         private void Home_Click(object sender, RoutedEventArgs e)
@@ -78,16 +77,6 @@ namespace WpfApp1.Views
         private void Logout_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new Login();
-        }
-
-        //Buttons
-        private void Edit_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void Download_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

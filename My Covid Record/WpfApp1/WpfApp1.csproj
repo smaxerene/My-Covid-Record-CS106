@@ -154,6 +154,9 @@
     <Compile Include="Views\Certificate.xaml.cs">
       <DependentUpon>Certificate.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\EditingUserProfile.xaml.cs">
+      <DependentUpon>EditingUserProfile.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Homepage.xaml.cs">
       <DependentUpon>Homepage.xaml</DependentUpon>
     </Compile>
@@ -171,6 +174,9 @@
     </Compile>
     <Compile Include="Views\UserProfile.xaml.cs">
       <DependentUpon>UserProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserReport.xaml.cs">
+      <DependentUpon>UserReport.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\VaccineDetailsPage.xaml.cs">
       <DependentUpon>VaccineDetailsPage.xaml</DependentUpon>
@@ -199,6 +205,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\EditingUserProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Homepage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -222,6 +232,10 @@
     <Page Include="Views\UserProfile.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\VaccineDetailsPage.xaml">
       <Generator>MSBuild:Compile</Generator>

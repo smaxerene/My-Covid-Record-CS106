@@ -66,7 +66,7 @@ namespace WpfApp1.Views
 
         private void Report_Click(object sender, RoutedEventArgs e)
         {
-
+            App.Current.MainWindow.Content = new UserReport();
         }
 
         private void Settings_Click(object sender, RoutedEventArgs e)
