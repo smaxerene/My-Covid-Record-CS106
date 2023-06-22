@@ -150,7 +150,6 @@
     <Compile Include="DataContext.cs" />
     <Compile Include="Views\UserReports.xaml.cs">
       <DependentUpon>UserReports.xaml</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Views\ReportIssue.xaml.cs">
       <DependentUpon>ReportIssue.xaml</DependentUpon>

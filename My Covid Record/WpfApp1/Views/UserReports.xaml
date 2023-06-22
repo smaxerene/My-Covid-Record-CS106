@@ -92,9 +92,5 @@
         <TextBlock FontWeight="Bold" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Report Issues:" VerticalAlignment="Top" Margin="180,537,0,0" FontFamily="Inter" Width="334" FontSize="40" TextAlignment="Center" Height="40"/>
 
         <TextBlock Text="Describe specifically of your Issue/problem you have encountered:" FontStyle="Oblique" FontSize="20" Margin="223,620,1041.6,403.4"/>
-
-
-
-
     </Grid>
 </Window>
