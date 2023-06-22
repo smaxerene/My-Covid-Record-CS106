@@ -36,7 +36,7 @@
                 <RowDefinition Height="44*"/>
                 <RowDefinition Height="31*"/>
             </Grid.RowDefinitions>
-            <TextBox x:Name="searchTextBox" Height="30" Margin="1490,11.1,-739,-10"
+            <TextBox x:Name="searchTextBox" Height="30" Margin="1495,2,-744.267,-0.8"
                      Background="White" BorderBrush="Black" BorderThickness="1" Grid.Row="1">
                 <TextBox.Style>
                     <Style TargetType="TextBox">
@@ -65,7 +65,7 @@
         <Line X1="0" Y1="0" X2="12000" Y2="0" Stroke="Black" StrokeThickness="10" Grid.ColumnSpan="3" Margin="0,147,0.6,685.4" Grid.Row="2" />
         <TextBlock Text="Account" FontSize="25
                    " FontWeight="Bold" Grid.Column="2" Margin="678.4,79.4,-692.4,731" Grid.Row="2" ></TextBlock>
-        <Button Name="SearchButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="28" Margin="519,94.4,0,0" Height="25" BorderThickness="0"  Background="White" Grid.Row="2" Grid.ColumnSpan="2">
+        <Button Name="SearchButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="28" Margin="525,87,0,0" Height="25" BorderThickness="0"  Background="White" Grid.Row="2" Grid.ColumnSpan="2">
             <Image Source="/Resources/images/searchbutton.png" RenderTransformOrigin="0.674,-0.028"></Image>
         </Button>
         <TextBlock FontWeight="Bold" HorizontalAlignment="Left" TextWrapping="Wrap" Text="My Covid Record" VerticalAlignment="Top" Margin="41.133,-10,0,0" FontFamily="Inter" Width="764" FontSize="80" TextAlignment="Center" Height="96" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="1"/>

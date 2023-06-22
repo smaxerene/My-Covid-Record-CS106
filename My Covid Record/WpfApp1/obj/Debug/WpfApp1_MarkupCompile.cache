@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\App.xaml
-12-1552273154
-
-17-1355345352
+141270779031
+4-1497612661
+191829600439
 46828973997
-MainWindow.xaml;Views\UserReports.xaml;Views\ReportIssue.xaml;Views\AdminLogin.xaml;Views\AdminRecording.xaml;Views\Certificate.xaml;Views\Homepage.xaml;Views\Login.xaml;Views\QRPage.xaml;Views\SignUp.xaml;Views\UserProfile.xaml;Views\VaccineDetailsPage.xaml;
+MainWindow.xaml;Views\EditingUserProfile.xaml;Views\UserReport.xaml;Views\UserReports.xaml;Views\ReportIssue.xaml;Views\AdminLogin.xaml;Views\AdminRecording.xaml;Views\Certificate.xaml;Views\Homepage.xaml;Views\Login.xaml;Views\QRPage.xaml;Views\SignUp.xaml;Views\UserProfile.xaml;Views\VaccineDetailsPage.xaml;
 
-True
+False
 

@@ -148,6 +148,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DataContext.cs" />
+    <Compile Include="Views\EditingUserProfile.xaml.cs">
+      <DependentUpon>EditingUserProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserReport.xaml.cs">
+      <DependentUpon>UserReport.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserReports.xaml.cs">
       <DependentUpon>UserReports.xaml</DependentUpon>
     </Compile>
@@ -193,6 +199,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\EditingUserProfile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserReport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\UserReports.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -401,7 +415,32 @@
     <Resource Include="Resources\images\searchbutton.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\images\QR_Placeholder_Code-removebg-preview.png" />
+    <Content Include="Resources\images\rejected.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\qr_placeholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\images\pie-chart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\menu.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\images\warning.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\images\confirm.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
