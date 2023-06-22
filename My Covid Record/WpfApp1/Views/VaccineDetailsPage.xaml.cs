@@ -28,17 +28,10 @@ namespace WpfApp1.Views
     {
         ObservableCollection<UserDetails> UserDetail = new ObservableCollection<UserDetails>();
 
+
         public VaccineDetailsPage()
         {
             InitializeComponent();
-            ListView.ItemsSource = UserDetail;
-
-            this.NavigationService.Navigate(new VaccineDetailsPage());
-
-            UserDetail = new ObservableCollection<UserDetails>
-            {
-
-            };
 
         }
 
@@ -98,33 +91,34 @@ namespace WpfApp1.Views
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            //To ListView
-            UserDetail.Add(new UserDetails()
-            {
-                DoseNo = Dose.Text,
-                Date = Date.Text,
-                Vaccine = Vaccine.Text,
-                Brand = Brand.Text,
-                Country = Country.Text
-            });
 
             //To Database
-            using (var db = new DataContext())
-            {
+            /* using (var db = new DataContext())
+             {
 
-                UserDetails userdetails = new UserDetails();
+                 UserDetails userdetails = new UserDetails();
 
-                userdetails.DoseNo = Dose.Text;
-                userdetails.Date = Date.Text;
-                userdetails.Vaccine = Vaccine.Text;
-                userdetails.Brand = Brand.Text;
-                userdetails.Country = Country.Text;
+                 userdetails.DoseNo = Dose.Text;
+                 userdetails.Date = Date.Text;
+                 userdetails.Vaccine = Vaccine.Text;
+                 userdetails.Brand = Brand.Text;
+                 userdetails.Country = Country.Text;
 
+                 db.UserDetails.Add(userdetails);
+                 db.SaveChanges();
 
-                db.UserDetails.Add(userdetails);
-                db.SaveChanges();
+             } */
 
-            }
+            UserDetails userdetails = new UserDetails();
+
+            userdetails.DoseNo = Dose.Text;
+            userdetails.Date = Date.Text;
+            userdetails.Vaccine = Vaccine.Text;
+            userdetails.Brand = Brand.Text;
+            userdetails.Country = Country.Text;
+
+            VaccineData.Items.Add(userdetails);
+
             Reset();
         }
 
@@ -142,11 +136,39 @@ namespace WpfApp1.Views
             Country.Text = "";
         }
 
+        private void DeleteRow_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = DataContext as MyDataModel;
+            if (vm != null)
+            {
+                vm.DeleteData();
+            }
+
+        }
+
+        void DeleteData()
+        {
+            var message = new ModalMessageBox(View)
+            {
+                Title = "Confirmation",
+                Message = "Are you sure you want to remove data? ",
+                Options = DialogOptions.YesNo,
+            };
+
+            message.ShowDialog(delegate (DialogOptions options)
+            {
+                if (options == DialogOptions.Yes)
+                {
+                    CodeViewData.Remove(SelectedCodeViewItem);
+                }
+            });
+        }
+
         private void Update_Click(object sender, RoutedEventArgs e)
         {
-            if (ListView.SelectedItems != null)
+            if (VaccineData.SelectedItems != null)
             {
-                UserDetails userDetails = ListView.SelectedItem as UserDetails;
+                UserDetails userDetails = VaccineData.SelectedItem as UserDetails;
 
                 if (userDetails == null)
                 {
@@ -172,52 +194,11 @@ namespace WpfApp1.Views
             }
         }
 
-        public ICommand DeleteCommand { get; }
-        private void DeleteRow_Click(object sender, RoutedEventArgs e)
-        {
-            //DeleteCommand = new Command<UserDetails>(DeleteItem);
-        }
-
         private void RemoveAll_Click(object sender, RoutedEventArgs e)
         {
-            ListView.Items.Clear();
+            VaccineData.Items.Clear();
 
         }
-
-        //DataGrid
-        /* private UserDetails m_selectedUserDetail;
-         public UserDetails _selectedUserDetail
-         {
-             get { return m_selectedUserDetail; }
-             set
-             {
-                 m_selectedUserDetail = value;
-                 OnPropertyChanged("selectedUserDetail");
-             }
-         }
-
-         private bool CanDelete
-         {
-             get { return SelectedUserDetail != null; }
-         }
-
-         private ICommand m_deleteCommand;
-         public ICommand DeleteCommand
-         {
-             get
-             {
-                 if (m_deleteCommand == null)
-                 {
-                     m_deleteCommand = new RelayCommand(param => Delete((Result)param), param => CanDelete);
-                 }
-                 return m_deleteCommand;
-             }
-         }
-
-         private void Delete(UserDetails userDetails)
-         {
-             UserDetails.Remove(UserDetail);
-         }*/
 
         //Other Buttons
         private void Certficate_Click(object sender, RoutedEventArgs e)
@@ -237,5 +218,3 @@ namespace WpfApp1.Views
         }
     }
 }
-
-//DeleteCommand = new Command<Basket>(DeleteItem);  

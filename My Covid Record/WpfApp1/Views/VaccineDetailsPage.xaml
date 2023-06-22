@@ -311,31 +311,9 @@
                             </Grid>
 
                             <Grid>
-                                <!--<ListView x:Name="ListView1" ItemsSource="{Binding MyData}">
-                                    <ListView.View>
-                                        <GridView>
-                                            <GridViewColumn Header="Dose No." Width="60" DisplayMemberBinding="{Binding DoseNo}"/>
-                                            <GridViewColumn Header="Date of Vaccination" Width="180" DisplayMemberBinding="{Binding Date}"/>
-                                            <GridViewColumn Header="Vaccine" Width="235" DisplayMemberBinding="{Binding Vaccine}"/>
-                                            <GridViewColumn Header="Brand" Width="235" DisplayMemberBinding="{Binding Brand}"/>
-                                            <GridViewColumn Header="Country of Vaccination" Width="180" DisplayMemberBinding="{Binding Country}"/>
-                                            <GridViewColumn Header="Delete"  Width="95">
-                                                <GridViewColumn.CellTemplate>
-
-                                                    <DataTemplate>
-                                                        <Button Content="X" Click="DeleteRow_Click" Command="{Binding Source={x:Reference Name=ListviewPage},  Path=BindingContext.DeleteCommand }"  />
-                                                    </DataTemplate>
-
-                                                </GridViewColumn.CellTemplate>
-                                            </GridViewColumn>
-                                        </GridView>
-                                    </ListView.View>
-
-                                </ListView> -->
-
-                                <DataGrid Margin="0,31,0.2,-30.4" x:Name="ListView" ItemsSource="{Binding MyData}"  SelectedItem="{Binding SelectedUserDetail}" AutoGenerateColumns="False">
+                                <DataGrid x:Name="VaccineData" ItemsSource="{Binding MyData}" SelectedItem="{Binding SelectedMyData}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
                                     <DataGrid.Columns>
-                                        <DataGridTextColumn Header="Dose No." Width="60" Binding="{Binding DoseNo}"/>
+                                        <DataGridTextColumn Header="Dose No." Width="60" Binding="{Binding Dose}"/>
                                         <DataGridTextColumn Header="Date of Vaccination" Width="180" Binding="{Binding Date}"/>
                                         <DataGridTextColumn Header="Vaccine" Width="235" Binding="{Binding Vaccine}"/>
                                         <DataGridTextColumn Header="Brand" Width="235" Binding="{Binding Brand}"/>
@@ -344,7 +322,7 @@
                                         <DataGridTemplateColumn Header="Delete" Width="95">
                                             <DataGridTemplateColumn.CellTemplate>
                                                 <DataTemplate>
-                                                    <Button Content="Delete" Click="DeleteRow_Click"  Command="Delete"/>
+                                                    <Button x:Name="RemoveData" Content="Delete" Click="DeleteRow_Click" ToolTip="delete"/>
                                                 </DataTemplate>
                                             </DataGridTemplateColumn.CellTemplate>
                                         </DataGridTemplateColumn>
