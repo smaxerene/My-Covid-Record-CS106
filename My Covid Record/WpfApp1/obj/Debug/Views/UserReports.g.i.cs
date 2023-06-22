@@ -38,7 +38,7 @@ namespace WpfApp1.Views {
     /// <summary>
     /// UserReports
     /// </summary>
-    public partial class UserReports : System.Windows.Window, System.Windows.Markup.IComponentConnector {
+    public partial class UserProfile : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
         #line 17 "..\..\..\Views\UserReports.xaml"

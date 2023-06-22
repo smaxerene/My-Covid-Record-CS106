@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\
 WpfApp1
 none
 false
 DEBUG;TRACE
-C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\App.xaml
-11-61851628
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\App.xaml
+13892178653
 
-171771164143
-451508916182
-MainWindow.xaml;Views\AdminLogin.xaml;Views\AdminRecording.xaml;Views\Certificate.xaml;Views\Homepage.xaml;Views\Login.xaml;Views\QRPage.xaml;Views\ReportIssue.xaml;Views\SignUp.xaml;Views\UserProfile.xaml;Views\VaccineDetailsPage.xaml;
+19-1502045817
+46828973997
+EditingUserProfile.xaml;MainWindow.xaml;Views\UserReports.xaml;Views\ReportIssue.xaml;Views\AdminLogin.xaml;Views\AdminRecording.xaml;Views\Certificate.xaml;Views\Homepage.xaml;Views\Login.xaml;Views\QRPage.xaml;Views\SignUp.xaml;Views\UserProfile.xaml;Views\VaccineDetailsPage.xaml;
 
 True
 

@@ -10,23 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp1.Views
+namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for AdminLogin.xaml
+    /// Interaction logic for EditingUserProfile.xaml
     /// </summary>
-    public partial class AdminLogin : Page
+    public partial class EditingUserProfile : Window
     {
-        public AdminLogin()
+        public EditingUserProfile()
         {
             InitializeComponent();
-        }
-        private void AdminLogin_Click(object sender, RoutedEventArgs e)
-        {
-            App.Current.MainWindow.Content = new UserProfile();
         }
     }
 }
