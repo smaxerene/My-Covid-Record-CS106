@@ -159,7 +159,7 @@ namespace WpfApp1.Views
             {
                 if (options == DialogOptions.Yes)
                 {
-                    CodeViewData.Remove(SelectedCodeViewItem);
+                    CodeViewData.Remove(SelectedMyData);
                 }
             });
         }
