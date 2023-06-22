@@ -107,6 +107,8 @@
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Dynamic" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
@@ -150,9 +152,6 @@
     <Compile Include="DataContext.cs" />
     <Compile Include="Views\EditingUserProfile.xaml.cs">
       <DependentUpon>EditingUserProfile.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\UserReport.xaml.cs">
-      <DependentUpon>UserReport.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UserReports.xaml.cs">
       <DependentUpon>UserReports.xaml</DependentUpon>
@@ -200,10 +199,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\EditingUserProfile.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\UserReport.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

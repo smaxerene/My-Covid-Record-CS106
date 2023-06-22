@@ -135,6 +135,7 @@ namespace WpfApp1.Views
             //    {
             //        MessageBox.Show($"Error saving QR code: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             //    }
+            //}
         }
     }
 }
