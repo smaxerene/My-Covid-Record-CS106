@@ -23,6 +23,7 @@ namespace WpfApp1.Views
     /// </summary>
     public partial class SignUp : Page
     {
+
         public SignUp()
         {
             InitializeComponent();

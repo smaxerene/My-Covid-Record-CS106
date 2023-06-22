@@ -27,6 +27,10 @@ namespace WpfApp1
 
             this.Content = new Login();
 
+          
+
         }
+
+        public sealed class NavigationService { }
     }
 }

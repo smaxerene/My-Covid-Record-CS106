@@ -32,6 +32,14 @@ namespace WpfApp1.Views
         {
             InitializeComponent();
             ListView.ItemsSource = UserDetail;
+
+            this.NavigationService.Navigate(new VaccineDetailsPage());
+
+            UserDetail = new ObservableCollection<UserDetails>
+            {
+
+            };
+
         }
 
         private void Home_Click(object sender, RoutedEventArgs e)
@@ -55,7 +63,7 @@ namespace WpfApp1.Views
 
         private void PersonalDeets_Click(object sender, RoutedEventArgs e)
         {
-            App.Current.MainWindow.Content = new UserProfile();
+            // App.Current.MainWindow.Content = new UserProfile(_signup);
         }
 
         private void GenerateQR_Click(object sender, RoutedEventArgs e)
@@ -75,7 +83,7 @@ namespace WpfApp1.Views
 
         private void Report_Click(object sender, RoutedEventArgs e)
         {
-
+            App.Current.MainWindow.Content = new UserReport();
         }
 
         private void Settings_Click(object sender, RoutedEventArgs e)
@@ -164,38 +172,54 @@ namespace WpfApp1.Views
             }
         }
 
-        private void Remove_Click(object sender, RoutedEventArgs e)
+        public ICommand DeleteCommand { get; }
+        private void DeleteRow_Click(object sender, RoutedEventArgs e)
         {
-            //if (e.Key != Key.Delete) return;
-
-            //if (ListView.SelectedItems != null)
-            //{
-            //  return;
-            //}
-
-            for (var rowIndex = 0; rowIndex < ListView.SelectedItems.Count; rowIndex++)
-            {
-                ListView.Items.Remove(ListView.SelectedItems[rowIndex]);
-            }
-
-            //if (ListView.SelectedItems.Count > 0)
-            //{
-            //ListView.SelectedItems.Remove(Dose.Text);
-            //ListView.SelectedItems.Remove(Date.Text);
-            //ListView.SelectedItems.Remove(Vaccine.Text);
-            //ListView.SelectedItems.Remove(Brand.Text);
-            //ListView.SelectedItems.Remove(Country.Text);
-            //}
+            //DeleteCommand = new Command<UserDetails>(DeleteItem);
         }
 
         private void RemoveAll_Click(object sender, RoutedEventArgs e)
         {
-            if (ListView.Items.Count > 0)
-            {
-                ListView.Items.RemoveAt(0);
-            }
+            ListView.Items.Clear();
+
         }
 
+        //DataGrid
+        /* private UserDetails m_selectedUserDetail;
+         public UserDetails _selectedUserDetail
+         {
+             get { return m_selectedUserDetail; }
+             set
+             {
+                 m_selectedUserDetail = value;
+                 OnPropertyChanged("selectedUserDetail");
+             }
+         }
+
+         private bool CanDelete
+         {
+             get { return SelectedUserDetail != null; }
+         }
+
+         private ICommand m_deleteCommand;
+         public ICommand DeleteCommand
+         {
+             get
+             {
+                 if (m_deleteCommand == null)
+                 {
+                     m_deleteCommand = new RelayCommand(param => Delete((Result)param), param => CanDelete);
+                 }
+                 return m_deleteCommand;
+             }
+         }
+
+         private void Delete(UserDetails userDetails)
+         {
+             UserDetails.Remove(UserDetail);
+         }*/
+
+        //Other Buttons
         private void Certficate_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new Certificate();
@@ -213,3 +237,5 @@ namespace WpfApp1.Views
         }
     }
 }
+
+//DeleteCommand = new Command<Basket>(DeleteItem);  

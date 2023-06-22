@@ -200,7 +200,7 @@
                             <StackPanel  Margin="10,0,20,0" Orientation="Vertical">
                                 <Grid>
                                     <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="400"/>
-                                    <Label Name="Name" Content="{Binding ElementName=FullNameTextBox, Path=Text, Mode=OneWay}" VerticalContentAlignment="Center" Height="40" Width="400" FontSize="16" FontFamily="Roboto"/>
+                                    <!--<Label Name="Name" Content="{Binding ElementName=FullNameTextBox, Path=Text, Mode=OneWay}" VerticalContentAlignment="Center" Height="40" Width="400" FontSize="16" FontFamily="Roboto"/>-->
                                 </Grid>
                                 <Grid Margin="0,10,0,0">
                                     <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="400"/>

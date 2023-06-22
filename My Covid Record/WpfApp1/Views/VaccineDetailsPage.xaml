@@ -7,6 +7,7 @@
       mc:Ignorable="d" 
       Title="VaccineDetailsPage">
 
+
     <Page.Resources>
         <!--Searchbar-->
         <ControlTemplate x:Key="RoundTextboxCornerTemplate" TargetType="{x:Type TextBoxBase}">
@@ -296,16 +297,6 @@
                                         </Grid>
 
                                         <Grid Margin="10,0,10,0">
-                                            <Button Content="Remove" Click="Remove_Click" Width="100" Background="#3A89FF" Foreground="White" FontFamily="Roboto" Height="35" FontSize="16">
-                                                <Button.Resources>
-                                                    <Style TargetType="Border">
-                                                        <Setter Property="CornerRadius" Value="8"></Setter>
-                                                    </Style>
-                                                </Button.Resources>
-                                            </Button>
-                                        </Grid>
-
-                                        <Grid Margin="10,0,10,0">
                                             <Button Content="Remove All" Click="RemoveAll_Click" Width="100"  Background="#3A89FF" Foreground="White" FontFamily="Roboto" Height="35" FontSize="16" Margin="0,4,0,4" Grid.RowSpan="2">
                                                 <Button.Resources>
                                                     <Style TargetType="Border">
@@ -320,20 +311,50 @@
                             </Grid>
 
                             <Grid>
-                                <ListView x:Name="ListView" ItemsSource="{Binding MyData}">
+                                <!--<ListView x:Name="ListView1" ItemsSource="{Binding MyData}">
                                     <ListView.View>
                                         <GridView>
-                                            <GridViewColumn Header="Dose No." Width="100" DisplayMemberBinding="{Binding DoseNo}"/>
-                                            <GridViewColumn Header="Date of Vaccination" Width="200" DisplayMemberBinding="{Binding Date}"/>
+                                            <GridViewColumn Header="Dose No." Width="60" DisplayMemberBinding="{Binding DoseNo}"/>
+                                            <GridViewColumn Header="Date of Vaccination" Width="180" DisplayMemberBinding="{Binding Date}"/>
                                             <GridViewColumn Header="Vaccine" Width="235" DisplayMemberBinding="{Binding Vaccine}"/>
                                             <GridViewColumn Header="Brand" Width="235" DisplayMemberBinding="{Binding Brand}"/>
-                                            <GridViewColumn Header="Country of Vaccination" Width="200" DisplayMemberBinding="{Binding Country}"/>
+                                            <GridViewColumn Header="Country of Vaccination" Width="180" DisplayMemberBinding="{Binding Country}"/>
+                                            <GridViewColumn Header="Delete"  Width="95">
+                                                <GridViewColumn.CellTemplate>
+
+                                                    <DataTemplate>
+                                                        <Button Content="X" Click="DeleteRow_Click" Command="{Binding Source={x:Reference Name=ListviewPage},  Path=BindingContext.DeleteCommand }"  />
+                                                    </DataTemplate>
+
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
                                         </GridView>
                                     </ListView.View>
 
-                                </ListView>
+                                </ListView> -->
 
+                                <DataGrid Margin="0,31,0.2,-30.4" x:Name="ListView" ItemsSource="{Binding MyData}"  SelectedItem="{Binding SelectedUserDetail}" AutoGenerateColumns="False">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Dose No." Width="60" Binding="{Binding DoseNo}"/>
+                                        <DataGridTextColumn Header="Date of Vaccination" Width="180" Binding="{Binding Date}"/>
+                                        <DataGridTextColumn Header="Vaccine" Width="235" Binding="{Binding Vaccine}"/>
+                                        <DataGridTextColumn Header="Brand" Width="235" Binding="{Binding Brand}"/>
+                                        <DataGridTextColumn Header="Country of Vaccination" Width="180"  Binding="{Binding Country}"/>
+
+                                        <DataGridTemplateColumn Header="Delete" Width="95">
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <Button Content="Delete" Click="DeleteRow_Click"  Command="Delete"/>
+                                                </DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                        </DataGridTemplateColumn>
+
+                                    </DataGrid.Columns>
+
+
+                                </DataGrid>
                             </Grid>
+
 
 
                             <Grid Margin="0,30,0,0">

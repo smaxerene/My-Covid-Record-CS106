@@ -20,6 +20,7 @@ namespace WpfApp1.Views
     /// </summary>
     public partial class Certificate : Page
     {
+
         public Certificate()
         {
             InitializeComponent();
@@ -47,7 +48,7 @@ namespace WpfApp1.Views
 
         private void PersonalDeets_Click(object sender, RoutedEventArgs e)
         {
-            App.Current.MainWindow.Content = new UserProfile();
+            //App.Current.MainWindow.Content = new UserProfile(_signup);
         }
 
         private void GenerateQR_Click(object sender, RoutedEventArgs e)

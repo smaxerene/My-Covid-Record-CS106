@@ -56,7 +56,8 @@ namespace WpfApp1.Views
                     }
                     else
                     {
-                        App.Current.MainWindow.Content = new Homepage();
+                        //App.Current.MainWindow.Content = new Homepage();
+                        App.Current.MainWindow.Content = new VaccineDetailsPage();
                     }
 
                 }
