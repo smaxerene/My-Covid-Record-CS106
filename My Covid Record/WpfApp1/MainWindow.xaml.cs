@@ -25,7 +25,7 @@ namespace WpfApp1
         {
             InitializeComponent();
 
-            this.Content = new Login();
+            this.Content = new EditingUserProfile();
 
         }
     }

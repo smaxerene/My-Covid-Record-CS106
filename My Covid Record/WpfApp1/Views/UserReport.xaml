@@ -211,7 +211,7 @@
             </Border>
             <Border BorderBrush="#FFCC00" BorderThickness="40" HorizontalAlignment="Center">
                 <Grid>
-                    <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" FontSize="20" Height="400" Width="1024" />
+                    <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" FontSize="20" Height="400" Width="1024" TextWrapping="Wrap" />
                 </Grid>
             </Border>
 
