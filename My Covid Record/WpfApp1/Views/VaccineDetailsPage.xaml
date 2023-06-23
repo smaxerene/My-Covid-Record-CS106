@@ -311,9 +311,22 @@
                             </Grid>
 
                             <Grid>
-                                <DataGrid x:Name="VaccineData" ItemsSource="{Binding MyData}" SelectedItem="{Binding SelectedMyData}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <DataGrid x:Name="VaccineData" ItemsSource="{Binding MyData}" SelectedItem="{Binding SelectedMyData}" Grid.ColumnSpan="1" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
                                     <DataGrid.Columns>
-                                        <DataGridTextColumn Header="Dose No." Width="60" Binding="{Binding Dose}"/>
+                                        <DataGridTextColumn Header="Dose No." Width="60" Binding="{Binding Dose}">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="TextBlock">
+                                                    <Setter Property="HorizontalAlignment" Value="Center" />
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+
                                         <DataGridTextColumn Header="Date of Vaccination" Width="180" Binding="{Binding Date}"/>
                                         <DataGridTextColumn Header="Vaccine" Width="235" Binding="{Binding Vaccine}"/>
                                         <DataGridTextColumn Header="Brand" Width="235" Binding="{Binding Brand}"/>

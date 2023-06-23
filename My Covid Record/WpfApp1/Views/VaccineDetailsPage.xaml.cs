@@ -56,7 +56,7 @@ namespace WpfApp1.Views
 
         private void PersonalDeets_Click(object sender, RoutedEventArgs e)
         {
-            // App.Current.MainWindow.Content = new UserProfile(_signup);
+            App.Current.MainWindow.Content = new UserProfile();
         }
 
         private void GenerateQR_Click(object sender, RoutedEventArgs e)
@@ -138,30 +138,14 @@ namespace WpfApp1.Views
 
         private void DeleteRow_Click(object sender, RoutedEventArgs e)
         {
-            var vm = DataContext as MyDataModel;
-            if (vm != null)
+            if (VaccineData.SelectedItem != null)
             {
-                vm.DeleteData();
+                var selectedItem = VaccineData.SelectedItem;
+
+                var selectedDataRow = selectedItem as UserDetails;
+
+                UserDetail.Remove(selectedDataRow);
             }
-
-        }
-
-        void DeleteData()
-        {
-            var message = new ModalMessageBox(View)
-            {
-                Title = "Confirmation",
-                Message = "Are you sure you want to remove data? ",
-                Options = DialogOptions.YesNo,
-            };
-
-            message.ShowDialog(delegate (DialogOptions options)
-            {
-                if (options == DialogOptions.Yes)
-                {
-                    CodeViewData.Remove(SelectedMyData);
-                }
-            });
         }
 
         private void Update_Click(object sender, RoutedEventArgs e)
@@ -215,6 +199,11 @@ namespace WpfApp1.Views
         private void GenerateCert_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new Certificate();
+        }
+
+        private void VaccineData_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -18,13 +20,40 @@ namespace WpfApp1.Views
     /// <summary>
     /// Interaction logic for Certificate.xaml
     /// </summary>
-    public partial class Certificate : Page
+    public partial class Certificate : Page, INotifyPropertyChanged
     {
 
         public Certificate()
         {
             InitializeComponent();
 
+            int currentuserId = (int)App.Current.Properties["CurrentUserId"];
+
+            IsReadOnly = true;
+
+            using (var db = new DataContext())
+            {
+                User currentUser = db.Users.Where(
+                    x => x.Id == currentuserId
+                    ).FirstOrDefault();
+
+                Name.Text = currentUser.FullName;
+                Birthday.Text = currentUser.Birthday;
+                Address.Text = currentUser.Address;
+            }
+
+            this.DataContext = this;
+        }
+
+        private bool _isReadOnly;
+        public bool IsReadOnly
+        {
+            get { return _isReadOnly; }
+            set
+            {
+                _isReadOnly = value;
+                OnPropertyChanged("IsReadOnly");
+            }
         }
 
         private void Home_Click(object sender, RoutedEventArgs e)
@@ -48,7 +77,7 @@ namespace WpfApp1.Views
 
         private void PersonalDeets_Click(object sender, RoutedEventArgs e)
         {
-            //App.Current.MainWindow.Content = new UserProfile(_signup);
+            App.Current.MainWindow.Content = new UserProfile();
         }
 
         private void GenerateQR_Click(object sender, RoutedEventArgs e)
@@ -68,7 +97,7 @@ namespace WpfApp1.Views
 
         private void Report_Click(object sender, RoutedEventArgs e)
         {
-
+            App.Current.MainWindow.Content = new UserReport();
         }
 
         private void Settings_Click(object sender, RoutedEventArgs e)
@@ -85,10 +114,47 @@ namespace WpfApp1.Views
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
 
+            IsReadOnly = false;
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            int currentuserId = (int)App.Current.Properties["CurrentUserId"];
+
+            using (var db = new DataContext())
+            {
+                User currentUser = db.Users.Where(
+                    x => x.Id == currentuserId
+                    ).FirstOrDefault();
+
+                currentUser.FullName = Name.Text;
+                currentUser.Birthday = Birthday.Text;
+                currentUser.Address = Address.Text;
+
+                db.Users.Update(currentUser);
+                db.SaveChanges();
+            }
+
+            this.DataContext = this;
+
+            IsReadOnly = true;
         }
         private void Download_Click(object sender, RoutedEventArgs e)
         {
 
         }
+
+        // Event handler for property change notifications
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        // Raises the PropertyChanged event when a property value changes
+        public void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
     }
 }

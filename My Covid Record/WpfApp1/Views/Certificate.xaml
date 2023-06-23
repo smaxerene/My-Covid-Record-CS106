@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+       xmlns:system="clr-namespace:System;assembly=mscorlib"
       xmlns:local="clr-namespace:WpfApp1.Views"
       mc:Ignorable="d"  
       Title="Certificate">
@@ -30,7 +31,7 @@
     </Page.Resources>
 
     <ScrollViewer>
-        
+
         <StackPanel Margin="20">
             <!--NZ Government Logo-->
             <Grid >
@@ -113,12 +114,12 @@
                                     </Grid>
 
                                     <Grid Margin="0,0,0,0" Width="116">
-                                        <Button Content="Personal Details"  Click="PersonalDeets_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,100,-50,220" Width="223" FontFamily="Inter"/>
+                                        <Button Content="Personal Details" Click="PersonalDeets_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,100,-50,220" Width="223" FontFamily="Inter"/>
                                         <Button Content="Generate QR Code" Click="GenerateQR_Click" HorizontalAlignment="Center"   Background="White" Margin="-57,125,-50,195" Width="223"/>
-                                        <Button Content="Notifcations"  HorizontalAlignment="Center"   Background="White" Margin="-57,150,-50,170" Width="223"/>
-                                        <Button Content="Generate Vaccine Certificate"  Click="Certificate_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,175,-50,145" Width="223"/>
-                                        <Button Content="Report an Issue" HorizontalAlignment="Center"  Background="White" Margin="-57,200,-50,121" Width="223"/>
-                                        <Button Content="Settings"   HorizontalAlignment="Center"  Background="White" Margin="-57,224,-50,97" Width="223"/>
+                                        <Button Content="Generate Vaccine Certificate" Click="Certificate_Click" HorizontalAlignment="Center"  Background="White"  Margin="-57,150,-50,170" Width="223"/>
+                                        <Button Content="Vaccine Details" Click="Notif_Click" HorizontalAlignment="Center"   Background="White"  Margin="-57,175,-50,145" Width="223"/>
+                                        <Button Content="Report an Issue" Click="Report_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,200,-50,121" Width="223"/>
+                                        <Button Content="Settings" Click="Settings_Click"  HorizontalAlignment="Center"  Background="White" Margin="-57,224,-50,97" Width="223"/>
                                     </Grid>
 
                                     <Grid>
@@ -142,7 +143,7 @@
             </Grid>
 
             <!--Certificate-->
-            <Border Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="10" Margin="200,0" Padding="20">
+            <Border Background="White" BorderBrush="Gainsboro" BorderThickness="10" Margin="200,30,200,0" Padding="20">
                 <Grid >
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"/>
@@ -159,7 +160,7 @@
                                VerticalAlignment="Center"
                                TextWrapping="Wrap" TextAlignment="Center" FontFamily="Inter" FontSize="48"/>
                     </StackPanel>
-                    <Border Background="GhostWhite" BorderBrush="gray" BorderThickness="1" Padding="20" Grid.Row="2" CornerRadius="4">
+                    <Border Background="White" BorderBrush="gray" BorderThickness="1" Padding="20" Grid.Row="2" CornerRadius="4">
 
                         <!--<Grid>
                             <TextBlock Text="Personal Details" FontFamily="Inter" FontWeight="Bold" FontSize="30"/>
@@ -189,17 +190,42 @@
                             Source="/Resources/images/qr_placeholder.png" Height="100" Width="100" /> BROKEN!!!!! NEEDS WORK!!!!!-->
 
                             <StackPanel Grid.Row="1" Grid.Column="1">
-                                <TextBlock Text="Name" FontWeight="DemiBold" FontSize="18"/>
-                                <TextBlock Text="   Andreas Dave Sam" FontSize="14"/>
-                                <TextBlock Text="Date of Birth" FontWeight="DemiBold" FontSize="18"/>
-                                <TextBlock Text="   13/07/1999" FontSize="14"/>
+                                <Grid Margin="10,0,0,0">
+                                    <StackPanel>
+                                        <TextBlock Text="Name" FontWeight="DemiBold" FontSize="18"/>
+                                        <TextBox Name="Name" IsReadOnly="{Binding IsReadOnly, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" FontSize="14"/>
+                                    </StackPanel>
+                                </Grid>
+
+                                <Grid Margin="10,10,0,0">
+                                    <StackPanel>
+                                        <TextBlock Text="Date of Birth" FontWeight="DemiBold" FontSize="18"/>
+                                        <TextBox Name="Birthday" IsReadOnly="{Binding IsReadOnly, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" FontSize="14"/>
+                                    </StackPanel>
+                                </Grid>
+
                             </StackPanel>
 
                             <StackPanel Grid.Row="1" Grid.Column="2">
-                                <TextBlock Text="Address" FontWeight="DemiBold" FontSize="18"/>
-                                <TextBlock Text="   Auckland 1010" FontSize="14"/>
-                                <TextBlock Text="Date Issued" FontWeight="DemiBold" FontSize="18"/>
-                                <TextBlock Text="   22/05/2023" FontSize="14"/>
+                                <Grid Margin="10,0,0,0">
+                                    <StackPanel>
+                                        <TextBlock Text="Address" FontWeight="DemiBold" FontSize="18"/>
+                                        <TextBox Name="Address" IsReadOnly="{Binding IsReadOnly, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" FontSize="14"/>
+                                    </StackPanel>
+                                </Grid>
+                                <Grid  Margin="10,10,0,0">
+                                    <StackPanel>
+                                        <TextBlock Text="Date Issued" FontWeight="DemiBold" FontSize="18"/>
+                                        <Label FontSize="14">
+                                            <Label.Content>
+                                                <TextBlock Text="{Binding Source= {x:Static system:DateTime.Now}, 
+                                                    ConverterCulture='en-NZ',
+                                                    StringFormat= ' {0}' }"/>
+                                            </Label.Content>
+                                        </Label>
+
+                                    </StackPanel>
+                                </Grid>
                             </StackPanel>
 
                             <StackPanel Grid.Row="1" Grid.Column="3">
@@ -211,11 +237,8 @@
                     </Border>
 
                     <!--Vaccine Doses-->
-                    <Border Background="GhostWhite" BorderBrush="gray" BorderThickness="1" Padding="0,20" Grid.Row="3" CornerRadius="4" Margin="0,20">
+                    <Border Background="White" BorderBrush="gray" BorderThickness="1" Padding="0,20" Grid.Row="3" CornerRadius="4" Margin="0,20">
 
-                        <!--<Grid>
-                            <TextBlock Text="Personal Details" FontFamily="Inter" FontWeight="Bold" FontSize="30"/>
-                        </Grid>-->
                         <StackPanel>
                             <Grid Height="72" Margin="0,0,0,0" >
                                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Dose No." FontWeight="Medium" VerticalAlignment="Top" Margin="26,0,0,0" FontFamily="Roboto"/>
@@ -238,9 +261,31 @@
 
                 <StackPanel Margin="6.8,25,23.2,25" Orientation="Horizontal" Grid.Column="1" >
                     <Grid Margin="5">
-                        <Button Content="Edit Certificate" FontWeight="Medium" Width="210"  
+                        <Button Content="Edit Personal Details" FontWeight="Medium" Width="210"  
                                 Background="#3A89FF" Foreground="White" FontFamily="Roboto" 
                                 Height="34" FontSize="16" BorderThickness="0" Click="Edit_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="8"></Setter>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </Grid>
+                    <Grid Margin="5">
+                        <Button Content="Edit Vaccine Details" FontWeight="Medium" Width="210"  
+                                Background="#3A89FF" Foreground="White" FontFamily="Roboto" 
+                                Height="34" FontSize="16" BorderThickness="0" Click="Edit_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="8"></Setter>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </Grid>
+                    <Grid Margin="5">
+                        <Button Content="Save Certificate" FontWeight="Medium" Width="210"  
+                                Background="#3A89FF" Foreground="White" FontFamily="Roboto" 
+                                Height="34" FontSize="16" BorderThickness="0" Click="Save_Click">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="8"></Setter>
@@ -262,136 +307,7 @@
                     </Grid>
                 </StackPanel>
             </Grid>
-            
-            <!--<Grid Margin="15">
-            <Rectangle Fill="#D9D9D9" Opacity="0.4" HorizontalAlignment="Center" Height="677" Stroke="Black" VerticalAlignment="Top" Width="1091" Margin="140,10,0,-29.8" StrokeThickness="0"/>
-            <Rectangle Fill="White" HorizontalAlignment="Center" Height="640" Stroke="Black" VerticalAlignment="Top" Width="1050" Margin="165,29,0,-11.8" StrokeThickness="0"/>
-
-            <StackPanel>
-                <Grid>
-                    <Image VerticalAlignment="Top" Source="/Resources/images/NZ.png" Margin="180,44,898.2,0" Height="75"/>
-                </Grid>
-
-                <Grid>
-                    <TextBlock Text="My Covid Record Certificate" FontWeight="ExtraBold" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Inter" FontSize="48"/>
-                </Grid>
-
-                -->
-            <!--Personal Details-->
-            <!--
-                <Grid Margin="25">
-                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="196" Stroke="Black" VerticalAlignment="Center" Width="987" Margin="170,10,0,-11.2" Opacity="0.3"/>
-
-                    <StackPanel>
-                        <Grid  Margin="2,20,0,0">
-                            <TextBlock Text="Personal Details" FontWeight="ExtraBold" TextWrapping="Wrap" TextAlignment="Left" FontFamily="Inter" FontSize="28" Margin="183,0,147.6,-1.2" />
-                        </Grid>
-
-                        <Grid>
-                            <Grid Margin="10,5,0,0">
-                                -->
-            <!--<Ellipse Fill="White" HorizontalAlignment="Left" Height="100" Stroke="Black" VerticalAlignment="Top" Width="100" Margin="180,19,0,0"/> -->
-            <!--
-                                <Image Source="/Resources/images/My Covid Record Logo.png"  Height="130" Margin="180,0,1003.6,0" />
-
-                            </Grid>
-
-                            <Grid>
-                                <Grid Margin="330,0,158.6,0.4">
-                                    <Grid>
-                                        <TextBlock Text="Name" Margin="0,20,554.8,90.4" FontFamily="Roboto" FontWeight="Medium" FontSize="20"/>
-                                        -->
-            <!--Name from database-->
-            <!--
-                                    </Grid>
-
-                                    <Grid>
-                                        <TextBlock Text="Address" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="280,19,273.8,90.4"/>
-                                        -->
-            <!--Address from database-->
-            <!--
-                                    </Grid>
-
-                                    <Grid>
-                                        <TextBlock Text="Certificate ID" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="559,19,-0.2,90.4"/>
-                                        -->
-            <!--Generate ID from database-->
-            <!--
-                                    </Grid>
-                                </Grid>
-
-                                <Grid>
-                                    <Grid Margin="330,0,158.6,0.4">
-                                        <Grid>
-                                            <TextBlock Text="Date of Birth" Margin="0,74,554.8,36.4" FontFamily="Roboto" FontWeight="Medium" FontSize="20"/>
-                                            -->
-            <!--DOB from database-->
-            <!--
-                                        </Grid>
-
-                                        <Grid>
-                                            <TextBlock Text="Date Issued" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="280,74,273.8,35.4"/>
-                                            -->
-            <!--Passport from database-->
-            <!--
-                                        </Grid>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                    </StackPanel>
-                </Grid>
-
-                -->
-            <!--Vaccine Record-->
-            <!--
-                <Grid  Margin="25,0,25,25">
-                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="209" Stroke="Black" VerticalAlignment="Center" Width="987" Margin="170,10,0,-11.2" Opacity="0.3"/>
-
-                    <StackPanel>
-                        <Grid Height="72" Margin="170,0,158.6,0" >
-                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Dose No." FontWeight="Medium" VerticalAlignment="Top" Margin="26,27,0,0" FontFamily="Roboto"/>
-                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Date of Vaccination" FontWeight="Medium" VerticalAlignment="Top" Margin="130,27,0,0" FontFamily="Roboto"/>
-                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Vaccine" FontWeight="Medium" VerticalAlignment="Top" Margin="340,27,0,0" FontFamily="Roboto"/>
-                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Brand" FontWeight="Medium" VerticalAlignment="Top" Margin="570,27,0,0" FontFamily="Roboto"/>
-                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" FontWeight="Medium" VerticalAlignment="Top" Margin="816,27,0,0" FontFamily="Roboto"><Run Text="Country of Vaccination"/><LineBreak/><Run/></TextBlock>
-                        </Grid>
-                    </StackPanel>
-                </Grid>
-
-            </StackPanel>
-        </Grid>-->
-
-            <!--Buttons-->
-            <!--<Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-
-            <StackPanel Margin="6.8,25,23.2,25" Orientation="Horizontal" Grid.Column="1">
-                <Grid Margin="5">
-                    <Button Content="Edit Certificate" FontWeight="Medium" Width="210"  Background="#3A89FF" Foreground="White" FontFamily="Roboto" Height="34" FontSize="16" BorderThickness="0" Click="Edit_Click">
-                        <Button.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="CornerRadius" Value="8"></Setter>
-                            </Style>
-                        </Button.Resources>
-                    </Button>
-                </Grid>
-                <Grid Margin="5">
-                    <Button Content="Download Certificate" FontWeight="Medium" Width="205"  Background="#3A89FF" Foreground="White" FontFamily="Roboto" Height="34" FontSize="16" UseLayoutRounding="True" BorderThickness="0" Margin="0,0,0,-0.4" Click="Download_Click">
-                        <Button.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="CornerRadius" Value="8"></Setter>
-                            </Style>
-                        </Button.Resources>
-                    </Button>
-                </Grid>
-            </StackPanel>
-        </Grid>-->
         </StackPanel>
-        
     </ScrollViewer>
 </Page>
+   

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,54 +14,47 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Npgsql;
 
 namespace WpfApp1.Views
 {
     /// <summary>
     /// Interaction logic for UserProfile.xaml
     /// </summary>
-    public partial class UserProfile : Page
+    public partial class UserProfile : Page, INotifyPropertyChanged
     {
-        //private readonly SignUp _signup;
-        public UserProfile(SignUp signup)
+
+        public UserProfile()
         {
             InitializeComponent();
 
-            // _signup = signup;
+            int currentuserId = (int)App.Current.Properties["CurrentUserId"];
+
+            IsReadOnly = true;
 
             using (var db = new DataContext())
             {
-                User userregister = new User();
+                User currentUser = db.Users.Where(
+                    x => x.Id == currentuserId
+                    ).FirstOrDefault();
 
-                //userregister.FullName = _signup.FullNameTextBox.Text;
-                // userregister.UserName = _signup.UsernameTextBox.Text;
-                // userregister.Email = _signup.EmailTextBox.Text;
-                // userregister.PhoneNo = _signup.PhoneTextBox.Text;
+                Name.Text = currentUser.FullName;
+                Username.Text = currentUser.UserName;
+                Email.Text = currentUser.Email;
+                Number.Text = currentUser.PhoneNo;
+            }
 
-                //Binding Data from SignUp Page
-                Binding binding = new Binding("Text");
+            this.DataContext = this;
+        }
 
-                //Full Name
-                //Set binding behaviours
-                // binding.Source = _signup.FullNameTextBox;
-                binding.Mode = BindingMode.OneWay;
-                //Attach the binding to the destination component
-                //Name.SetBinding(Label.ContentProperty, binding);
-
-                //Username
-                // binding.Source = _signup.UsernameTextBox;
-                binding.Mode = BindingMode.OneWay;
-                Username.SetBinding(Label.ContentProperty, binding);
-
-                //Email
-                // binding.Source = _signup.EmailTextBox;
-                binding.Mode = BindingMode.OneWay;
-                Email.SetBinding(Label.ContentProperty, binding);
-
-                //Phone Number
-                // binding.Source = _signup.PhoneTextBox;
-                binding.Mode = BindingMode.OneWay;
-                Number.SetBinding(Label.ContentProperty, binding);
+        private bool _isReadOnly;
+        public bool IsReadOnly
+        {
+            get { return _isReadOnly; }
+            set
+            {
+                _isReadOnly = value;
+                OnPropertyChanged("IsReadOnly");
             }
         }
 
@@ -85,7 +80,7 @@ namespace WpfApp1.Views
 
         private void PersonalDeets_Click(object sender, RoutedEventArgs e)
         {
-            // App.Current.MainWindow.Content = new UserProfile(_signup);
+            App.Current.MainWindow.Content = new UserProfile();
         }
 
         private void GenerateQR_Click(object sender, RoutedEventArgs e)
@@ -105,7 +100,7 @@ namespace WpfApp1.Views
 
         private void Report_Click(object sender, RoutedEventArgs e)
         {
-
+            App.Current.MainWindow.Content = new UserReport();
         }
 
         private void Settings_Click(object sender, RoutedEventArgs e)
@@ -116,6 +111,53 @@ namespace WpfApp1.Views
         private void Logout_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new Login();
+        }
+
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+
+            IsReadOnly = false;
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            int currentuserId = (int)App.Current.Properties["CurrentUserId"];
+
+            using (var db = new DataContext())
+            {
+                User currentUser = db.Users.Where(
+                    x => x.Id == currentuserId
+                    ).FirstOrDefault();
+
+                currentUser.FullName = Name.Text;
+                currentUser.UserName = Username.Text;
+                currentUser.Email = Email.Text;
+                currentUser.PhoneNo = Number.Text;
+
+                db.Users.Update(currentUser);
+                db.SaveChanges();
+            }
+
+            this.DataContext = this;
+
+            IsReadOnly = true;
+        }
+
+        // Event handler for property change notifications
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        // Raises the PropertyChanged event when a property value changes
+        public void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        private void ForgotPassWord_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

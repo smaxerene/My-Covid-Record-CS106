@@ -56,6 +56,7 @@ namespace WpfApp1.Views
                     }
                     else
                     {
+                        App.Current.Properties["CurrentUserId"] = isUserThere.Id;
                         App.Current.MainWindow.Content = new Homepage();
                     }
 

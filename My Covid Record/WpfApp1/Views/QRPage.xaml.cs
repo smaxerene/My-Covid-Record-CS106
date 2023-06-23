@@ -47,7 +47,7 @@ namespace WpfApp1.Views
 
         private void PersonalDeets_Click(object sender, RoutedEventArgs e)
         {
-            // App.Current.MainWindow.Content = new UserProfile(_signup);
+            App.Current.MainWindow.Content = new UserProfile();
         }
 
         private void GenerateQR_Click(object sender, RoutedEventArgs e)
@@ -67,7 +67,7 @@ namespace WpfApp1.Views
 
         private void Report_Click(object sender, RoutedEventArgs e)
         {
-
+            App.Current.MainWindow.Content = new UserReport();
         }
 
         private void Settings_Click(object sender, RoutedEventArgs e)
