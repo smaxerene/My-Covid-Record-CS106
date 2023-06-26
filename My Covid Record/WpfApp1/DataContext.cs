@@ -13,9 +13,10 @@ namespace WpfApp1
     {
         public DbSet<User> Users { get; set; }
         public DbSet<UserDetails> UserDetails { get; set; }
+
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
            => optionsBuilder.UseNpgsql("Host=rosie.db.elephantsql.com;Database=zbjbtgnq;Username=zbjbtgnq;Password=PKNbH0np9lpE1enC8hxK4ye3X7xMeuf-");
-
     }
 
     public class User
@@ -39,6 +40,7 @@ namespace WpfApp1
         public string Brand { get; set; }
         public string Country { get; set; }
     }
+
 
 }
 

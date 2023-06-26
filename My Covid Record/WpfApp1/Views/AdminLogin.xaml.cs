@@ -27,8 +27,8 @@ namespace WpfApp1.Views
         }
         private void AdminLogin_Click(object sender, RoutedEventArgs e)
         {
-            UserReports UserReportsWindow = new UserReports();
-            App.Current.MainWindow.Content = UserReportsWindow;
+            ReportRecieves ReportRecievesWindow = new ReportRecieves();
+            ReportRecievesWindow.Show();
         }
     }
 }

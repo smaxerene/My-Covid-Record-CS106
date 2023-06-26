@@ -1,64 +1,77 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
+using Npgsql;
+using System.Data;
 
-namespace WpfApp1
+namespace WpfApp1.Views
 {
     public partial class UserReports : Window
     {
-        private List<UserReport> reports;
-        public UserReport SelectedReport { get; set; }
+        string connectionString = "Server=rosie.db.elephantsql.com;Port=866020 ;Database=zbjbtgnq;";
 
         public UserReports()
         {
             InitializeComponent();
-
-            // Initialize the reports list (replace with your actual logic)
-            reports = new List<UserReport>
-            {
-                new UserReport { Subject = "Issue 1", Description = "Description 1" },
-                new UserReport { Subject = "Issue 2", Description = "Description 2" },
-                new UserReport { Subject = "Issue 3", Description = "Description 3" }
-            };
-
-
-            // Bind the reports to the ListView
-            reportsListView.ItemsSource = reports;
         }
 
-        private void ListViewItem_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
-            // Set the selected item when the ListViewItem is clicked
-            var listViewItem = sender as ListViewItem;
-            if (listViewItem != null && listViewItem.IsSelected)
+            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
-                SelectedReport = listViewItem.DataContext as UserReport;
+                connection.Open();
+
+                string subject = SubjectTextBox.Text;
+                string email = EmailTextBox.Text;
+                string description = DescriptionTextBox.Text;
+
+                string insertQuery = "INSERT INTO Report (Subject, Email, Description) VALUES (@Subject, @Email, @Description)";
+
+                using (NpgsqlCommand command = new NpgsqlCommand(insertQuery, connection))
+                {
+                    command.Parameters.AddWithValue("@Subject", subject);
+                    command.Parameters.AddWithValue("@Email", email);
+                    command.Parameters.AddWithValue("@Description", description);
+
+                    command.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Your report has been submitted successfully!", "Report Submitted", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                // Clear the input fields
+                EmailTextBox.Text = string.Empty;
+                SubjectTextBox.Text = string.Empty;
+                DescriptionTextBox.Text = string.Empty;
+
+                // Refresh the reports list
+                LoadReports();
             }
         }
 
-        private void OpenReportIssueWindow(List<UserReport> reports)
+        private void LoadReports()
         {
-            ReportIssue reportIssue = new ReportIssue(reports);
-            reportIssue.Show();
+            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string selectQuery = "SELECT * FROM Report";
+
+                using (NpgsqlCommand command = new NpgsqlCommand(selectQuery, connection))
+                {
+                    using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(command))
+                    {
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        ReportsListBox.ItemsSource = dataTable.DefaultView;
+                    }
+                }
+            }
         }
 
-        private void Submit_Click(object sender, RoutedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            if (SelectedReport != null)
-            {
-                OpenReportIssueWindow(reports);
-            }
-            else
-            {
-                MessageBox.Show("Please select a report before submitting.");
-            }
+            LoadReports();
         }
-    }
-
-    public class UserReport
-    {
-        public string Subject { get; set; }
-        public string Description { get; set; }
     }
 }
