@@ -36,7 +36,6 @@ namespace WpfApp1.Views
             this.DataContext = this;
         }
 
-
         //Account 
         private void btnClosePopup_Click(object sender, RoutedEventArgs e)
         {

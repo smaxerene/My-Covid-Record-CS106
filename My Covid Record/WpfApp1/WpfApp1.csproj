@@ -35,6 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MahApps.Metro.IconPacks.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.Material.4.11.0\lib\net47\MahApps.Metro.IconPacks.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Material, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.Material.4.11.0\lib\net47\MahApps.Metro.IconPacks.Material.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -145,6 +151,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DataContext.cs" />
+    <Compile Include="System\Drawing\Image.cs" />
     <Compile Include="Views\AdminLogin.xaml.cs">
       <DependentUpon>AdminLogin.xaml</DependentUpon>
     </Compile>
@@ -399,6 +406,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\images\qr_placeholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\editButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\deleteButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

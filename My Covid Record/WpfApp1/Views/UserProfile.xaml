@@ -27,6 +27,26 @@
                 </Trigger>
             </ControlTemplate.Triggers>
         </ControlTemplate>
+
+        <ControlTemplate x:Key="RoundTextboxCornterTemplate" TargetType="{x:Type TextBoxBase}">
+            <Border Background="{TemplateBinding Background}"   
+         x:Name="Bd" BorderBrush="Black"  
+         BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
+                <ScrollViewer x:Name="PART_ContentHost"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="Width" Value="Auto">
+                    <Setter Property="MinWidth" Value="100"/>
+                </Trigger>
+                <Trigger Property="Height" Value="Auto">
+                    <Setter Property="MinHeight" Value="20"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
     </Page.Resources>
 
     <ScrollViewer>
@@ -74,10 +94,26 @@
                     </Button>
 
                     <Grid Margin="5,10" Width="529">
-                        <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" FontSize="25" Height="50" Width="512" />
+                        <TextBox Name="SearchTermTextBox" Template="{StaticResource RoundTextboxCornterTemplate}" VerticalContentAlignment="Center" FontSize="25" Height="50" Width="512" />
                         <Button x:Name="SearchButton"  BorderThickness="0" HorizontalAlignment="Right" Background="White" Margin="10,10,12,9.6" >
                             <Image Source="/Resources/images/searchbutton.png" Width="38" />
                         </Button>
+
+                        <TextBlock IsHitTestVisible="False" Text="  Enter Search Term Here" 
+                               VerticalAlignment="Center" HorizontalAlignment="Left" 
+                               FontFamily="Inter"
+                               Margin="10,0,0,0" Foreground="DarkGray">
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Text, ElementName=SearchTermTextBox}" Value="">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
                     </Grid>
                 </StackPanel>
 
@@ -154,6 +190,9 @@
                     </Grid>
                     <Grid  Margin="10,15,0,0">
                         <TextBlock TextWrapping="Wrap" FontWeight="Medium" Text="Hi, " Grid.ColumnSpan="2" FontFamily="Roboto" FontSize="30"/>
+                    </Grid>
+                    <Grid>
+                        <TextBox Name="Greeting" IsReadOnly="{Binding IsReadOnly, UpdateSourceTrigger=PropertyChanged}" Height="30" Width="400" BorderThickness="0"  FontWeight="Medium" FontSize="30" FontFamily="Roboto" VerticalContentAlignment="Center" Margin="0,14,0,7.2"/>
                     </Grid>
                 </StackPanel>
 

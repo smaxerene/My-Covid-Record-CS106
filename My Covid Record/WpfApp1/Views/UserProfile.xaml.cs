@@ -38,6 +38,7 @@ namespace WpfApp1.Views
                     x => x.Id == currentuserId
                     ).FirstOrDefault();
 
+                Greeting.Text = currentUser.FullName;
                 Name.Text = currentUser.FullName;
                 Username.Text = currentUser.UserName;
                 Email.Text = currentUser.Email;

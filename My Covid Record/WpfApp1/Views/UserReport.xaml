@@ -122,10 +122,26 @@
                     </Button>
 
                     <Grid Margin="5,10" Width="529">
-                        <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" FontSize="25" Height="50" Width="512" />
+                        <TextBox Name="SearchTermTextBox" Template="{StaticResource RoundTextboxCornterTemplate}" VerticalContentAlignment="Center" FontSize="25" Height="50" Width="512" />
                         <Button x:Name="SearchButton"  BorderThickness="0" HorizontalAlignment="Right" Background="White" Margin="10,10,12,9.6" >
                             <Image Source="/Resources/images/searchbutton.png" Width="38" />
                         </Button>
+
+                        <TextBlock IsHitTestVisible="False" Text="  Enter Search Term Here" 
+                               VerticalAlignment="Center" HorizontalAlignment="Left" 
+                               FontFamily="Inter"
+                               Margin="10,0,0,0" Foreground="DarkGray">
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Text, ElementName=SearchTermTextBox}" Value="">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
                     </Grid>
                 </StackPanel>
 

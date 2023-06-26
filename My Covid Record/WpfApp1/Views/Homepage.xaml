@@ -7,6 +7,28 @@
       mc:Ignorable="d" 
       Title="Homepage">
 
+    <Page.Resources>
+        <ControlTemplate x:Key="RoundTextboxCornterTemplate" TargetType="{x:Type TextBoxBase}">
+            <Border Background="{TemplateBinding Background}"   
+         x:Name="Bd" BorderBrush="Black"  
+         BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
+                <ScrollViewer x:Name="PART_ContentHost"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="Width" Value="Auto">
+                    <Setter Property="MinWidth" Value="100"/>
+                </Trigger>
+                <Trigger Property="Height" Value="Auto">
+                    <Setter Property="MinHeight" Value="20"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Page.Resources>
+
     <ScrollViewer>
 
         <StackPanel Margin="20">
@@ -49,99 +71,113 @@
 
             </Grid>
 
-            <Label Content="Welcome back" 
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <Grid>
+                        <Label Content="Welcome back" 
                HorizontalAlignment="Center" 
                FontFamily="Inter" FontSize="20"/>
+                    </Grid>
+                </StackPanel>
+            </Grid>
 
-            <StackPanel Margin="60,0">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
 
-                    <TextBox HorizontalAlignment="Left" Height="30"   VerticalAlignment="Center" 
-                             x:Name="SearchTermTextBox" Width="253" TextChanged="TextBox_TextChanged" FontFamily="Inter"
-                             Padding="8,0,0,0"
-                             VerticalContentAlignment="Center"
-                             />
+            <!--Home, Searchbar, & Account-->
+            <Grid Margin="40,20,40,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-                    <TextBlock IsHitTestVisible="False" Text="Enter Search Term Here" 
+                <!--Home, Searchbar-->
+                <StackPanel Orientation="Horizontal">
+                    <Grid Margin="5,10" Width="529">
+                        <TextBox Name="SearchTermTextBox" Template="{StaticResource RoundTextboxCornterTemplate}" VerticalContentAlignment="Center" FontSize="25" Height="50" Width="512" />
+                        <Button x:Name="SearchButton"  BorderThickness="0" HorizontalAlignment="Right" Background="White" Margin="10,10,12,9.6" >
+                            <Image Source="/Resources/images/searchbutton.png" Width="38" />
+                        </Button>
+
+                        <TextBlock IsHitTestVisible="False" Text="  Enter Search Term Here" 
                                VerticalAlignment="Center" HorizontalAlignment="Left" 
                                FontFamily="Inter"
                                Margin="10,0,0,0" Foreground="DarkGray">
-                        <TextBlock.Style>
-                            <Style TargetType="{x:Type TextBlock}">
-                                <Setter Property="Visibility" Value="Collapsed"/>
-                                <Style.Triggers>
-                                    <DataTrigger Binding="{Binding Text, ElementName=SearchTermTextBox}" Value="">
-                                        <Setter Property="Visibility" Value="Visible"/>
-                                    </DataTrigger>
-                                </Style.Triggers>
-                            </Style>
-                        </TextBlock.Style>
-                    </TextBlock>
-
-                    <StackPanel Grid.ColumnSpan="2" Height="74" VerticalAlignment="Top" >
-                        <Button Name="btnShowPopup" Content="Account" FontWeight="Medium" HorizontalAlignment="Right" VerticalAlignment="Top" Width="105" Height="74" 
-                Click="btnShowPopup_Click" FontSize="25" BorderThickness="0"  Background="White" FontFamily="Roboto" Grid.Column="1" Margin="0,0,0,0">
-                            <Button.Resources>
-                                <Style TargetType="{x:Type Border}">
-                                    <Setter Property="CornerRadius" Value="8"/>
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Text, ElementName=SearchTermTextBox}" Value="">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
                                 </Style>
-                            </Button.Resources>
-                        </Button>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </Grid>
+                </StackPanel>
 
+                <!--Account-->
+                <StackPanel Grid.ColumnSpan="2" Height="74" VerticalAlignment="Top" >
+                    <Button Name="btnShowPopup" Content="Account" FontWeight="Medium"  HorizontalAlignment="Right" VerticalAlignment="Top" Width="105" Height="74" 
+                Click="btnShowPopup_Click" FontSize="25" BorderThickness="0"  Background="White" FontFamily="Roboto" Grid.Column="1" Margin="0,0,0,0">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="8"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
 
-
-                        <Popup AllowsTransparency="True" HorizontalOffset="1cm" x:Name="myPopup" 
+                    <Popup AllowsTransparency="True" HorizontalOffset="1cm" x:Name="myPopup" 
                    Placement="Relative" StaysOpen="True" PlacementTarget="{Binding ElementName=btnShowPopup}"
                        Margin="0"
->
-                            <Border Width="304" Height="301">
-                                <DockPanel Background="#3A89FF" LastChildFill="True" Margin="0,0,0,-39.2"  Grid.ColumnSpan="3" Grid.RowSpan="1" RenderTransformOrigin="0.522,0.549" Height="340" VerticalAlignment="Top">
-                                    <DockPanel.RenderTransform>
-                                        <TransformGroup>
-                                            <ScaleTransform/>
-                                            <SkewTransform AngleX="0.268"/>
-                                            <RotateTransform/>
-                                            <TranslateTransform X="0.873"/>
-                                        </TransformGroup>
-                                    </DockPanel.RenderTransform>
+                       >
+                        <Border Width="304" Height="301">
+                            <DockPanel Background="#3A89FF" LastChildFill="True" Margin="0,0,0,-39.2"  Grid.ColumnSpan="3" Grid.RowSpan="1" RenderTransformOrigin="0.522,0.549" Height="340" VerticalAlignment="Top">
+                                <DockPanel.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform AngleX="0.268"/>
+                                        <RotateTransform/>
+                                        <TranslateTransform X="0.873"/>
+                                    </TransformGroup>
+                                </DockPanel.RenderTransform>
+                                <Grid>
                                     <Grid>
-                                        <Grid>
-                                            <TextBlock Background="#3A89FF" Foreground="White" DockPanel.Dock="Top" 
+                                        <TextBlock Background="#3A89FF" Foreground="White" DockPanel.Dock="Top" 
                                    FontSize="16"  HorizontalAlignment="Center"  
                                    Margin="30,40,215,270" Text="Account" />
-                                        </Grid>
+                                    </Grid>
 
-                                        <Grid Margin="0,0,0,0" Width="116">
-                                            <Button Content="Personal Details" Click="PersonalDeets_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,100,-50,220" Width="223" FontFamily="Inter"/>
-                                            <Button Content="Generate QR Code" Click="GenerateQR_Click" HorizontalAlignment="Center"   Background="White" Margin="-57,125,-50,195" Width="223"/>
-                                            <Button Content="Generate Vaccine Certificate" Click="Certificate_Click" HorizontalAlignment="Center"  Background="White"  Margin="-57,150,-50,170" Width="223"/>
-                                            <Button Content="Vaccine Details" Click="Notif_Click" HorizontalAlignment="Center"   Background="White"  Margin="-57,175,-50,145" Width="223"/>
-                                            <Button Content="Report an Issue" Click="Report_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,200,-50,121" Width="223"/>
-                                            <Button Content="Settings" Click="Settings_Click"  HorizontalAlignment="Center"  Background="White" Margin="-57,224,-50,97" Width="223"/>
-                                        </Grid>
+                                    <Grid Margin="0,0,0,0" Width="116">
+                                        <Button Content="Personal Details" Click="PersonalDeets_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,100,-50,220" Width="223" FontFamily="Inter"/>
+                                        <Button Content="Generate QR Code" Click="GenerateQR_Click" HorizontalAlignment="Center"   Background="White" Margin="-57,125,-50,195" Width="223"/>
+                                        <Button Content="Generate Vaccine Certificate" Click="Certificate_Click" HorizontalAlignment="Center"  Background="White"  Margin="-57,150,-50,170" Width="223"/>
+                                        <Button Content="Vaccine Details" Click="Notif_Click" HorizontalAlignment="Center"   Background="White"  Margin="-57,175,-50,145" Width="223"/>
+                                        <Button Content="Report an Issue" Click="Report_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,200,-50,121" Width="223"/>
+                                        <Button Content="Settings" Click="Settings_Click"  HorizontalAlignment="Center"  Background="White" Margin="-57,224,-50,97" Width="223"/>
+                                    </Grid>
 
-                                        <Grid>
-                                            <Button Click="btnClosePopup_Click" Content="Close" Margin="17,255,248,44" 
+                                    <Grid>
+                                        <Button Click="btnClosePopup_Click" Content="Close" Margin="17,255,248,44" 
                                 HorizontalAlignment="Center"  BorderThickness="0" Background="#3A89FF" Foreground="White" MaxHeight="23" RenderTransformOrigin="0.087,0.689" Width="39"/>
 
-                                            <Button Content="Logout" Click="Logout_Click" Margin="242,255,17,44" 
+                                        <Button Click="btnClosePopup_Click" Content="Logout" Margin="242,255,17,44" 
                                  HorizontalAlignment="Center" BorderThickness="0" Background="#3A89FF" Foreground="White" MaxHeight="23" RenderTransformOrigin="0.574,0.693" Width="45" FontFamily="Inter"/>
-                                        </Grid>
 
                                     </Grid>
-                                </DockPanel>
-                            </Border>
-                        </Popup>
-                    </StackPanel>
-                </Grid>
+                                </Grid>
+                            </DockPanel>
+                        </Border>
+                    </Popup>
+                </StackPanel>
+            </Grid>
 
-            </StackPanel>
-
-            <StackPanel Margin="60,0">
+            <StackPanel Margin="50,0">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
