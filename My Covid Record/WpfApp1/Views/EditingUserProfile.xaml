@@ -1,0 +1,219 @@
+﻿<Page x:Class="WpfApp1.Views.EditingUserProfile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EditingUserProfile">
+
+    <Page.Resources>
+        <!--Searchbar-->
+        <ControlTemplate x:Key="RoundTextboxCornerTemplate" TargetType="{x:Type TextBoxBase}">
+            <Border Background="{TemplateBinding Background}"   
+         x:Name="Bd" BorderBrush="Black"  
+         BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
+                <ScrollViewer x:Name="PART_ContentHost"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="Width" Value="Auto">
+                    <Setter Property="MinWidth" Value="100"/>
+                </Trigger>
+                <Trigger Property="Height" Value="Auto">
+                    <Setter Property="MinHeight" Value="20"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <!--Textbox design-->
+        <ControlTemplate x:Key="RoundTextboxCornterTemplate" TargetType="{x:Type TextBoxBase}">
+            <Border Background="{TemplateBinding Background}"   
+         x:Name="Bd" BorderBrush="Black"  
+         BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
+                <ScrollViewer x:Name="PART_ContentHost"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="Width" Value="Auto">
+                    <Setter Property="MinWidth" Value="100"/>
+                </Trigger>
+                <Trigger Property="Height" Value="Auto">
+                    <Setter Property="MinHeight" Value="20"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <!--Password textbox design-->
+        <Style TargetType="PasswordBox" x:Key="roundcornerpassword">
+            <Setter Property="PasswordChar" Value="●"/>
+            <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="PasswordBox">
+                        <Border Background="{TemplateBinding Background}"   
+                        x:Name="Bd" BorderBrush="Black"  
+                        BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <ScrollViewer>
+        <StackPanel Margin="20">
+            <!--NZ Government Logo-->
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image HorizontalAlignment="Left" Height="60" 
+               Source="/Resources/images/NZ Gov Logo.png"/>
+
+                <Image Grid.Column="1" HorizontalAlignment="Right" Height="44" Source="/Resources/images/NZ Gov.png"/>
+            </Grid>
+
+            <StackPanel Background="#3A89FF">
+                <Grid>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Social Medias" FontSize="14" Padding="7" HorizontalAlignment="Center"/>
+                        <Label Content="Language Change Options" FontSize="14" Padding="7" HorizontalAlignment="Center"/>
+                        <Label Content="Chats" FontSize="14" Padding="7" HorizontalAlignment="Center"/>
+                        <Label Content="Donate" FontSize="14" Padding="7" HorizontalAlignment="Center"/>
+                    </StackPanel>
+
+                </Grid>
+            </StackPanel>
+
+            <StackPanel>
+                <Grid HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" Margin="0,0,200,0">
+                        <Label Content="Edit Users Profile" FontSize="22" Padding="7" FontWeight="Bold"/>
+                        <Label Content="Status" FontSize="22" Padding="7" FontWeight="Bold"/>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="350"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <StackPanel Background="#3A89FF">
+                    <Label Content="Search People" FontSize="16" HorizontalAlignment="Center" Padding="0,5"/>
+                    <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" FontSize="25" VerticalAlignment="Center" Padding="5" Width="300" />
+
+                    <StackPanel Margin="40,15" Orientation="Horizontal">
+                        <Ellipse Height="40" Width="40" Fill="#FFCC00"/>
+                        <Label Content="Username" FontSize="14" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="40,15" Orientation="Horizontal">
+                        <Ellipse Height="40" Width="40" Fill="#FFCC00"/>
+                        <Label Content="Username" FontSize="14" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="40,15" Orientation="Horizontal">
+                        <Ellipse Height="40" Width="40" Fill="#FFCC00"/>
+                        <Label Content="Username" FontSize="14" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="40,15" Orientation="Horizontal">
+                        <Ellipse Height="40" Width="40" Fill="#FFCC00"/>
+                        <Label Content="Username" FontSize="14" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="40,15" Orientation="Horizontal">
+                        <Ellipse Height="40" Width="40" Fill="#FFCC00"/>
+                        <Label Content="Username" FontSize="14" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="40,15" Orientation="Horizontal">
+                        <Ellipse Height="40" Width="40" Fill="#FFCC00"/>
+                        <Label Content="Username" FontSize="14" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="40,15" Orientation="Horizontal">
+                        <Ellipse Height="40" Width="40" Fill="#FFCC00"/>
+                        <Label Content="Username" FontSize="14" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="40,15" Orientation="Horizontal">
+                        <Ellipse Height="40" Width="40" Fill="#FFCC00"/>
+                        <Label Content="Username" FontSize="14" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="40,15" Orientation="Horizontal">
+                        <Ellipse Height="40" Width="40" Fill="#FFCC00"/>
+                        <Label Content="Username" FontSize="14" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+
+                    <StackPanel Orientation="Horizontal" Margin="30,20">
+                        <Image HorizontalAlignment="Center" Height="40" 
+                               Source="/Resources/images/NZ Gov Logo.png"/>
+                        <Label Content="Social Medias" FontSize="14" Padding="7" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+                <!--Second Grid Column-->
+                <StackPanel Grid.Column="2" >
+                    <StackPanel Orientation="Horizontal" Background="#FFCC00">
+                        <Label Content="Details" FontSize="20" FontWeight="Bold" Margin="100,0,0,0"/>
+                        <Label Content="Documents" FontSize="20" FontWeight="Bold" Margin="50,0,0,0" HorizontalContentAlignment="Right"/>
+                    </StackPanel>
+                    <Ellipse Fill="#FFCC00" Height="140" Width="140" Margin="80"/>
+                    <Label Content="Personal Details" FontWeight="Bold" FontSize="20" Padding="50,10" HorizontalAlignment="Center"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Email:" FontWeight="Bold" FontSize="24" VerticalAlignment="Center" Margin="6,30"/>
+                        <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" Background="#3A89FF" 
+                                 Foreground="White" FontSize="25" VerticalAlignment="Center" 
+                                 Width="300" Margin="87,0" Padding="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Phone:" FontWeight="Bold" FontSize="24" VerticalAlignment="Center" Margin="1,10"/>
+                        <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" Background="#3A89FF" 
+                                 Foreground="White" FontSize="25" VerticalAlignment="Center" 
+                                 Width="300" Margin="92,0" Padding="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Name:" FontWeight="Bold" FontSize="24" VerticalAlignment="Center" Margin="3,30"/>
+                        <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" Background="#3A89FF" 
+                                 Foreground="White" FontSize="25" VerticalAlignment="Center" 
+                                 Width="300" Margin="90,0" Padding="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Joined:" FontWeight="Bold" FontSize="24" VerticalAlignment="Center" Margin="0,10"/>
+                        <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" Background="#3A89FF" 
+                                 Foreground="White" FontSize="25" VerticalAlignment="Center" VerticalContentAlignment="Center"
+                                  Width="300" Margin="94,0" Padding="5"/>
+                    </StackPanel>
+                    <Label Content="Personal Details" FontWeight="Bold" FontSize="20" Padding="50,30" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
