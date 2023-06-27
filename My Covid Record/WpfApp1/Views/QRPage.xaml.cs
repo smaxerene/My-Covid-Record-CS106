@@ -27,18 +27,15 @@ namespace WpfApp1.Views
         {
             InitializeComponent();
         }
-
         private void Home_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new Homepage();
         }
-
         //Account 
         private void btnClosePopup_Click(object sender, RoutedEventArgs e)
         {
             myPopup.IsOpen = false;
         }
-
         private void btnShowPopup_Click(object sender, RoutedEventArgs e)
         {
             if (sender == btnShowPopup)
@@ -46,12 +43,10 @@ namespace WpfApp1.Views
                 myPopup.IsOpen = true;
             }
         }
-
         private void PersonalDeets_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new UserProfile();
         }
-
         private void GenerateQR_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new QRPage();
@@ -66,7 +61,6 @@ namespace WpfApp1.Views
         {
             App.Current.MainWindow.Content = new VaccineDetailsPage();
         }
-
         private void Report_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new UserReports();
@@ -76,7 +70,6 @@ namespace WpfApp1.Views
         {
 
         }
-
         private void Logout_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new Login();

@@ -186,7 +186,12 @@ namespace WpfApp1.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //For ReportRecieves
+            App.Current.MainWindow.Content = new AdminRecording();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Content = new ReportRecieves();
         }
     }
 

@@ -36,14 +36,23 @@
         <TextBox HorizontalAlignment="Left" BorderBrush="Black" Height="28" Margin="265,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="313" TextChanged="TextBox_TextChanged"/>
 
         <Line X1="0" Y1="0" X2="2000" Y2="0" Stroke="Black"   StrokeThickness="5" Margin="-8,390,0,665" />
-        <TextBox HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="30" TextChanged="TextBox_TextChanged" Margin="0,963,0,0"/>
-        <ListView x:Name="reportListView" Margin="442,532,510,106">
+        <Button Click="Button_Click_3" Margin="390,331,1448,690" Background="White" BorderBrush="Transparent" BorderThickness="0">
+            <Image Source="/Resources/images/medical.png"></Image>
+        </Button>
+
+        <Button Click="Button_Click_4" Margin="574,331,1271,690" Background="White" BorderBrush="Transparent" BorderThickness="0">
+            <Image Source="/Resources/images/report.png"></Image>
+        </Button>
+
+
+        <TextBox HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="30" TextChanged="TextBox_TextChanged" Margin="796,944,924,0"/>
+        <ListView x:Name="reportListView"  FontSize="30" Margin="381,532,313,106">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Report ID" DisplayMemberBinding="{Binding ReportId}" />
-                    <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Subject}" />
-                    <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Email}" />
-                    <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}" />
+                    <GridViewColumn Header="ID" Width="150" DisplayMemberBinding="{Binding ReportId}" />
+                    <GridViewColumn Header="Subject"  Width="250" DisplayMemberBinding="{Binding Subject}" />
+                    <GridViewColumn Header="Email" Width="250" DisplayMemberBinding="{Binding Email}" />
+                    <GridViewColumn Header="Description" Width="250" DisplayMemberBinding="{Binding Description}" />
                 </GridView>
             </ListView.View>
         </ListView>

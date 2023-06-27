@@ -13,7 +13,7 @@
             <Setter Property="HorizontalContentAlignment" Value="Center" />
         </Style>
     </Page.Resources>
-
+    
     <Grid Margin="0,234,-0.4,-215.6">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="271*"/>
@@ -62,7 +62,8 @@
                 </TextBlock.Style>
             </TextBlock>
         </Grid>
-        <TextBlock Text="Press to see Reports"  FontWeight="Black" FontSize="20" Grid.Column="2" Margin="701.4,439,35.6,381.4" Grid.Row="2" RenderTransformOrigin="0.5,0.5">
+        <TextBlock  Text="Reports" FontWeight="Black" FontSize="20" Grid.Column="1" Margin="309,146,23.305,701.4" Grid.Row="2" RenderTransformOrigin="0.5,0.5"/>
+        <TextBlock  Text="Records" FontWeight="Black" FontSize="20" Grid.Column="1" Margin="154,147,178.305,700.4" Grid.Row="2" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -72,21 +73,12 @@
                 </TransformGroup>
             </TextBlock.RenderTransform></TextBlock>
         <!--<*************************************************************>-->
-        <Button Click="Button_Click" Margin="729.4,474,68.6,214.4" Grid.RowSpan="3" Background="White" Grid.Column="2" BorderBrush="Transparent" BorderThickness="0">
-            <Polygon
-        HorizontalAlignment="Right"
-        VerticalAlignment="Top"
-        Width="152"
-        Height="174"
-        Points="0 2,0,0 2,1"
-        Fill="Red"
-               Stroke="Transparent"
-              Stretch="Fill"
-        StrokeThickness="0"
-        Grid.Column="2"
-        Grid.Row="2" />
+        <Button Click="Button_Click" Margin="161,110,186.305,727.4" Grid.RowSpan="3" Background="White" Grid.Column="1" BorderBrush="Transparent" BorderThickness="0">
+            <Image Source="/Resources/images/medical.png"></Image>
         </Button>
-
+        <Button Click="Button_Click_1" Margin="313,110,34.305,727.4" Grid.RowSpan="3" Background="White" Grid.Column="1" BorderBrush="Transparent" BorderThickness="0">
+            <Image Source="/Resources/images/report.png"></Image>
+        </Button>
         <!--<*************************************************************>-->
         <Line X1="0" Y1="0" X2="12000" Y2="0" Stroke="Black" StrokeThickness="10" Grid.ColumnSpan="3" Margin="0,147,0.6,685.4" Grid.Row="2" />
         <TextBlock Text="Account" FontSize="25

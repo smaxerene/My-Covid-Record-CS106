@@ -27,6 +27,7 @@ namespace WpfApp1.Views
         }
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -34,12 +35,10 @@ namespace WpfApp1.Views
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                // Get the values from the text boxes
                 string subject = Subjecttextbox.Text;
                 string email = Emailtextbox.Text;
                 string description = Descriptiontextbox.Text;
                 MessageBox.Show("Your report has been submitted successfully!", "Report Submitted", MessageBoxButton.OK, MessageBoxImage.Information);
-                // Insert the user report into the database table
                 string insertQuery = "INSERT INTO AdminRecords (Subject, Email, Description) VALUES (@Subject, @Email, @Description)";
                 using (SqlCommand command = new SqlCommand(insertQuery, connection))
                 {
@@ -49,17 +48,13 @@ namespace WpfApp1.Views
 
                     command.ExecuteNonQuery();
                 }
-                // Your code to insert the user report into the database
             }
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            // Create an instance of the ReportRecieves page
             ReportRecieves reportRecievesPage = new ReportRecieves();
-            // Set the main window's content to the ReportRecieves page
             Application.Current.MainWindow.Content = reportRecievesPage;
         }
-
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new Homepage();

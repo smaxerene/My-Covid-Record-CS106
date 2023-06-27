@@ -41,7 +41,6 @@ namespace WpfApp1.Views
                             string email = reader.GetString(2);
                             string description = reader.GetString(3);
 
-                            // Add the report data to your UI elements or collection for display
                             reportListView.Items.Add(new ReportItem { ReportId = reportId, Subject = subject, Email = email, Description = description });
                         }
                     }
@@ -49,10 +48,8 @@ namespace WpfApp1.Views
             }
         }
 
-        // Define a class to hold the report data
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            // Handle the text changed event here
         }
 
         private class ReportItem
@@ -70,6 +67,20 @@ namespace WpfApp1.Views
             }
         }
 
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Content = new Homepage();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Content = new AdminRecording();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Content = new ReportRecieves();
+        }
     }
 }
 

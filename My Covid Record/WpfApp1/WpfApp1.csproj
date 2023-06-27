@@ -448,6 +448,9 @@
     <Resource Include="Resources\images\searchbutton.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\images\medical.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\images\rejected.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -466,6 +469,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\images\report.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\images\warning.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
