@@ -24,10 +24,9 @@ namespace WpfApp1.Views
         {
             InitializeComponent();
         }
-
         private void AdminLogin_Click(object sender, RoutedEventArgs e)
         {
-            App.Current.MainWindow.Content = new AdminRecording();
+            App.Current.MainWindow.Content = new UserReports();
         }
     }
 }

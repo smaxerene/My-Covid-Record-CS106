@@ -146,16 +146,16 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            
+
             <StackPanel Orientation="Horizontal">
                 <Grid Margin="10,10,0,0">
-                     <Image Source="/Resources/images/profile.png" Height="40"/>
+                    <Image Source="/Resources/images/profile.png" Height="40"/>
                 </Grid>
                 <Grid  Margin="10,15,0,0">
                     <TextBlock TextWrapping="Wrap" FontWeight="Medium" Text="Hi, " Grid.ColumnSpan="2" FontFamily="Roboto" FontSize="30"/>
                 </Grid>
             </StackPanel>
-           
+
             <!--Name from database-->
         </Grid>
 
@@ -200,15 +200,19 @@
                             <StackPanel  Margin="10,0,20,0" Orientation="Vertical">
                                 <Grid>
                                     <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="400"/>
+                                    <Label Name="Name" Content="{Binding ElementName=FullNameTextBox, Path=Text, Mode=OneWay}" VerticalContentAlignment="Center" Height="40" Width="400" FontSize="16" FontFamily="Roboto"/>
                                 </Grid>
                                 <Grid Margin="0,10,0,0">
                                     <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="400"/>
+                                    <Label Name="Username" Content="{Binding ElementName=UsernameTextBox, Path=Text, Mode=OneWay}" VerticalContentAlignment="Center" Height="40" Width="400" FontSize="16" FontFamily="Roboto"/>
                                 </Grid>
                                 <Grid Margin="0,10,0,0">
                                     <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="400"/>
+                                    <Label Name="Email" Content="{Binding ElementName=EmailTextBox, Path=Text, Mode=OneWay}" VerticalContentAlignment="Center" Height="40" Width="400" FontSize="16" FontFamily="Roboto"/>
                                 </Grid>
                                 <Grid  Margin="0,10,0,0">
                                     <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="400"/>
+                                    <Label Name="Number" Content="{Binding ElementName=PhoneTextBox, Path=Text, Mode=OneWay}" VerticalContentAlignment="Center" Height="40" Width="400" FontSize="16" FontFamily="Roboto"/>
                                 </Grid>
                                 <Grid Margin="0,10,0,0">
                                     <Rectangle Fill="Black" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="400"/>
@@ -230,13 +234,13 @@
                                 </StackPanel>
                             </Grid>
                         </StackPanel>
-                        
+
                     </StackPanel>
                 </Grid>
 
             </Grid>
         </Grid>
-        
+
 
         <!--Buttons-->
         <Grid Height="122">

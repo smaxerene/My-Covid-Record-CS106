@@ -26,6 +26,8 @@ namespace WpfApp1.Views
         public SignUp()
         {
             InitializeComponent();
+
+            DataContext = new SignUp();
         }
 
         //Submit

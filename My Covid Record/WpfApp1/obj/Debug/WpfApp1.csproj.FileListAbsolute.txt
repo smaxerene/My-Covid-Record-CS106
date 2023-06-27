@@ -470,8 +470,3 @@ C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid 
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.exe
-C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
-C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\UserReport.g.cs
-C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\UserReport.baml
-C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\EditingUserProfile.g.cs
-C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\EditingUserProfile.baml

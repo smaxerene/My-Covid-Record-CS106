@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Data.SqlClient;
 using System.Data;
 using System.Linq;
@@ -73,7 +75,7 @@ namespace WpfApp1.Views
 
         private void Report_Click(object sender, RoutedEventArgs e)
         {
-            App.Current.MainWindow.Content = new UserReport();
+
         }
 
         private void Settings_Click(object sender, RoutedEventArgs e)
@@ -118,15 +120,6 @@ namespace WpfApp1.Views
             Reset();
         }
 
-        //public class UserDetails
-        //{
-        //    public string DoseNo { get; set; }
-        //    public string Date { get; set; }
-        //    public string Vaccine { get; set; }
-        //    public string Brand { get; set; }
-        //    public string Country { get; set; }
-        //}
-
         private void New_Click(object sender, RoutedEventArgs e)
         {
             Reset();
@@ -143,8 +136,26 @@ namespace WpfApp1.Views
 
         private void Update_Click(object sender, RoutedEventArgs e)
         {
-            if (ListView.SelectedItems.Count > 0)
+            if (ListView.SelectedItems != null)
             {
+                UserDetails userDetails = ListView.SelectedItem as UserDetails;
+
+                if (userDetails == null)
+                {
+                    return;
+                }
+                else
+                {
+
+                    //userDetails.Cache();
+                    //userDetails.DataContext = userDetails;
+                    //userDetails.Owner = Application.Current.MainWindow;
+                    //userDetails.ShowDialog();
+                    //if (userDetails.DataContext == null) userDetails.Restore();
+                }
+
+                //UserDetail.Add(new UserDetails() { Name = "DoseNo" });
+
                 //Dose.Text = ListView.SelectedItems[0].SubItems[0].Text;
                 //Date.Text = ListView.SelectedItems[0].SubItems[1].Text;
                 //Vaccine.Text = ListView.SelectedItems[0].SubItems[2].Text;
@@ -155,22 +166,33 @@ namespace WpfApp1.Views
 
         private void Remove_Click(object sender, RoutedEventArgs e)
         {
-            if (ListView.SelectedItems.Count > 0)
+            //if (e.Key != Key.Delete) return;
+
+            //if (ListView.SelectedItems != null)
+            //{
+            //  return;
+            //}
+
+            for (var rowIndex = 0; rowIndex < ListView.SelectedItems.Count; rowIndex++)
             {
-                //ListView.Text = Dose.Text;
-                //ListView.SelectedItems[0].SubItems[1].Text = Date.Text;
-                //ListView.SelectedItems[0].SubItems[2].Text = Vaccine.Text;
-                //ListView.SelectedItems[0].SubItems[3].Text = Brand.Text;
-                //ListView.SelectedItems[0].SubItems[4].Text = Country.Text;
+                ListView.Items.Remove(ListView.SelectedItems[rowIndex]);
             }
+
+            //if (ListView.SelectedItems.Count > 0)
+            //{
+            //ListView.SelectedItems.Remove(Dose.Text);
+            //ListView.SelectedItems.Remove(Date.Text);
+            //ListView.SelectedItems.Remove(Vaccine.Text);
+            //ListView.SelectedItems.Remove(Brand.Text);
+            //ListView.SelectedItems.Remove(Country.Text);
+            //}
         }
 
         private void RemoveAll_Click(object sender, RoutedEventArgs e)
         {
-            if (ListView.SelectedItems.Count > 0)
+            if (ListView.Items.Count > 0)
             {
-                //ListView.SelectedItemsRemove(ListView.SelectedItemsProperty[0]);
-
+                ListView.Items.RemoveAt(0);
             }
         }
 

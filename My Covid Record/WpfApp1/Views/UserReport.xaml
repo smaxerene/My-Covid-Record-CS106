@@ -5,9 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApp1.Views"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
       Title="UserReport">
-
     <Page.Resources>
         <!--Searchbar-->
         <ControlTemplate x:Key="RoundTextboxCornerTemplate" TargetType="{x:Type TextBoxBase}">
@@ -187,47 +185,11 @@
                 </StackPanel>
             </Grid>
 
-            <!--Andreas' Work Below-->
+            <!--My Covid Record-->
             <Grid>
-                <Label Content="Report Issues " HorizontalAlignment="Left" Height="58" FontFamily="Inter" FontWeight="Bold" FontSize="48"/>
+                <Label Content="Report Page" HorizontalAlignment="Left" Height="50" FontFamily="Inter" FontWeight="Bold" FontSize="32"/>
             </Grid>
-            <Grid>
-                <StackPanel>
-                    <TextBlock Margin="0,30,0,15" FontSize="18" HorizontalAlignment="Center">Please state the issue you experienced in general below:</TextBlock>
-                </StackPanel>
-            </Grid>
-            <Border BorderBrush="#FFCC00" BorderThickness="10" HorizontalAlignment="Center">
-                <Grid>
-                    <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" FontSize="25" Height="50" Width="512" />
-                </Grid>
-            </Border>
-            <Grid>
-                <StackPanel>
-                    <TextBlock Margin="0,30,0,15" FontSize="18" HorizontalAlignment="Center">Now please give the details of the issue below:</TextBlock>
-                </StackPanel>
-            </Grid>
-            <Border>
-                
-            </Border>
-            <Border BorderBrush="#FFCC00" BorderThickness="40" HorizontalAlignment="Center">
-                <Grid>
-                    <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" FontSize="20" Height="400" Width="1024" TextWrapping="Wrap" />
-                </Grid>
-            </Border>
 
-
-            <Grid Margin="5">
-                <Button Content="Submit Report" FontWeight="Medium" Width="205"  
-                                Background="#3A89FF" Foreground="White" FontFamily="Roboto" 
-                                Height="34" FontSize="16" UseLayoutRounding="True" BorderThickness="0" 
-                                Margin="0,20,0,0">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="8"></Setter>
-                        </Style>
-                    </Button.Resources>
-                </Button>
-            </Grid>
         </StackPanel>
     </ScrollViewer>
 </Page>
