@@ -30,21 +30,22 @@
 
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="829*" />
                     <ColumnDefinition Width="auto" />
-                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="776*" />
+                    <ColumnDefinition Width="53*"/>
                 </Grid.ColumnDefinitions>
                 <Image 
                 Source="/Resources/images/My Covid Record Logo.png"  
                 Height="120"
-                HorizontalAlignment="Right"
+                HorizontalAlignment="Right" Margin="0,0,0.4,0"
                 />
 
                 <Label Content="My Covid Record" 
-               Grid.Column="1" Grid.Row="1" 
+               Grid.Column="1" 
                VerticalAlignment="Center" 
                 FontFamily="Inter" 
-                Margin="30,0"
+                Margin="29.6,13,30,13"
                 FontWeight="Bold" FontSize="70"/>
 
             </Grid>

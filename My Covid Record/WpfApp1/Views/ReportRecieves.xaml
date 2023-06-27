@@ -1,9 +1,9 @@
-﻿<Window x:Class="WpfApp1.Views.ReportRecieves"
+﻿<Page x:Class="WpfApp1.Views.ReportRecieves"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:local="clr-namespace:WpfApp1.Views"
         mc:Ignorable="d"
         Title="ReportRecieves" Height="1080" Width="1920">
     <Grid>
@@ -12,14 +12,35 @@
 
             </Border>
         </Border>
+        <Button Click="Button_Click_2" Margin="193,258,1682,786" BorderBrush="Transparent" BorderThickness="0">
+            <Image Source="/Resources/images/menu.png" />
+        </Button>
+        <Image Height="60"
+                   HorizontalAlignment="Right"
+                    VerticalAlignment="Center" 
+                   Source="/Resources/images/NZ Gov.png" Margin="0,0,0,1020"/>
+        <Image HorizontalAlignment="Left" 
+                   VerticalAlignment="Center" 
+                   Width="60"
+               Source="/Resources/images/NZ Gov Logo.png" Margin="10,0,0,1023" />
+        <Image 
+                Source="/Resources/images/My Covid Record Logo.png"  
+                Height="120"
+                HorizontalAlignment="Right" Margin="0,79,1093,881"
+                />
+        <Label Content="My Covid Record" 
+               VerticalAlignment="Center" 
+                FontFamily="Inter" 
+                Margin="827,105,-767,881"
+                FontWeight="Bold" FontSize="70"/>
+        <TextBox HorizontalAlignment="Left" BorderBrush="Black" Height="28" Margin="265,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="313" TextChanged="TextBox_TextChanged"/>
 
-
-
-        <Line X1="0" Y1="0" X2="2000" Y2="0" Stroke="Black" StrokeThickness="5" Margin="-8,390,0,665" />
+        <Line X1="0" Y1="0" X2="2000" Y2="0" Stroke="Black"   StrokeThickness="5" Margin="-8,390,0,665" />
+        <TextBox HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="30" TextChanged="TextBox_TextChanged" Margin="0,963,0,0"/>
         <ListView x:Name="reportListView" Margin="442,532,510,106">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ReportId}" />
+                    <GridViewColumn Header="Report ID" DisplayMemberBinding="{Binding ReportId}" />
                     <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Subject}" />
                     <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Email}" />
                     <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}" />
@@ -29,4 +50,4 @@
         <Button Content="Account"  HorizontalAlignment="Left" Height="28" Margin="1562,266,0,0" VerticalAlignment="Top" Width="252"/>
 
     </Grid>
-</Window>
+</Page>

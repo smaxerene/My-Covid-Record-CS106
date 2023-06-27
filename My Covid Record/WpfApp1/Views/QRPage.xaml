@@ -142,7 +142,7 @@
             </Grid>
 
             <!--QR-->
-            <Grid>
+            <Grid Height="422">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="auto"/>
@@ -156,9 +156,15 @@
                         <Image Height="30" Source="/Resources/images/NZGovNameMaori.png" Margin="10,85,-10.2,333"/>
                         <Image  Height="18" Source="/Resources/images/NZGovName.png" Margin="0,117,-0.2,313"/>
                         <Rectangle Fill="#FFFFFF" Height="160" Stroke="Black"  Width="173" Margin="120,232,119.8,54.4"/>
+                        <Image x:Name="imgQRCode" Width="160" Margin="126,233,127.6,55" />
+
+
                         <TextBlock  TextAlignment="Center" Width="260" FontFamily="Inter" FontWeight="Bold" FontSize="25" Margin="75,157,77.8,231"><Run Text="My Covid Record"/><LineBreak/><Run Text="QR Code"/></TextBlock>
                     </Grid>
                 </StackPanel>
+                <TextBox x:Name="txtInput" Text="Stay Home and stay safe :D Samantha,Dave,Andreas" Template="{StaticResource RoundTextboxCornterTemplate}" Background="#FFCC00" BorderThickness="0" FontSize="25" Margin="155,422,175,0" Grid.Column="1" />
+
+
             </Grid>
 
             <!--Buttons-->

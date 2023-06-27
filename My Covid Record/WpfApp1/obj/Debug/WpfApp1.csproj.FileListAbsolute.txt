@@ -571,3 +571,7 @@ C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid 
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\Adminchangeuser.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\Adminchangeuser.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Resources\images\menu.png

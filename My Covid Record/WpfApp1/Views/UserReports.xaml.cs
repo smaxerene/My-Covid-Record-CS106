@@ -1,33 +1,47 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using Npgsql;
-using System.Data;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.Data.SqlClient;
 
 namespace WpfApp1.Views
 {
-    public partial class UserReports : Window
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class UserReports : Page
     {
-        string connectionString = "Server=rosie.db.elephantsql.com;Port=866020 ;Database=zbjbtgnq;";
-
         public UserReports()
         {
             InitializeComponent();
         }
-
-        private void SubmitButton_Click(object sender, RoutedEventArgs e)
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string connectionString = "Server=R4MOSS;Initial Catalog=AdminRecords;User ID=Dave;Password=ramozz";
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-
-                string subject = SubjectTextBox.Text;
-                string email = EmailTextBox.Text;
-                string description = DescriptionTextBox.Text;
-
-                string insertQuery = "INSERT INTO Report (Subject, Email, Description) VALUES (@Subject, @Email, @Description)";
-
-                using (NpgsqlCommand command = new NpgsqlCommand(insertQuery, connection))
+                // Get the values from the text boxes
+                string subject = Subjecttextbox.Text;
+                string email = Emailtextbox.Text;
+                string description = Descriptiontextbox.Text;
+                MessageBox.Show("Your report has been submitted successfully!", "Report Submitted", MessageBoxButton.OK, MessageBoxImage.Information);
+                // Insert the user report into the database table
+                string insertQuery = "INSERT INTO AdminRecords (Subject, Email, Description) VALUES (@Subject, @Email, @Description)";
+                using (SqlCommand command = new SqlCommand(insertQuery, connection))
                 {
                     command.Parameters.AddWithValue("@Subject", subject);
                     command.Parameters.AddWithValue("@Email", email);
@@ -35,43 +49,20 @@ namespace WpfApp1.Views
 
                     command.ExecuteNonQuery();
                 }
-
-                MessageBox.Show("Your report has been submitted successfully!", "Report Submitted", MessageBoxButton.OK, MessageBoxImage.Information);
-
-                // Clear the input fields
-                EmailTextBox.Text = string.Empty;
-                SubjectTextBox.Text = string.Empty;
-                DescriptionTextBox.Text = string.Empty;
-
-                // Refresh the reports list
-                LoadReports();
+                // Your code to insert the user report into the database
             }
         }
-
-        private void LoadReports()
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
-            {
-                connection.Open();
-
-                string selectQuery = "SELECT * FROM Report";
-
-                using (NpgsqlCommand command = new NpgsqlCommand(selectQuery, connection))
-                {
-                    using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(command))
-                    {
-                        DataTable dataTable = new DataTable();
-                        adapter.Fill(dataTable);
-
-                        ReportsListBox.ItemsSource = dataTable.DefaultView;
-                    }
-                }
-            }
+            // Create an instance of the ReportRecieves page
+            ReportRecieves reportRecievesPage = new ReportRecieves();
+            // Set the main window's content to the ReportRecieves page
+            Application.Current.MainWindow.Content = reportRecievesPage;
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            LoadReports();
+            App.Current.MainWindow.Content = new Homepage();
         }
     }
 }
