@@ -27,14 +27,14 @@ namespace WpfApp1.Views
         {
             InitializeComponent();
 
-            int currentuserId = (int)App.Current.Properties["CurrentUserId"];
-
             IsReadOnly = true;
+
+            currentLoginUserID = (int)App.Current.Properties["CurrentUserId"];
 
             using (var db = new DataContext())
             {
                 User currentUser = db.Users.Where(
-                    x => x.Id == currentuserId
+                    x => x.Id == currentLoginUserID
                     ).FirstOrDefault();
 
                 Name.Text = currentUser.FullName;
@@ -43,7 +43,25 @@ namespace WpfApp1.Views
             }
 
             this.DataContext = this;
+            LoadVaccineData();
+
         }
+
+        private void LoadVaccineData()
+        {
+            using (var db = new DataContext())
+            {
+                var vaccineList = (from ud in db.UserDetails
+                                   where ud.UserId == currentLoginUserID
+                                   select ud
+                                   ).ToList();
+
+                VaccineData.ItemsSource = vaccineList;
+            }
+
+        }
+
+        private int currentLoginUserID;
 
         private bool _isReadOnly;
         public bool IsReadOnly
@@ -100,10 +118,6 @@ namespace WpfApp1.Views
             App.Current.MainWindow.Content = new UserReport();
         }
 
-        private void Settings_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void Logout_Click(object sender, RoutedEventArgs e)
         {
@@ -117,14 +131,18 @@ namespace WpfApp1.Views
             IsReadOnly = false;
         }
 
+        private void EditPage_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Content = new VaccineDetailsPage();
+        }
+
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            int currentuserId = (int)App.Current.Properties["CurrentUserId"];
 
             using (var db = new DataContext())
             {
                 User currentUser = db.Users.Where(
-                    x => x.Id == currentuserId
+                    x => x.Id == currentLoginUserID
                     ).FirstOrDefault();
 
                 currentUser.FullName = Name.Text;

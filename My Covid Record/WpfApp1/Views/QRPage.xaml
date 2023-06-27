@@ -135,7 +135,6 @@
                                         <Button Content="Generate Vaccine Certificate" Click="Certificate_Click" HorizontalAlignment="Center"  Background="White"  Margin="-57,150,-50,170" Width="223"/>
                                         <Button Content="Vaccine Details" Click="Notif_Click" HorizontalAlignment="Center"   Background="White"  Margin="-57,175,-50,145" Width="223"/>
                                         <Button Content="Report an Issue" Click="Report_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,200,-50,121" Width="223"/>
-                                        <Button Content="Settings" Click="Settings_Click"  HorizontalAlignment="Center"  Background="White" Margin="-57,224,-50,97" Width="223"/>
                                     </Grid>
 
                                     <Grid>
@@ -167,11 +166,11 @@
 
                 <StackPanel Grid.Column="1">
                     <Grid>
-                        <Rectangle Fill="#FFCC00" Height="426" Stroke="Black" VerticalAlignment="Top" Width="297" Margin="58,10,57.8,0"/>
+                        <Rectangle Fill="#FFCC00" Height="426" VerticalAlignment="Top" Width="297" RadiusX="10" RadiusY="10" Margin="58,10,57.8,0"/>
                         <Image Height="57" Source="/Resources/images/NZ Gov Logo.png" Margin="58,28,57.8,363" />
                         <Image Height="30" Source="/Resources/images/NZGovNameMaori.png" Margin="10,85,-10.2,333"/>
                         <Image  Height="18" Source="/Resources/images/NZGovName.png" Margin="0,117,-0.2,313"/>
-                        <Rectangle Fill="#FFFFFF" Height="160" Stroke="Black"  Width="173" Margin="120,232,119.8,54.4"/>
+                        <Rectangle Fill="#FFFFFF" Height="160" Stroke="Gray"  Width="173" Margin="120,232,119.8,54.4"/>
                         <TextBlock  TextAlignment="Center" Width="260" FontFamily="Inter" FontWeight="Bold" FontSize="25" Margin="75,157,77.8,231"><Run Text="My Covid Record"/><LineBreak/><Run Text="QR Code"/></TextBlock>
                     </Grid>
                 </StackPanel>

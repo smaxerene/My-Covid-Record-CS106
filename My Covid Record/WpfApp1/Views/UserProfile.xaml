@@ -155,7 +155,6 @@
                                         <Button Content="Generate Vaccine Certificate" Click="Certificate_Click" HorizontalAlignment="Center"  Background="White"  Margin="-57,150,-50,170" Width="223"/>
                                         <Button Content="Vaccine Details" Click="Notif_Click" HorizontalAlignment="Center"   Background="White"  Margin="-57,175,-50,145" Width="223"/>
                                         <Button Content="Report an Issue" Click="Report_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,200,-50,121" Width="223"/>
-                                        <Button Content="Settings" Click="Settings_Click"  HorizontalAlignment="Center"  Background="White" Margin="-57,224,-50,97" Width="223"/>
                                     </Grid>
 
                                     <Grid>
@@ -215,10 +214,10 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="1">
-                        <Rectangle Fill="#FFCC00" HorizontalAlignment="Center" Height="340" Stroke="Black" Width="630" StrokeThickness="0"/>
+                        <Rectangle Fill="#FFCC00" HorizontalAlignment="Center" Height="300" Stroke="Black" Width="630" StrokeThickness="0" RadiusX="10" RadiusY="10"/>
 
                         <StackPanel>
-                            <StackPanel Margin="20,50,20,0" Orientation="Horizontal">
+                            <StackPanel Margin="20,30,20,0" Orientation="Horizontal">
                                 <StackPanel  Margin="20,0,0,0" Orientation="Vertical">
                                     <Grid Margin="0,8,0,0">
                                         <TextBlock HorizontalAlignment="Left"

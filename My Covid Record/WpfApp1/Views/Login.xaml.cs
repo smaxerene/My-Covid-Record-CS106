@@ -63,6 +63,7 @@ namespace WpfApp1.Views
                 }
             }
         }
+
         private void buttonRegister_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new SignUp();

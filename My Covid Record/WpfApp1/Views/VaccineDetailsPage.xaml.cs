@@ -26,25 +26,34 @@ namespace WpfApp1.Views
     /// </summary>
     public partial class VaccineDetailsPage : Page, INotifyPropertyChanged
     {
-        ObservableCollection<UserDetails> UserDetail = new ObservableCollection<UserDetails>();
 
         public VaccineDetailsPage()
         {
             InitializeComponent();
 
+            currentLoginUserID = (int)App.Current.Properties["CurrentUserId"];
+
             LoadVaccineData();
+
+            this.DataContext = this;
+
         }
 
         private void LoadVaccineData()
         {
             using (var db = new DataContext())
             {
-                var vaccineList = db.UserDetails.ToList();
+                var vaccineList = (from ud in db.UserDetails
+                                   where ud.UserId == currentLoginUserID
+                                   select ud
+                                   ).ToList();
+
                 VaccineData.ItemsSource = vaccineList;
             }
 
         }
 
+        private int currentLoginUserID;
         private void Home_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new Homepage();
@@ -89,23 +98,18 @@ namespace WpfApp1.Views
             App.Current.MainWindow.Content = new UserReport();
         }
 
-        private void Settings_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Logout_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new Login();
         }
 
+        //To Database & DataGrid
         private void Add_Click(object sender, RoutedEventArgs e)
         {
 
-            //To Database
+            //To Database & dataGrid
             using (var db = new DataContext())
             {
-
                 UserDetails userdetails = new UserDetails();
 
                 userdetails.DoseNo = Dose.Text;
@@ -113,6 +117,7 @@ namespace WpfApp1.Views
                 userdetails.Vaccine = Vaccine.Text;
                 userdetails.Brand = Brand.Text;
                 userdetails.Country = Country.Text;
+                userdetails.UserId = currentLoginUserID;
 
                 db.UserDetails.Add(userdetails);
                 db.SaveChanges();
@@ -139,6 +144,57 @@ namespace WpfApp1.Views
             Country.Text = "";
         }
 
+        private void RemoveAll_Click(object sender, RoutedEventArgs e)
+        {
+            VaccineData.Items.Clear();
+
+            using (var db = new DataContext())
+            {
+                UserDetails userdetails = new UserDetails();
+
+                userdetails.DoseNo = Dose.Text;
+                userdetails.Date = Date.Text;
+                userdetails.Vaccine = Vaccine.Text;
+                userdetails.Brand = Brand.Text;
+                userdetails.Country = Country.Text;
+
+                db.UserDetails.Remove(userdetails);
+                db.SaveChanges();
+            }
+        }
+
+        //DataGrid Row
+        private void btnCloseEditPopUp_Click(object sender, RoutedEventArgs e)
+        {
+            myEditPopup.IsOpen = false;
+        }
+
+        private void btnEditShowPopUp_Click(object sender, RoutedEventArgs e)
+        {
+            myEditPopup.IsOpen = true;
+        }
+
+        private void btnSaveEditPopup_Click(object sender, RoutedEventArgs e)
+        {
+            using (var db = new DataContext())
+            {
+                UserDetails currentUserDetails = db.UserDetails.Where(
+                    x => x.Id == currentLoginUserID
+                    ).FirstOrDefault();
+
+                currentUserDetails.DoseNo = EditDose.Text;
+                currentUserDetails.Date = EditDate.Text;
+                currentUserDetails.Vaccine = EditVaccine.Text;
+                currentUserDetails.Brand = EditBrand.Text;
+                currentUserDetails.Country = EditCountry.Text;
+
+                db.UserDetails.Update(currentUserDetails);
+                db.SaveChanges();
+            }
+            this.DataContext = this;
+            LoadVaccineData();
+        }
+
         private void DeleteRow_Click(object sender, RoutedEventArgs e)
         {
             if (VaccineData.SelectedItem != null)
@@ -150,75 +206,9 @@ namespace WpfApp1.Views
                     db.UserDetails.Remove(selectedUser);
                     db.SaveChanges();
                 }
-
                 LoadVaccineData();
             }
         }
-
-        private void Edit_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Update_Click(object sender, RoutedEventArgs e)
-        {
-            /* int currentuserId = (int)App.Current.Properties["CurrentUserId"];
-
-             using (var db = new DataContext())
-             {
-                 UserDetails currentUserDetails = db.UserDetails.Where(
-                     x => x.Id == currentuserId
-                     ).FirstOrDefault();
-
-                 currentUserDetails.DoseNo = Dose.Text;
-                 currentUserDetails.Date = Date.Text;
-                 currentUserDetails.Vaccine = Vaccine.Text;
-                 currentUserDetails.Brand = Brand.Text;
-                 currentUserDetails.Country = Brand.Text;
-
-                 db.Users.Update(currentUserDetails);
-                 db.SaveChanges();
-             }
-
-             this.DataContext = this; */
-
-        }
-
-
-        private void RemoveAll_Click(object sender, RoutedEventArgs e)
-        {
-            VaccineData.Items.Clear();
-
-            using (var db = new DataContext())
-            {
-
-                UserDetails userdetails = new UserDetails();
-
-                userdetails.DoseNo = Dose.Text;
-                userdetails.Date = Date.Text;
-                userdetails.Vaccine = Vaccine.Text;
-                userdetails.Brand = Brand.Text;
-                userdetails.Country = Country.Text;
-
-                db.UserDetails.Remove(userdetails);
-                db.SaveChanges();
-
-            }
-
-        }
-
-        /* private void btnCloseEditPopUp_Click(object sender, RoutedEventArgs e)
-         {
-             myEditPopup.IsOpen = false;
-         }
-
-         private void btnEditShowPopUp_Click(object sender, RoutedEventArgs e)
-         {
-             if (sender == EditShowPopUp)
-             {
-                 myEditPopup.IsOpen = true;
-             }
-         }*/
 
         //Other Buttons
         private void Certficate_Click(object sender, RoutedEventArgs e)
@@ -227,11 +217,6 @@ namespace WpfApp1.Views
         }
 
         //Buttons
-        private void EditUpload_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void GenerateCert_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new Certificate();

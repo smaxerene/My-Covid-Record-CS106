@@ -70,11 +70,6 @@ namespace WpfApp1.Views
             App.Current.MainWindow.Content = new UserReport();
         }
 
-        private void Settings_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Logout_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new Login();
