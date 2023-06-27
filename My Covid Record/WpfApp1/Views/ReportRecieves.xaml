@@ -46,17 +46,18 @@
 
 
         <TextBox HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="30" TextChanged="TextBox_TextChanged" Margin="796,944,924,0"/>
-        <ListView x:Name="reportListView"  FontSize="30" Margin="381,532,313,106">
+        <ListView x:Name="reportListView" FontSize="30" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="ID" Width="150" DisplayMemberBinding="{Binding ReportId}" />
-                    <GridViewColumn Header="Subject"  Width="250" DisplayMemberBinding="{Binding Subject}" />
-                    <GridViewColumn Header="Email" Width="250" DisplayMemberBinding="{Binding Email}" />
-                    <GridViewColumn Header="Description" Width="250" DisplayMemberBinding="{Binding Description}" />
+                    <GridViewColumn Header="ID" Width="*" DisplayMemberBinding="{Binding ReportId}" />
+                    <GridViewColumn Header="Subject" Width="*" DisplayMemberBinding="{Binding Subject}" />
+                    <GridViewColumn Header="Email" Width="*" DisplayMemberBinding="{Binding Email}" />
+                    <GridViewColumn Header="Description" Width="*" DisplayMemberBinding="{Binding Description}" />
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Account"  HorizontalAlignment="Left" Height="28" Margin="1562,266,0,0" VerticalAlignment="Top" Width="252"/>
+
+        <Button Content="Account"  HorizontalAlignment="Left" Height="28" Margin="1562,266,0,0" VerticalAlignment="Top" Width="252" Click="Button_Click"/>
 
     </Grid>
 </Page>
