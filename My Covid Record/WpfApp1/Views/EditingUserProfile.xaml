@@ -94,7 +94,7 @@
                 <Image Grid.Column="1" HorizontalAlignment="Right" Height="44" Source="/Resources/images/NZ Gov.png"/>
             </Grid>
 
-            <StackPanel>
+            <StackPanel Background="#3A89FF">
                 <Grid>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Label Content="Social Medias" FontSize="14" Padding="7" HorizontalAlignment="Center"/>
@@ -117,58 +117,58 @@
 
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="350"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
-                <StackPanel>
-                    <Label Content="Search People" FontSize="16" HorizontalAlignment="Center"/>
-                    <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" FontSize="25" VerticalAlignment="Center" Height="30" Width="300" />
+                <StackPanel Background="#3A89FF">
+                    <Label Content="Search People" FontSize="16" HorizontalAlignment="Center" Padding="0,5"/>
+                    <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" FontSize="25" VerticalAlignment="Center" Padding="5" Width="300" />
                     
                     <StackPanel Margin="40,15" Orientation="Horizontal">
-                        <Ellipse Height="40" Width="40" Fill="LightGray"/>
+                        <Ellipse Height="40" Width="40" Fill="#FFCC00"/>
                         <Label Content="Username" FontSize="14" VerticalAlignment="Center"/>
                     </StackPanel>
 
                     <StackPanel Margin="40,15" Orientation="Horizontal">
-                        <Ellipse Height="40" Width="40" Fill="LightGray"/>
+                        <Ellipse Height="40" Width="40" Fill="#FFCC00"/>
                         <Label Content="Username" FontSize="14" VerticalAlignment="Center"/>
                     </StackPanel>
 
                     <StackPanel Margin="40,15" Orientation="Horizontal">
-                        <Ellipse Height="40" Width="40" Fill="LightGray"/>
+                        <Ellipse Height="40" Width="40" Fill="#FFCC00"/>
                         <Label Content="Username" FontSize="14" VerticalAlignment="Center"/>
                     </StackPanel>
 
                     <StackPanel Margin="40,15" Orientation="Horizontal">
-                        <Ellipse Height="40" Width="40" Fill="LightGray"/>
+                        <Ellipse Height="40" Width="40" Fill="#FFCC00"/>
                         <Label Content="Username" FontSize="14" VerticalAlignment="Center"/>
                     </StackPanel>
 
                     <StackPanel Margin="40,15" Orientation="Horizontal">
-                        <Ellipse Height="40" Width="40" Fill="LightGray"/>
+                        <Ellipse Height="40" Width="40" Fill="#FFCC00"/>
                         <Label Content="Username" FontSize="14" VerticalAlignment="Center"/>
                     </StackPanel>
 
                     <StackPanel Margin="40,15" Orientation="Horizontal">
-                        <Ellipse Height="40" Width="40" Fill="LightGray"/>
+                        <Ellipse Height="40" Width="40" Fill="#FFCC00"/>
                         <Label Content="Username" FontSize="14" VerticalAlignment="Center"/>
                     </StackPanel>
 
                     <StackPanel Margin="40,15" Orientation="Horizontal">
-                        <Ellipse Height="40" Width="40" Fill="LightGray"/>
+                        <Ellipse Height="40" Width="40" Fill="#FFCC00"/>
                         <Label Content="Username" FontSize="14" VerticalAlignment="Center"/>
                     </StackPanel>
 
                     <StackPanel Margin="40,15" Orientation="Horizontal">
-                        <Ellipse Height="40" Width="40" Fill="LightGray"/>
+                        <Ellipse Height="40" Width="40" Fill="#FFCC00"/>
                         <Label Content="Username" FontSize="14" VerticalAlignment="Center"/>
                     </StackPanel>
 
                     <StackPanel Margin="40,15" Orientation="Horizontal">
-                        <Ellipse Height="40" Width="40" Fill="LightGray"/>
+                        <Ellipse Height="40" Width="40" Fill="#FFCC00"/>
                         <Label Content="Username" FontSize="14" VerticalAlignment="Center"/>
                     </StackPanel>
 
@@ -181,37 +181,37 @@
                 </StackPanel>
                 <!--Second Grid Column-->
                 <StackPanel Grid.Column="2" >
-                    <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal" Background="#FFCC00">
                         <Label Content="Details" FontSize="20" FontWeight="Bold" Margin="100,0,0,0"/>
                         <Label Content="Documents" FontSize="20" FontWeight="Bold" Margin="50,0,0,0" HorizontalContentAlignment="Right"/>
                     </StackPanel>
-                    <Ellipse Fill="LightGray" Height="140" Width="140" Margin="80"/>
-                    <Label Content="Personal Details" FontWeight="Bold" FontSize="20" Padding="50,10"/>
-                    <StackPanel Orientation="Horizontal">
-                        <Label Content="Email:" FontWeight="Bold" FontSize="18" VerticalAlignment="Center" Margin="0,30"/>
-                        <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" Background="Black" 
-                                 Foreground="White" FontSize="25" VerticalAlignment="Center" Height="30" 
-                                 Width="300" Margin="87,0"/>
+                    <Ellipse Fill="#FFCC00" Height="140" Width="140" Margin="80"/>
+                    <Label Content="Personal Details" FontWeight="Bold" FontSize="20" Padding="50,10" HorizontalAlignment="Center"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Email:" FontWeight="Bold" FontSize="24" VerticalAlignment="Center" Margin="6,30"/>
+                        <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" Background="#3A89FF" 
+                                 Foreground="White" FontSize="25" VerticalAlignment="Center" 
+                                 Width="300" Margin="87,0" Padding="5"/>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <Label Content="Phone:" FontWeight="Bold" FontSize="18" VerticalAlignment="Center" Margin="0,10"/>
-                        <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" Background="Black" 
-                                 Foreground="White" FontSize="25" VerticalAlignment="Center" Height="30" 
-                                 Width="300" Margin="80,0"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Phone:" FontWeight="Bold" FontSize="24" VerticalAlignment="Center" Margin="1,10"/>
+                        <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" Background="#3A89FF" 
+                                 Foreground="White" FontSize="25" VerticalAlignment="Center" 
+                                 Width="300" Margin="92,0" Padding="5"/>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <Label Content="Name:" FontWeight="Bold" FontSize="18" VerticalAlignment="Center" Margin="0,30"/>
-                        <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" Background="Black" 
-                                 Foreground="White" FontSize="25" VerticalAlignment="Center" Height="30" 
-                                 Width="300" Margin="82,0"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Name:" FontWeight="Bold" FontSize="24" VerticalAlignment="Center" Margin="3,30"/>
+                        <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" Background="#3A89FF" 
+                                 Foreground="White" FontSize="25" VerticalAlignment="Center" 
+                                 Width="300" Margin="90,0" Padding="5"/>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <Label Content="Joined:" FontWeight="Bold" FontSize="18" VerticalAlignment="Center" Margin="0,10"/>
-                        <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" Background="Gray" 
-                                 Foreground="White" FontSize="25" VerticalAlignment="Center" Height="30" 
-                                 Width="300" Margin="75,0" BorderBrush="Gray"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Joined:" FontWeight="Bold" FontSize="24" VerticalAlignment="Center" Margin="0,10"/>
+                        <TextBox Template="{StaticResource RoundTextboxCornerTemplate}" Background="#3A89FF" 
+                                 Foreground="White" FontSize="25" VerticalAlignment="Center" VerticalContentAlignment="Center"
+                                  Width="300" Margin="94,0" Padding="5"/>
                     </StackPanel>
-                    <Label Content="Personal Details" FontWeight="Bold" FontSize="20" Padding="50,30"/>
+                    <Label Content="Personal Details" FontWeight="Bold" FontSize="20" Padding="50,30" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Grid>
         </StackPanel>
