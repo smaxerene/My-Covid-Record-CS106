@@ -213,7 +213,7 @@ namespace WpfApp1.Views
                     encoder.Save(fileStream);
                 }
 
-                MessageBox.Show("Covid-19 Certificate downloaded successfully.");
+                MessageBox.Show(" Your Covid-19 Certificate downloaded successfully.");
             }
         }
 
