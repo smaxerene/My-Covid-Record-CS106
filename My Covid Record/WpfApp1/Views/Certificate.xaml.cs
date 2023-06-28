@@ -10,10 +10,12 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
+using System.Windows.Media; // For RenderTargetBitmap
+using System.Windows.Media.Imaging;// For BitmapFrame, PngBitmapEncoder, PixelFormats
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO; // For FileStream
+using Microsoft.Win32; // For SaveFileDialog
 
 namespace WpfApp1.Views
 {
@@ -22,10 +24,17 @@ namespace WpfApp1.Views
     /// </summary>
     public partial class Certificate : Page, INotifyPropertyChanged
     {
+        private Random random;
+        private List<int> generatedNumbers;
 
         public Certificate()
         {
             InitializeComponent();
+
+            random = new Random();
+            generatedNumbers = new List<int>();
+
+            GenerateRandomNumber();
 
             IsReadOnly = true;
 
@@ -41,10 +50,31 @@ namespace WpfApp1.Views
                 Birthday.Text = currentUser.Birthday;
                 Address.Text = currentUser.Address;
             }
-
             this.DataContext = this;
             LoadVaccineData();
+        }
 
+        private void GenerateRandomNumber()
+        {
+            int minNumber = 1000000;
+            int maxNumber = 9000000;
+
+            if (generatedNumbers.Count == (maxNumber - minNumber + 1))
+            {
+                RandomNumberTextBlock.Text = "All numbers have been generated.";
+                return;
+            }
+
+            int randomNumber;
+
+            do
+            {
+                randomNumber = random.Next(minNumber, maxNumber + 1);
+            }
+            while (generatedNumbers.Contains(randomNumber));
+
+            generatedNumbers.Add(randomNumber);
+            RandomNumberTextBlock.Text = $" {randomNumber}";
         }
 
         private void LoadVaccineData()
@@ -127,7 +157,6 @@ namespace WpfApp1.Views
         //Buttons
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-
             IsReadOnly = false;
         }
 
@@ -159,7 +188,33 @@ namespace WpfApp1.Views
         }
         private void Download_Click(object sender, RoutedEventArgs e)
         {
+            // Create a RenderTargetBitmap with the size of the Border element
+            RenderTargetBitmap renderTargetBitmap = new RenderTargetBitmap((int)myCertificate.ActualWidth, (int)myCertificate.ActualHeight, 96, 96, PixelFormats.Default);
 
+            // Render the Border onto the RenderTargetBitmap
+            renderTargetBitmap.Render(myCertificate);
+
+            // Create a PngBitmapEncoder to encode the RenderTargetBitmap as a PNG image
+            PngBitmapEncoder encoder = new PngBitmapEncoder();
+            encoder.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
+
+            // Create a SaveFileDialog to prompt the user to choose the location to save the file
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "PNG Image (*.png)|*.png";
+            saveFileDialog.DefaultExt = ".png";
+
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                string filePath = saveFileDialog.FileName;
+
+                // Save the RenderTargetBitmap as a PNG file
+                using (FileStream fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    encoder.Save(fileStream);
+                }
+
+                MessageBox.Show("Covid-19 Certificate downloaded successfully.");
+            }
         }
 
         // Event handler for property change notifications

@@ -305,7 +305,7 @@
 
             <!--Certificate-->
 
-            <Border Background="White" BorderBrush="Gainsboro" BorderThickness="10" Width="900" Padding="20">
+            <Border x:Name="myCertificate" Background="White" BorderBrush="Gainsboro" BorderThickness="10" Width="900" Padding="20">
                 <Grid >
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"/>
@@ -391,7 +391,7 @@
 
                             <StackPanel Grid.Row="1" Grid.Column="3">
                                 <TextBlock Text="Certificate ID" FontWeight="DemiBold" FontSize="18"/>
-                                <TextBlock Text="   0123456789" FontSize="14"/>
+                                <TextBlock x:Name="RandomNumberTextBlock" FontSize="14"/>
                             </StackPanel>
 
                         </Grid>

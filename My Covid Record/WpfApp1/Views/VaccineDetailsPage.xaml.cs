@@ -214,21 +214,6 @@ namespace WpfApp1.Views
                 myEditPopup.IsOpen = false;
             }
 
-            //using (var db = new DataContext())
-            //{
-            //    UserDetails currentUserDetails = db.UserDetails.Where(
-            //        x => x.Id == currentLoginUserID
-            //        ).FirstOrDefault();
-
-            //    currentUserDetails.DoseNo = EditDose.Text;
-            //    currentUserDetails.Date = EditDate.Text;
-            //    currentUserDetails.Vaccine = EditVaccine.Text;
-            //    currentUserDetails.Brand = EditBrand.Text;
-            //    currentUserDetails.Country = EditCountry.Text;
-
-            //    db.UserDetails.Update(currentUserDetails);
-            //    db.SaveChanges();
-            //}
         }
 
         private void DeleteRow_Click(object sender, RoutedEventArgs e)
