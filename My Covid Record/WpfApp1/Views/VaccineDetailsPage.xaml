@@ -592,7 +592,7 @@
 
                                 <!--DataGrid-->
                                 <DataGrid x:Name="VaccineData" Grid.Column="1" ItemsSource="{Binding MyData}" SelectedItem="{Binding SelectedMyData}" Grid.ColumnSpan="1" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"
-                                           ColumnHeaderStyle="{DynamicResource ColumnHeaderStyle}" RowStyle="{DynamicResource DataGridRowStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}"  Style="{DynamicResource DataGridStyle1}" Height="240">
+                                      ColumnHeaderStyle="{DynamicResource ColumnHeaderStyle}" RowStyle="{DynamicResource DataGridRowStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}"  Style="{DynamicResource DataGridStyle1}" Height="240">
                                     <DataGrid.Columns>
 
                                         <DataGridTextColumn Header="Dose No." Width="70" Binding="{Binding DoseNo, UpdateSourceTrigger=PropertyChanged}"/>

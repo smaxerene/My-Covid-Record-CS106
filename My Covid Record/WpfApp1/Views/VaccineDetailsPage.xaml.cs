@@ -172,27 +172,63 @@ namespace WpfApp1.Views
         private void btnEditShowPopUp_Click(object sender, RoutedEventArgs e)
         {
             myEditPopup.IsOpen = true;
+
+            if (VaccineData.SelectedItem != null)
+            {
+                var selectedUser = (UserDetails)VaccineData.SelectedItem;
+
+                // Populate the edit fields with the selected row data
+                EditDose.Text = selectedUser.DoseNo;
+                EditDate.Text = selectedUser.Date;
+                EditVaccine.Text = selectedUser.Vaccine;
+                EditBrand.Text = selectedUser.Brand;
+                EditCountry.Text = selectedUser.Country;
+            }
         }
 
         private void btnSaveEditPopup_Click(object sender, RoutedEventArgs e)
         {
-            using (var db = new DataContext())
+            if (VaccineData.SelectedItem != null)
             {
-                UserDetails currentUserDetails = db.UserDetails.Where(
-                    x => x.Id == currentLoginUserID
-                    ).FirstOrDefault();
+                var selectedUser = (UserDetails)VaccineData.SelectedItem;
 
-                currentUserDetails.DoseNo = EditDose.Text;
-                currentUserDetails.Date = EditDate.Text;
-                currentUserDetails.Vaccine = EditVaccine.Text;
-                currentUserDetails.Brand = EditBrand.Text;
-                currentUserDetails.Country = EditCountry.Text;
+                using (var db = new DataContext())
+                {
+                    UserDetails userDetails = db.UserDetails.Find(selectedUser.Id);
 
-                db.UserDetails.Update(currentUserDetails);
-                db.SaveChanges();
+                    if (userDetails != null)
+                    {
+                        userDetails.DoseNo = EditDose.Text;
+                        userDetails.Date = EditDate.Text;
+                        userDetails.Vaccine = EditVaccine.Text;
+                        userDetails.Brand = EditBrand.Text;
+                        userDetails.Country = EditCountry.Text;
+
+                        db.UserDetails.Update(userDetails);
+                        db.SaveChanges();
+                    }
+                }
+                this.DataContext = this;
+                LoadVaccineData();
+
+                myEditPopup.IsOpen = false;
             }
-            this.DataContext = this;
-            LoadVaccineData();
+
+            //using (var db = new DataContext())
+            //{
+            //    UserDetails currentUserDetails = db.UserDetails.Where(
+            //        x => x.Id == currentLoginUserID
+            //        ).FirstOrDefault();
+
+            //    currentUserDetails.DoseNo = EditDose.Text;
+            //    currentUserDetails.Date = EditDate.Text;
+            //    currentUserDetails.Vaccine = EditVaccine.Text;
+            //    currentUserDetails.Brand = EditBrand.Text;
+            //    currentUserDetails.Country = EditCountry.Text;
+
+            //    db.UserDetails.Update(currentUserDetails);
+            //    db.SaveChanges();
+            //}
         }
 
         private void DeleteRow_Click(object sender, RoutedEventArgs e)
@@ -220,11 +256,6 @@ namespace WpfApp1.Views
         private void GenerateCert_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new Certificate();
-        }
-
-        private void VaccineData_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
 
         // Event handler for property change notifications
