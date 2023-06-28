@@ -33,7 +33,7 @@
                 FontFamily="Inter" 
                 Margin="827,105,-767,881"
                 FontWeight="Bold" FontSize="70"/>
-        <TextBox HorizontalAlignment="Left" BorderBrush="Black" Height="28" Margin="265,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="313" TextChanged="TextBox_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" BorderBrush="Black" Height="28" Margin="265,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="313"/>
 
         <Line X1="0" Y1="0" X2="2000" Y2="0" Stroke="Black"   StrokeThickness="5" Margin="-8,390,0,665" />
         <Button Click="Button_Click_3" Margin="390,331,1448,690" Background="White" BorderBrush="Transparent" BorderThickness="0">
@@ -45,19 +45,26 @@
         </Button>
 
 
-        <TextBox HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="30" TextChanged="TextBox_TextChanged" Margin="796,944,924,0"/>
-        <ListView x:Name="reportListView" FontSize="30" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <TextBox HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="30"  Margin="796,944,924,0"/>
+        <ListView x:Name="reportListView" FontSize="30" Margin="321,471,232,106" ItemsSource="{Binding ReportItems}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="ID" Width="*" DisplayMemberBinding="{Binding ReportId}" />
-                    <GridViewColumn Header="Subject" Width="*" DisplayMemberBinding="{Binding Subject}" />
-                    <GridViewColumn Header="Email" Width="*" DisplayMemberBinding="{Binding Email}" />
-                    <GridViewColumn Header="Description" Width="*" DisplayMemberBinding="{Binding Description}" />
+                    <GridViewColumn Header="ID" Width="150" DisplayMemberBinding="{Binding ReportId}" />
+                    <GridViewColumn Header="Subject" Width="220" DisplayMemberBinding="{Binding Subject}" />
+                    <GridViewColumn Header="Email" Width="320" DisplayMemberBinding="{Binding Email}" />
+                    <GridViewColumn Header="Description" Width="450" DisplayMemberBinding="{Binding Description}" />
+                    <GridViewColumn Header="Actions" Width="200">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Remove" Click="RemoveButton_Click" Tag="{Binding ReportId}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
-
         <Button Content="Account"  HorizontalAlignment="Left" Height="28" Margin="1562,266,0,0" VerticalAlignment="Top" Width="252" Click="Button_Click"/>
-
+        <TextBlock Text="Records" FontSize="30" Margin="390,388,1391,637" FontFamily="Bold"></TextBlock>
+        <TextBlock Text="Reports" FontSize="30" Margin="574,388,1207,637" FontFamily="Bold"></TextBlock>
     </Grid>
 </Page>
