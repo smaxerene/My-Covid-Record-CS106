@@ -189,7 +189,7 @@ namespace WpfApp1.Views
         private void Download_Click(object sender, RoutedEventArgs e)
         {
             // Create a RenderTargetBitmap with the size of the Border element
-            var renderTargetBitmap = new RenderTargetBitmap((int)myCertificate.ActualWidth, (int)myCertificate.ActualHeight, 96, 96, PixelFormats.Default);
+            var renderTargetBitmap = new RenderTargetBitmap((int)myCertificate.ActualWidth, (int)myCertificate.ActualHeight, 50, 50, PixelFormats.Default);
 
             // Render the Border onto the RenderTargetBitmap
             renderTargetBitmap.Render(myCertificate);

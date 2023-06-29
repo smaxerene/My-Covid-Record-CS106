@@ -46,7 +46,7 @@
                         BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
                         </Border>
                         <ControlTemplate.Triggers>
-                            <Trigger Property="IsEnabled" Value="false">
+                            <Trigger Property="IsEnabled" Value="True">
                                 <Setter Property="Background" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
                                 <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
                             </Trigger>
@@ -95,81 +95,81 @@
                 <TextBlock Height="36" HorizontalAlignment="Left"  x:Name ="errormessage" VerticalAlignment="Top" Width="318" FontSize="20" OpacityMask="Crimson" Foreground="#FFE5572C" />
 
 
-                    <Grid Margin="0,20,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
+                <Grid Margin="0,20,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
-                        <Grid Grid.Column="1">
-                            <Rectangle Fill="#3A89FF" Height="250"  Stroke="Black"  Width="770" StrokeThickness="0" RadiusX="19.6" RadiusY="20" />
-                            <Rectangle Fill="#6194E0"  HorizontalAlignment="Left" Height="250" Stroke="Black" Width="245" Opacity="0.8" StrokeThickness="0" RadiusX="19.6" RadiusY="20" />
+                    <Grid Grid.Column="1">
+                        <Rectangle Fill="#3A89FF" Height="250"  Stroke="Black"  Width="770" StrokeThickness="0" RadiusX="19.6" RadiusY="20" />
+                        <Rectangle Fill="#6194E0"  HorizontalAlignment="Left" Height="250" Stroke="Black" Width="245" Opacity="0.8" StrokeThickness="0" RadiusX="19.6" RadiusY="20" />
 
-                            <StackPanel Orientation="Horizontal">
-                                <Grid  Width="240" Height="242">
-                                    <StackPanel Margin="20,15,0,0">
-                                        <Grid>
-                                            <TextBlock FontWeight="Medium" Text="Full Name" FontFamily="Roboto" FontSize="24"/>
-                                        </Grid>
+                        <StackPanel Orientation="Horizontal">
+                            <Grid  Width="240" Height="242">
+                                <StackPanel Margin="20,15,0,0">
+                                    <Grid>
+                                        <TextBlock FontWeight="Medium" Text="Full Name" FontFamily="Roboto" FontSize="24"/>
+                                    </Grid>
 
-                                        <Grid Margin="0,8,0,0">
-                                            <TextBlock FontWeight="Medium" Text="Username" FontFamily="Roboto" FontSize="24"/>
-                                        </Grid>
+                                    <Grid Margin="0,8,0,0">
+                                        <TextBlock FontWeight="Medium" Text="Username" FontFamily="Roboto" FontSize="24"/>
+                                    </Grid>
 
-                                        <Grid Margin="0,8,0,0">
-                                            <TextBlock FontWeight="Medium" Text="Email Address" FontFamily="Roboto" FontSize="24"/>
-                                        </Grid>
+                                    <Grid Margin="0,8,0,0">
+                                        <TextBlock FontWeight="Medium" Text="Email Address" FontFamily="Roboto" FontSize="24"/>
+                                    </Grid>
 
-                                        <Grid Margin="0,8,0,0">
-                                            <TextBlock FontWeight="Medium" Text="Phone Number"  FontFamily="Roboto" FontSize="24"/>
-                                        </Grid>
+                                    <Grid Margin="0,8,0,0">
+                                        <TextBlock FontWeight="Medium" Text="Phone Number"  FontFamily="Roboto" FontSize="24"/>
+                                    </Grid>
 
-                                        <Grid Margin="0,8,0,0">
-                                            <TextBlock FontWeight="Medium" Text="Password" FontFamily="Roboto" FontSize="24"/>
+                                    <Grid Margin="0,8,0,0">
+                                        <TextBlock FontWeight="Medium" Text="Password" FontFamily="Roboto" FontSize="24"/>
 
-                                        </Grid>
+                                    </Grid>
 
-                                        <Grid Margin="0,8,0,0">
-                                            <TextBlock FontWeight="Medium" Text="Confirm Password" FontFamily="Roboto" FontSize="24"/>
-                                        </Grid>
-                                    </StackPanel>
-                                </Grid>
+                                    <Grid Margin="0,8,0,0">
+                                        <TextBlock FontWeight="Medium" Text="Confirm Password" FontFamily="Roboto" FontSize="24"/>
+                                    </Grid>
+                                </StackPanel>
+                            </Grid>
 
-                                <Grid>
-                                    <StackPanel Margin="20,15,0,0">
-                                        <Grid>
-                                            <TextBox x:Name="FullNameTextBox" Height="30" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}"/>
-                                        </Grid>
+                            <Grid>
+                                <StackPanel Margin="20,15,0,0">
+                                    <Grid>
+                                        <TextBox x:Name="FullNameTextBox" Height="30" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}"/>
+                                    </Grid>
 
-                                        <Grid Margin="0,8,0,0">
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="17*"/>
-                                                <ColumnDefinition Width="83*"/>
-                                            </Grid.ColumnDefinitions>
-                                            <TextBox x:Name="UsernameTextBox" Height="30" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}" Grid.ColumnSpan="2" Margin="0,0,0,0.4"/>
-                                        </Grid>
+                                    <Grid Margin="0,8,0,0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="17*"/>
+                                            <ColumnDefinition Width="83*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBox x:Name="UsernameTextBox" Height="30" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}" Grid.ColumnSpan="2" Margin="0,0,0,0.4"/>
+                                    </Grid>
 
-                                        <Grid Margin="0,8,0,0">
-                                            <TextBox x:Name="EmailTextBox" Height="30" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}"/>
-                                        </Grid>
+                                    <Grid Margin="0,8,0,0">
+                                        <TextBox x:Name="EmailTextBox" Height="30" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}"/>
+                                    </Grid>
 
-                                        <Grid Margin="0,8,0,0">
-                                            <TextBox x:Name="PhoneTextBox" Height="30"  Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}" />
-                                        </Grid>
+                                    <Grid Margin="0,8,0,0">
+                                        <TextBox x:Name="PhoneTextBox" Height="30"  Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}" />
+                                    </Grid>
 
-                                        <Grid Margin="0,8,0,0">
-                                            <PasswordBox Name="PasswordPassBox" FontSize="25" Height="30" Style="{StaticResource roundcornerpassword}"/>
-                                        </Grid>
+                                    <Grid Margin="0,8,0,0">
+                                        <PasswordBox Name="PasswordPassBox" FontSize="25" Height="30" Style="{StaticResource roundcornerpassword}"/>
+                                    </Grid>
 
-                                        <Grid Margin="0,8,0,0">
-                                            <PasswordBox Name="ConfirmPassPassBox" FontSize="25" Width="500" Height="30" Style="{StaticResource roundcornerpassword}"/>
-                                        </Grid>
+                                    <Grid Margin="0,8,0,0">
+                                        <PasswordBox Name="ConfirmPassPassBox" FontSize="25" Width="500" Height="30" Style="{StaticResource roundcornerpassword}"/>
+                                    </Grid>
 
-                                    </StackPanel>
-                                </Grid>
+                                </StackPanel>
+                            </Grid>
 
-                            </StackPanel>
+                        </StackPanel>
 
                     </Grid>
                 </Grid>

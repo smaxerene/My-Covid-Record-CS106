@@ -367,14 +367,26 @@
                         Width="292" FontFamily="Inter" 
                         Background="Black" FontSize="17" 
                         Foreground="White" FontWeight="Bold"
-                        Margin="0,0,500,50"/>
+                        Margin="0,0,500,50">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
                 <Button Content="Generate Vaccine Certificate" Grid.Column="1" 
                         HorizontalAlignment="Center" Height="41" Grid.Row="1" 
                         VerticalAlignment="Top" Width="292" Click="Certificate_Click" 
                         FontFamily="Inter" Background="Black" FontSize="17" 
                         Foreground="White" FontWeight="Bold"
-                        Margin="500,0,0,50"/>
+                        Margin="500,0,0,50">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
             </Grid>
 

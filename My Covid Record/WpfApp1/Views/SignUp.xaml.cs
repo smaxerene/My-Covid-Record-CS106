@@ -29,7 +29,7 @@ namespace WpfApp1.Views
         {
             InitializeComponent();
 
-            DataContext = new SignUp();
+            //DataContext = new SignUp();
         }
 
         //Submit
@@ -92,7 +92,6 @@ namespace WpfApp1.Views
                 {
                     using (var db = new DataContext())
                     {
-                        // var list = (from u in db.user select u).ToList();
 
                         User userregister = new User();
                         userregister.FullName = FullNameTextBox.Text;
@@ -106,7 +105,6 @@ namespace WpfApp1.Views
                         db.SaveChanges();
 
                     }
-
                     errormessage.Text = "You have Registered successfully.";
                     Reset();
                 }
@@ -139,6 +137,11 @@ namespace WpfApp1.Views
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new Login();
+        }
+
+        private void PasswordPassBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
