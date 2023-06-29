@@ -26,7 +26,7 @@ namespace WpfApp1.Views
             {
                 connection.Open();
 
-                string selectQuery = "SELECT * FROM dbo.AdminRecords\r\n";
+                string selectQuery = "SELECT * FROM dbo.AdminRecords";
                 using (SqlCommand command = new SqlCommand(selectQuery, connection))
                 {
                     using (SqlDataReader reader = command.ExecuteReader())
@@ -102,10 +102,6 @@ namespace WpfApp1.Views
                 }
             }
         }
-
-
-
-
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new Homepage();

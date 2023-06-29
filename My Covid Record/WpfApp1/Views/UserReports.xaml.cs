@@ -45,15 +45,13 @@ namespace WpfApp1.Views
                     command.Parameters.AddWithValue("@Subject", subject);
                     command.Parameters.AddWithValue("@Email", email);
                     command.Parameters.AddWithValue("@Description", description);
-
                     command.ExecuteNonQuery();
                 }
             }
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            ReportRecieves reportRecievesPage = new ReportRecieves();
-            Application.Current.MainWindow.Content = reportRecievesPage;
+           
         }
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
