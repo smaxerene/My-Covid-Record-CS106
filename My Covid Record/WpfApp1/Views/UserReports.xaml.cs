@@ -49,13 +49,61 @@ namespace WpfApp1.Views
                 }
             }
         }
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-           
-        }
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+
+        //Menu
+        private void Home_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new Homepage();
+        }
+
+        //Account 
+        private void btnClosePopup_Click(object sender, RoutedEventArgs e)
+        {
+            myPopup.IsOpen = false;
+        }
+
+        private void btnShowPopup_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender == btnShowPopup)
+            {
+                myPopup.IsOpen = true;
+            }
+        }
+
+        private void PersonalDeets_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Content = new UserProfile();
+        }
+
+        private void GenerateQR_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Content = new QRPage();
+        }
+
+        private void Certificate_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Content = new Certificate();
+        }
+
+        private void Notif_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Content = new VaccineDetailsPage();
+        }
+
+        private void Report_Click(object sender, RoutedEventArgs e)
+        {
+
+            App.Current.MainWindow.Content = new UserReports();
+        }
+
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Content = new Login();
         }
     }
 }
