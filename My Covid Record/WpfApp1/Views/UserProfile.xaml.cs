@@ -59,9 +59,6 @@ namespace WpfApp1.Views
             }
         }
 
-        public UserProfile()
-        {
-        }
 
         //Menu
         private void Home_Click(object sender, RoutedEventArgs e)
