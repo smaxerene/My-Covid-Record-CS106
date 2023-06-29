@@ -801,3 +801,9 @@ C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\
 C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
 C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.exe
 >>>>>>> Dave
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\MahApps.Metro.IconPacks.Core.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\MahApps.Metro.IconPacks.Material.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\MahApps.Metro.IconPacks.Core.pdb
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\MahApps.Metro.IconPacks.Core.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\MahApps.Metro.IconPacks.Material.xml
