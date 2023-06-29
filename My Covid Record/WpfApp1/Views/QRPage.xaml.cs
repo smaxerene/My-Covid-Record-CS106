@@ -20,6 +20,7 @@ namespace WpfApp1.Views
     /// </summary>
     public partial class QRPage : Page
     {
+
         public QRPage()
         {
             InitializeComponent();
@@ -66,12 +67,7 @@ namespace WpfApp1.Views
 
         private void Report_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void Settings_Click(object sender, RoutedEventArgs e)
-        {
-
+            App.Current.MainWindow.Content = new UserReport();
         }
 
         private void Logout_Click(object sender, RoutedEventArgs e)

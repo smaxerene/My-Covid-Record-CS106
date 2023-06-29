@@ -56,12 +56,14 @@ namespace WpfApp1.Views
                     }
                     else
                     {
+                        App.Current.Properties["CurrentUserId"] = isUserThere.Id;
                         App.Current.MainWindow.Content = new Homepage();
                     }
 
                 }
             }
         }
+
         private void buttonRegister_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new SignUp();

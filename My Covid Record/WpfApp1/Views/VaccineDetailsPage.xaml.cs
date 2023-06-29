@@ -24,16 +24,36 @@ namespace WpfApp1.Views
     /// <summary>
     /// Interaction logic for VaccineDetailsPage.xaml
     /// </summary>
-    public partial class VaccineDetailsPage : Page
+    public partial class VaccineDetailsPage : Page, INotifyPropertyChanged
     {
-        ObservableCollection<UserDetails> UserDetail = new ObservableCollection<UserDetails>();
 
         public VaccineDetailsPage()
         {
             InitializeComponent();
-            ListView.ItemsSource = UserDetail;
+
+            currentLoginUserID = (int)App.Current.Properties["CurrentUserId"];
+
+            LoadVaccineData();
+
+            this.DataContext = this;
+
         }
 
+        private void LoadVaccineData()
+        {
+            using (var db = new DataContext())
+            {
+                var vaccineList = (from ud in db.UserDetails
+                                   where ud.UserId == currentLoginUserID
+                                   select ud
+                                   ).ToList();
+
+                VaccineData.ItemsSource = vaccineList;
+            }
+
+        }
+
+        private int currentLoginUserID;
         private void Home_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new Homepage();
@@ -75,12 +95,7 @@ namespace WpfApp1.Views
 
         private void Report_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void Settings_Click(object sender, RoutedEventArgs e)
-        {
-
+            App.Current.MainWindow.Content = new UserReport();
         }
 
         private void Logout_Click(object sender, RoutedEventArgs e)
@@ -88,22 +103,13 @@ namespace WpfApp1.Views
             App.Current.MainWindow.Content = new Login();
         }
 
+        //To Database & DataGrid
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            //To ListView
-            UserDetail.Add(new UserDetails()
-            {
-                DoseNo = Dose.Text,
-                Date = Date.Text,
-                Vaccine = Vaccine.Text,
-                Brand = Brand.Text,
-                Country = Country.Text
-            });
 
-            //To Database
+            //To Database & dataGrid
             using (var db = new DataContext())
             {
-
                 UserDetails userdetails = new UserDetails();
 
                 userdetails.DoseNo = Dose.Text;
@@ -111,12 +117,16 @@ namespace WpfApp1.Views
                 userdetails.Vaccine = Vaccine.Text;
                 userdetails.Brand = Brand.Text;
                 userdetails.Country = Country.Text;
-
+                userdetails.UserId = currentLoginUserID;
 
                 db.UserDetails.Add(userdetails);
                 db.SaveChanges();
 
             }
+
+            //To DataGrid
+            LoadVaccineData();
+
             Reset();
         }
 
@@ -134,82 +144,117 @@ namespace WpfApp1.Views
             Country.Text = "";
         }
 
-        private void Update_Click(object sender, RoutedEventArgs e)
-        {
-            if (ListView.SelectedItems != null)
-            {
-                UserDetails userDetails = ListView.SelectedItem as UserDetails;
-
-                if (userDetails == null)
-                {
-                    return;
-                }
-                else
-                {
-
-                    //userDetails.Cache();
-                    //userDetails.DataContext = userDetails;
-                    //userDetails.Owner = Application.Current.MainWindow;
-                    //userDetails.ShowDialog();
-                    //if (userDetails.DataContext == null) userDetails.Restore();
-                }
-
-                //UserDetail.Add(new UserDetails() { Name = "DoseNo" });
-
-                //Dose.Text = ListView.SelectedItems[0].SubItems[0].Text;
-                //Date.Text = ListView.SelectedItems[0].SubItems[1].Text;
-                //Vaccine.Text = ListView.SelectedItems[0].SubItems[2].Text;
-                //Brand.Text = ListView.SelectedItems[0].SubItems[3].Text;
-                //Country.Text = ListView.SelectedItems[0].SubItems[4].Text;
-            }
-        }
-
-        private void Remove_Click(object sender, RoutedEventArgs e)
-        {
-            //if (e.Key != Key.Delete) return;
-
-            //if (ListView.SelectedItems != null)
-            //{
-            //  return;
-            //}
-
-            for (var rowIndex = 0; rowIndex < ListView.SelectedItems.Count; rowIndex++)
-            {
-                ListView.Items.Remove(ListView.SelectedItems[rowIndex]);
-            }
-
-            //if (ListView.SelectedItems.Count > 0)
-            //{
-            //ListView.SelectedItems.Remove(Dose.Text);
-            //ListView.SelectedItems.Remove(Date.Text);
-            //ListView.SelectedItems.Remove(Vaccine.Text);
-            //ListView.SelectedItems.Remove(Brand.Text);
-            //ListView.SelectedItems.Remove(Country.Text);
-            //}
-        }
-
         private void RemoveAll_Click(object sender, RoutedEventArgs e)
         {
-            if (ListView.Items.Count > 0)
+            VaccineData.Items.Clear();
+
+            using (var db = new DataContext())
             {
-                ListView.Items.RemoveAt(0);
+                UserDetails userdetails = new UserDetails();
+
+                userdetails.DoseNo = Dose.Text;
+                userdetails.Date = Date.Text;
+                userdetails.Vaccine = Vaccine.Text;
+                userdetails.Brand = Brand.Text;
+                userdetails.Country = Country.Text;
+
+                db.UserDetails.Remove(userdetails);
+                db.SaveChanges();
             }
         }
 
+        //DataGrid Row
+        private void btnCloseEditPopUp_Click(object sender, RoutedEventArgs e)
+        {
+            myEditPopup.IsOpen = false;
+        }
+
+        private void btnEditShowPopUp_Click(object sender, RoutedEventArgs e)
+        {
+            myEditPopup.IsOpen = true;
+
+            if (VaccineData.SelectedItem != null)
+            {
+                var selectedUser = (UserDetails)VaccineData.SelectedItem;
+
+                // Populate the edit fields with the selected row data
+                EditDose.Text = selectedUser.DoseNo;
+                EditDate.Text = selectedUser.Date;
+                EditVaccine.Text = selectedUser.Vaccine;
+                EditBrand.Text = selectedUser.Brand;
+                EditCountry.Text = selectedUser.Country;
+            }
+        }
+
+        private void btnSaveEditPopup_Click(object sender, RoutedEventArgs e)
+        {
+            if (VaccineData.SelectedItem != null)
+            {
+                var selectedUser = (UserDetails)VaccineData.SelectedItem;
+
+                using (var db = new DataContext())
+                {
+                    UserDetails userDetails = db.UserDetails.Find(selectedUser.Id);
+
+                    if (userDetails != null)
+                    {
+                        userDetails.DoseNo = EditDose.Text;
+                        userDetails.Date = EditDate.Text;
+                        userDetails.Vaccine = EditVaccine.Text;
+                        userDetails.Brand = EditBrand.Text;
+                        userDetails.Country = EditCountry.Text;
+
+                        db.UserDetails.Update(userDetails);
+                        db.SaveChanges();
+                    }
+                }
+                this.DataContext = this;
+                LoadVaccineData();
+
+                myEditPopup.IsOpen = false;
+            }
+
+        }
+
+        private void DeleteRow_Click(object sender, RoutedEventArgs e)
+        {
+            if (VaccineData.SelectedItem != null)
+            {
+                var selectedUser = (UserDetails)VaccineData.SelectedItem;
+
+                using (var db = new DataContext())
+                {
+                    db.UserDetails.Remove(selectedUser);
+                    db.SaveChanges();
+                }
+                LoadVaccineData();
+            }
+        }
+
+        //Other Buttons
         private void Certficate_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new Certificate();
         }
 
         //Buttons
-        private void EditUpload_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void GenerateCert_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new Certificate();
         }
+
+        // Event handler for property change notifications
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        // Raises the PropertyChanged event when a property value changes
+        public void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
+
+
 }

@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+       xmlns:system="clr-namespace:System;assembly=mscorlib"
       xmlns:local="clr-namespace:WpfApp1.Views"
       mc:Ignorable="d"  
       Title="Certificate">
@@ -27,10 +28,157 @@
                 </Trigger>
             </ControlTemplate.Triggers>
         </ControlTemplate>
+
+        <!--DataGrid design-->
+        <Style x:Key="DataGridRowStyle1" TargetType="{x:Type DataGridRow}">
+            <Setter Property="Margin" Value="0 4 0 0" />
+            <Setter Property="Background" Value="#FFFFFF"/>
+            <Setter Property="SnapsToDevicePixels" Value="true"/>
+            <Setter Property="Validation.ErrorTemplate" Value="{x:Null}"/>
+            <Setter Property="ValidationErrorTemplate">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <TextBlock Foreground="Red" Margin="2,0,0,0" Text="!" VerticalAlignment="Center"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridRow}">
+                        <Border x:Name="DGR_Border" Padding="0 8" CornerRadius="5" Background="{TemplateBinding Background}" BorderThickness="0.5" BorderBrush="Black" SnapsToDevicePixels="True">
+                            <SelectiveScrollingGrid>
+                                <SelectiveScrollingGrid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </SelectiveScrollingGrid.ColumnDefinitions>
+                                <SelectiveScrollingGrid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </SelectiveScrollingGrid.RowDefinitions>
+                                <DataGridCellsPresenter Grid.Column="1" ItemsPanel="{TemplateBinding ItemsPanel}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                <DataGridDetailsPresenter Grid.Column="1" Grid.Row="1" SelectiveScrollingGrid.SelectiveScrollingOrientation="{Binding AreRowDetailsFrozen, Converter={x:Static DataGrid.RowDetailsScrollingConverter}, ConverterParameter={x:Static SelectiveScrollingOrientation.Vertical}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" Visibility="{TemplateBinding DetailsVisibility}"/>
+                                <DataGridRowHeader Grid.RowSpan="2" SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical" Visibility="{Binding HeadersVisibility, Converter={x:Static DataGrid.HeadersVisibilityConverter}, ConverterParameter={x:Static DataGridHeadersVisibility.Row}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                            </SelectiveScrollingGrid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFCC00"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                </Trigger>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="#FFCC00"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                </Trigger>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsSelected" Value="true"/>
+                        <Condition Property="Selector.IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="Background" Value="#dfdfdf"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="DataGridCellStyle1" TargetType="{x:Type DataGridCell}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+            <Setter Property="Margin" Value="15 0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="0" SnapsToDevicePixels="True">
+                            <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="DataGridStyle1" TargetType="{x:Type DataGrid}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#222528"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="RowDetailsVisibilityMode" Value="VisibleWhenSelected"/>
+            <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="Both"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="AutoGenerateColumns" Value="False" />
+            <Setter Property="HeadersVisibility" Value="Column" />
+            <Setter Property="Margin" Value="0 10 0 0" />
+            <Setter Property="Grid.Row" Value="5" />
+            <Setter Property="SelectionMode" Value="Single" />
+            <Setter Property="SelectionUnit" Value="FullRow" />
+            <Setter Property="CanUserAddRows" Value="False" />
+            <Setter Property="CanUserDeleteRows" Value="False" />
+            <Setter Property="CanUserReorderColumns" Value="False" />
+            <Setter Property="CanUserResizeRows" Value="False" />
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="GridLinesVisibility" Value="None" />
+            <Setter Property="ColumnWidth" Value="*" />
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGrid}">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="DG_ScrollViewer" Focusable="false">
+                                <ScrollViewer.Template>
+                                    <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Button Command="{x:Static DataGrid.SelectAllCommand}" Focusable="false" Style="{DynamicResource {ComponentResourceKey ResourceId=DataGridSelectAllButtonStyle, TypeInTargetAssembly={x:Type DataGrid}}}" Visibility="{Binding HeadersVisibility, Converter={x:Static DataGrid.HeadersVisibilityConverter}, ConverterParameter={x:Static DataGridHeadersVisibility.All}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" Width="{Binding CellsPanelHorizontalOffset, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                                            <DataGridColumnHeadersPresenter x:Name="PART_ColumnHeadersPresenter" Grid.Column="1" Visibility="{Binding HeadersVisibility, Converter={x:Static DataGrid.HeadersVisibilityConverter}, ConverterParameter={x:Static DataGridHeadersVisibility.Column}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                                            <ScrollContentPresenter x:Name="PART_ScrollContentPresenter" Grid.ColumnSpan="2" CanContentScroll="{TemplateBinding CanContentScroll}" Grid.Row="1"/>
+                                            <ScrollBar x:Name="PART_VerticalScrollBar" Grid.Column="2" Maximum="{TemplateBinding ScrollableHeight}" Orientation="Vertical" Grid.Row="1" ViewportSize="{TemplateBinding ViewportHeight}" Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"/>
+                                            <Grid Grid.Column="1" Grid.Row="2">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="{Binding NonFrozenColumnsViewportHorizontalOffset, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <ScrollBar x:Name="PART_HorizontalScrollBar" Grid.Column="1" Maximum="{TemplateBinding ScrollableWidth}" Orientation="Horizontal" ViewportSize="{TemplateBinding ViewportWidth}" Value="{Binding HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"/>
+                                            </Grid>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </ScrollViewer.Template>
+                                <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            </ScrollViewer>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsGrouping" Value="true"/>
+                        <Condition Property="VirtualizingPanel.IsVirtualizingWhenGrouping" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="ColumnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Padding" Value="8"/>
+        </Style>
     </Page.Resources>
 
     <ScrollViewer>
-        
+
         <StackPanel Margin="20">
             <!--NZ Government Logo-->
             <Grid >
@@ -68,15 +216,31 @@
 
                 <!--Home, Searchbar-->
                 <StackPanel Orientation="Horizontal">
-                    <Button x:Name="HomeButton" Opacity="0.995" BorderThickness="0" Background="White" Click="Home_Click">
+                    <Button x:Name="HomeButton" Opacity="0.995" BorderThickness="0" Background="White"  Click="Home_Click">
                         <Image Source="/Resources/images/homeButton.png"/>
                     </Button>
 
                     <Grid Margin="5,10" Width="529">
-                        <TextBox Template="{StaticResource RoundTextboxCornterTemplate}" FontSize="25" Height="50" Width="512" />
+                        <TextBox Name="SearchTermTextBox" Template="{StaticResource RoundTextboxCornterTemplate}" VerticalContentAlignment="Center" FontSize="25" Height="50" Width="512" />
                         <Button x:Name="SearchButton"  BorderThickness="0" HorizontalAlignment="Right" Background="White" Margin="10,10,12,9.6" >
                             <Image Source="/Resources/images/searchbutton.png" Width="38" />
                         </Button>
+
+                        <TextBlock IsHitTestVisible="False" Text="  Enter Search Term Here" 
+                               VerticalAlignment="Center" HorizontalAlignment="Left" 
+                               FontFamily="Inter"
+                               Margin="10,0,0,0" Foreground="DarkGray">
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Text, ElementName=SearchTermTextBox}" Value="">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
                     </Grid>
                 </StackPanel>
 
@@ -93,10 +257,9 @@
 
                     <Popup AllowsTransparency="True" HorizontalOffset="1cm" x:Name="myPopup" 
                    Placement="Relative" StaysOpen="True" PlacementTarget="{Binding ElementName=btnShowPopup}"
-                       Margin="0"
-                       >
-                        <Border Width="304" Height="301">
-                            <DockPanel Background="#3A89FF" LastChildFill="True" Margin="0,0,0,-39.2"  Grid.ColumnSpan="3" Grid.RowSpan="1" RenderTransformOrigin="0.522,0.549" Height="340" VerticalAlignment="Top">
+                       Margin="0">
+                        <Border Width="304" Height="301" >
+                            <DockPanel Background="#3A89FF"  LastChildFill="True" Margin="0,0,0,-39.2"  Grid.ColumnSpan="3" Grid.RowSpan="1" RenderTransformOrigin="0.522,0.549" Height="340" VerticalAlignment="Top">
                                 <DockPanel.RenderTransform>
                                     <TransformGroup>
                                         <ScaleTransform/>
@@ -113,12 +276,11 @@
                                     </Grid>
 
                                     <Grid Margin="0,0,0,0" Width="116">
-                                        <Button Content="Personal Details"  Click="PersonalDeets_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,100,-50,220" Width="223" FontFamily="Inter"/>
+                                        <Button Content="Personal Details" Click="PersonalDeets_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,100,-50,220" Width="223" FontFamily="Inter"/>
                                         <Button Content="Generate QR Code" Click="GenerateQR_Click" HorizontalAlignment="Center"   Background="White" Margin="-57,125,-50,195" Width="223"/>
-                                        <Button Content="Notifcations"  HorizontalAlignment="Center"   Background="White" Margin="-57,150,-50,170" Width="223"/>
-                                        <Button Content="Generate Vaccine Certificate"  Click="Certificate_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,175,-50,145" Width="223"/>
-                                        <Button Content="Report an Issue" HorizontalAlignment="Center"  Background="White" Margin="-57,200,-50,121" Width="223"/>
-                                        <Button Content="Settings"   HorizontalAlignment="Center"  Background="White" Margin="-57,224,-50,97" Width="223"/>
+                                        <Button Content="Generate Vaccine Certificate" Click="Certificate_Click" HorizontalAlignment="Center"  Background="White"  Margin="-57,150,-50,170" Width="223"/>
+                                        <Button Content="Vaccine Details" Click="Notif_Click" HorizontalAlignment="Center"   Background="White"  Margin="-57,175,-50,145" Width="223"/>
+                                        <Button Content="Report an Issue" Click="Report_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,200,-50,121" Width="223"/>
                                     </Grid>
 
                                     <Grid>
@@ -137,12 +299,12 @@
             </Grid>
 
             <!--Your Covid-19 Certificate-->
-            <Grid>
+            <Grid Margin="0,0,0,20">
                 <Label Content="Your Covid-19 Certificate: " HorizontalAlignment="Left" Height="50" FontFamily="Inter" FontWeight="Bold" FontSize="32" Margin="20,0,0,-0.4"/>
             </Grid>
 
             <!--Certificate-->
-            <Border Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="10" Margin="200,0" Padding="20">
+            <Border x:Name="myCertificate" Background="White" BorderBrush="Gainsboro" BorderThickness="10" Width="900" Padding="20">
                 <Grid >
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"/>
@@ -150,6 +312,7 @@
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
+
                     <Image VerticalAlignment="Top" Source="/Resources/images/NZ.png"  Height="75" HorizontalAlignment="Left"/>
                     <StackPanel Orientation="Horizontal" Grid.Row="1" 
                             HorizontalAlignment="Center">
@@ -159,11 +322,9 @@
                                VerticalAlignment="Center"
                                TextWrapping="Wrap" TextAlignment="Center" FontFamily="Inter" FontSize="48"/>
                     </StackPanel>
-                    <Border Background="GhostWhite" BorderBrush="gray" BorderThickness="1" Padding="20" Grid.Row="2" CornerRadius="4">
 
-                        <!--<Grid>
-                            <TextBlock Text="Personal Details" FontFamily="Inter" FontWeight="Bold" FontSize="30"/>
-                        </Grid>-->
+                    <Border Background="White" BorderBrush="gray" BorderThickness="1" Padding="20" Grid.Row="2" CornerRadius="4" Margin="0,5,0,0">
+
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
@@ -185,48 +346,83 @@
                                     <ImageBrush ImageSource="/Resources/images/profile.png"/>
                                 </Rectangle.Fill>
                             </Rectangle>
+
                             <!--<Image Grid.Row="1"
                             Source="/Resources/images/qr_placeholder.png" Height="100" Width="100" /> BROKEN!!!!! NEEDS WORK!!!!!-->
 
                             <StackPanel Grid.Row="1" Grid.Column="1">
-                                <TextBlock Text="Name" FontWeight="DemiBold" FontSize="18"/>
-                                <TextBlock Text="   Andreas Dave Sam" FontSize="14"/>
-                                <TextBlock Text="Date of Birth" FontWeight="DemiBold" FontSize="18"/>
-                                <TextBlock Text="   13/07/1999" FontSize="14"/>
+                                <Grid Margin="10,0,0,0">
+                                    <StackPanel>
+                                        <TextBlock Text="Name" FontWeight="DemiBold" FontSize="18"/>
+                                        <TextBox Name="Name" IsReadOnly="{Binding IsReadOnly, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" FontSize="14"/>
+                                    </StackPanel>
+                                </Grid>
+
+                                <Grid Margin="10,10,0,0">
+                                    <StackPanel>
+                                        <TextBlock Text="Date of Birth" FontWeight="DemiBold" FontSize="18"/>
+                                        <TextBox Name="Birthday" IsReadOnly="{Binding IsReadOnly, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" FontSize="14"/>
+                                    </StackPanel>
+                                </Grid>
                             </StackPanel>
 
                             <StackPanel Grid.Row="1" Grid.Column="2">
-                                <TextBlock Text="Address" FontWeight="DemiBold" FontSize="18"/>
-                                <TextBlock Text="   Auckland 1010" FontSize="14"/>
-                                <TextBlock Text="Date Issued" FontWeight="DemiBold" FontSize="18"/>
-                                <TextBlock Text="   22/05/2023" FontSize="14"/>
+                                <Grid Margin="10,0,0,0">
+                                    <StackPanel>
+                                        <TextBlock Text="Address" FontWeight="DemiBold" FontSize="18"/>
+                                        <TextBox Name="Address" IsReadOnly="{Binding IsReadOnly, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" FontSize="14"/>
+                                    </StackPanel>
+                                </Grid>
+                                <Grid  Margin="10,10,0,0">
+                                    <StackPanel>
+                                        <TextBlock Text="Date Issued" FontWeight="DemiBold" FontSize="18"/>
+                                        <Label FontSize="14">
+                                            <Label.Content>
+                                                <TextBlock Text="{Binding Source= {x:Static system:DateTime.Now}, 
+                                                    ConverterCulture='en-NZ',
+                                                    StringFormat= ' {0}' }"/>
+                                            </Label.Content>
+                                        </Label>
+
+                                    </StackPanel>
+                                </Grid>
                             </StackPanel>
 
                             <StackPanel Grid.Row="1" Grid.Column="3">
                                 <TextBlock Text="Certificate ID" FontWeight="DemiBold" FontSize="18"/>
-                                <TextBlock Text="   0123456789" FontSize="14"/>
+                                <TextBlock x:Name="RandomNumberTextBlock" FontSize="14"/>
                             </StackPanel>
 
                         </Grid>
                     </Border>
 
                     <!--Vaccine Doses-->
-                    <Border Background="GhostWhite" BorderBrush="gray" BorderThickness="1" Padding="0,20" Grid.Row="3" CornerRadius="4" Margin="0,20">
+                    <Border Background="White" BorderBrush="gray" BorderThickness="1" Padding="0,20" Grid.Row="3" CornerRadius="4" Margin="0,20">
 
-                        <!--<Grid>
-                            <TextBlock Text="Personal Details" FontFamily="Inter" FontWeight="Bold" FontSize="30"/>
-                        </Grid>-->
-                        <StackPanel>
-                            <Grid Height="72" Margin="0,0,0,0" >
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Dose No." FontWeight="Medium" VerticalAlignment="Top" Margin="26,0,0,0" FontFamily="Roboto"/>
-                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Date of Vaccination" FontWeight="Medium" VerticalAlignment="Top" Margin="100,0,0,0" FontFamily="Roboto"/>
-                                <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Vaccine" FontWeight="Medium" VerticalAlignment="Top" Margin="0,0,200,0" FontFamily="Roboto"/>
-                                <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Text="Brand" FontWeight="Medium" VerticalAlignment="Top" Margin="0,0,320,0" FontFamily="Roboto"/>
-                                <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" FontWeight="Medium" VerticalAlignment="Top" Margin="0,0,70,0" FontFamily="Roboto"><Run Text="Country of Vaccination"/><LineBreak/><Run/></TextBlock>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="800"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Column="1">
+                                <DataGrid x:Name="VaccineData" ItemsSource="{Binding MyData}" SelectedItem="{Binding SelectedMyData}" Grid.ColumnSpan="2" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"
+                                           ColumnHeaderStyle="{DynamicResource ColumnHeaderStyle}" RowStyle="{DynamicResource DataGridRowStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}"  Style="{DynamicResource DataGridStyle1}" Margin="0,0,0,15">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Dose No." Width="100" Binding="{Binding DoseNo, UpdateSourceTrigger=PropertyChanged}"/>
+                                        <DataGridTextColumn Header="Date of Vaccination" Width="170" Binding="{Binding Date, UpdateSourceTrigger=PropertyChanged}"/>
+                                        <DataGridTextColumn Header="Vaccine" Width="190" Binding="{Binding Vaccine, UpdateSourceTrigger=PropertyChanged}"/>
+                                        <DataGridTextColumn Header="Brand" Width="150" Binding="{Binding Brand, UpdateSourceTrigger=PropertyChanged}"/>
+                                        <DataGridTextColumn Header="Country of Vaccination" Width="auto"  Binding="{Binding Country, UpdateSourceTrigger=PropertyChanged}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
                             </Grid>
-                        </StackPanel>
+
+                        </Grid>
                     </Border>
                 </Grid>
+
             </Border>
 
             <Grid>
@@ -238,9 +434,31 @@
 
                 <StackPanel Margin="6.8,25,23.2,25" Orientation="Horizontal" Grid.Column="1" >
                     <Grid Margin="5">
-                        <Button Content="Edit Certificate" FontWeight="Medium" Width="210"  
+                        <Button Content="Edit Personal Details" FontWeight="Medium" Width="210"  
                                 Background="#3A89FF" Foreground="White" FontFamily="Roboto" 
                                 Height="34" FontSize="16" BorderThickness="0" Click="Edit_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="8"></Setter>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </Grid>
+                    <Grid Margin="5">
+                        <Button Content="Save Certificate" FontWeight="Medium" Width="210"  
+                                Background="#3A89FF" Foreground="White" FontFamily="Roboto" 
+                                Height="34" FontSize="16" BorderThickness="0" Click="Save_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="8"></Setter>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </Grid>
+                    <Grid Margin="5">
+                        <Button Content="Edit Vaccine Details" FontWeight="Medium" Width="210"  
+                                Background="#3A89FF" Foreground="White" FontFamily="Roboto" 
+                                Height="34" FontSize="16" BorderThickness="0" Click="EditPage_Click">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="8"></Setter>
@@ -262,136 +480,7 @@
                     </Grid>
                 </StackPanel>
             </Grid>
-            
-            <!--<Grid Margin="15">
-            <Rectangle Fill="#D9D9D9" Opacity="0.4" HorizontalAlignment="Center" Height="677" Stroke="Black" VerticalAlignment="Top" Width="1091" Margin="140,10,0,-29.8" StrokeThickness="0"/>
-            <Rectangle Fill="White" HorizontalAlignment="Center" Height="640" Stroke="Black" VerticalAlignment="Top" Width="1050" Margin="165,29,0,-11.8" StrokeThickness="0"/>
-
-            <StackPanel>
-                <Grid>
-                    <Image VerticalAlignment="Top" Source="/Resources/images/NZ.png" Margin="180,44,898.2,0" Height="75"/>
-                </Grid>
-
-                <Grid>
-                    <TextBlock Text="My Covid Record Certificate" FontWeight="ExtraBold" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Inter" FontSize="48"/>
-                </Grid>
-
-                -->
-            <!--Personal Details-->
-            <!--
-                <Grid Margin="25">
-                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="196" Stroke="Black" VerticalAlignment="Center" Width="987" Margin="170,10,0,-11.2" Opacity="0.3"/>
-
-                    <StackPanel>
-                        <Grid  Margin="2,20,0,0">
-                            <TextBlock Text="Personal Details" FontWeight="ExtraBold" TextWrapping="Wrap" TextAlignment="Left" FontFamily="Inter" FontSize="28" Margin="183,0,147.6,-1.2" />
-                        </Grid>
-
-                        <Grid>
-                            <Grid Margin="10,5,0,0">
-                                -->
-            <!--<Ellipse Fill="White" HorizontalAlignment="Left" Height="100" Stroke="Black" VerticalAlignment="Top" Width="100" Margin="180,19,0,0"/> -->
-            <!--
-                                <Image Source="/Resources/images/My Covid Record Logo.png"  Height="130" Margin="180,0,1003.6,0" />
-
-                            </Grid>
-
-                            <Grid>
-                                <Grid Margin="330,0,158.6,0.4">
-                                    <Grid>
-                                        <TextBlock Text="Name" Margin="0,20,554.8,90.4" FontFamily="Roboto" FontWeight="Medium" FontSize="20"/>
-                                        -->
-            <!--Name from database-->
-            <!--
-                                    </Grid>
-
-                                    <Grid>
-                                        <TextBlock Text="Address" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="280,19,273.8,90.4"/>
-                                        -->
-            <!--Address from database-->
-            <!--
-                                    </Grid>
-
-                                    <Grid>
-                                        <TextBlock Text="Certificate ID" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="559,19,-0.2,90.4"/>
-                                        -->
-            <!--Generate ID from database-->
-            <!--
-                                    </Grid>
-                                </Grid>
-
-                                <Grid>
-                                    <Grid Margin="330,0,158.6,0.4">
-                                        <Grid>
-                                            <TextBlock Text="Date of Birth" Margin="0,74,554.8,36.4" FontFamily="Roboto" FontWeight="Medium" FontSize="20"/>
-                                            -->
-            <!--DOB from database-->
-            <!--
-                                        </Grid>
-
-                                        <Grid>
-                                            <TextBlock Text="Date Issued" FontFamily="Roboto" FontWeight="Medium" FontSize="20" Margin="280,74,273.8,35.4"/>
-                                            -->
-            <!--Passport from database-->
-            <!--
-                                        </Grid>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                    </StackPanel>
-                </Grid>
-
-                -->
-            <!--Vaccine Record-->
-            <!--
-                <Grid  Margin="25,0,25,25">
-                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="209" Stroke="Black" VerticalAlignment="Center" Width="987" Margin="170,10,0,-11.2" Opacity="0.3"/>
-
-                    <StackPanel>
-                        <Grid Height="72" Margin="170,0,158.6,0" >
-                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Dose No." FontWeight="Medium" VerticalAlignment="Top" Margin="26,27,0,0" FontFamily="Roboto"/>
-                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Date of Vaccination" FontWeight="Medium" VerticalAlignment="Top" Margin="130,27,0,0" FontFamily="Roboto"/>
-                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Vaccine" FontWeight="Medium" VerticalAlignment="Top" Margin="340,27,0,0" FontFamily="Roboto"/>
-                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Brand" FontWeight="Medium" VerticalAlignment="Top" Margin="570,27,0,0" FontFamily="Roboto"/>
-                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" FontWeight="Medium" VerticalAlignment="Top" Margin="816,27,0,0" FontFamily="Roboto"><Run Text="Country of Vaccination"/><LineBreak/><Run/></TextBlock>
-                        </Grid>
-                    </StackPanel>
-                </Grid>
-
-            </StackPanel>
-        </Grid>-->
-
-            <!--Buttons-->
-            <!--<Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-
-            <StackPanel Margin="6.8,25,23.2,25" Orientation="Horizontal" Grid.Column="1">
-                <Grid Margin="5">
-                    <Button Content="Edit Certificate" FontWeight="Medium" Width="210"  Background="#3A89FF" Foreground="White" FontFamily="Roboto" Height="34" FontSize="16" BorderThickness="0" Click="Edit_Click">
-                        <Button.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="CornerRadius" Value="8"></Setter>
-                            </Style>
-                        </Button.Resources>
-                    </Button>
-                </Grid>
-                <Grid Margin="5">
-                    <Button Content="Download Certificate" FontWeight="Medium" Width="205"  Background="#3A89FF" Foreground="White" FontFamily="Roboto" Height="34" FontSize="16" UseLayoutRounding="True" BorderThickness="0" Margin="0,0,0,-0.4" Click="Download_Click">
-                        <Button.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="CornerRadius" Value="8"></Setter>
-                            </Style>
-                        </Button.Resources>
-                    </Button>
-                </Grid>
-            </StackPanel>
-        </Grid>-->
         </StackPanel>
-        
     </ScrollViewer>
 </Page>
+   

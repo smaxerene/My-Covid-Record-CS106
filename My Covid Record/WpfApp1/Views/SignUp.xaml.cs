@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Npgsql;
 
 namespace WpfApp1.Views
 {
@@ -23,6 +24,7 @@ namespace WpfApp1.Views
     /// </summary>
     public partial class SignUp : Page
     {
+
         public SignUp()
         {
             InitializeComponent();

@@ -35,6 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MahApps.Metro.IconPacks.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.Material.4.11.0\lib\net47\MahApps.Metro.IconPacks.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Material, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.Material.4.11.0\lib\net47\MahApps.Metro.IconPacks.Material.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -88,9 +94,6 @@
     </Reference>
     <Reference Include="Npgsql.EntityFrameworkCore.PostgreSQL, Version=3.1.18.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>..\packages\Npgsql.EntityFrameworkCore.PostgreSQL.3.1.18\lib\netstandard2.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll</HintPath>
-    </Reference>
-    <Reference Include="QRCoder, Version=1.4.3.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
-      <HintPath>..\packages\QRCoder.1.4.3\lib\net40\QRCoder.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -148,13 +151,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DataContext.cs" />
-    <Compile Include="Views\UserReports.xaml.cs">
-      <DependentUpon>UserReports.xaml</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="Views\ReportIssue.xaml.cs">
-      <DependentUpon>ReportIssue.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="System\Drawing\Image.cs" />
     <Compile Include="Views\AdminLogin.xaml.cs">
       <DependentUpon>AdminLogin.xaml</DependentUpon>
     </Compile>
@@ -173,11 +170,17 @@
     <Compile Include="Views\QRPage.xaml.cs">
       <DependentUpon>QRPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ReportIssue.xaml.cs">
+      <DependentUpon>ReportIssue.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UserProfile.xaml.cs">
       <DependentUpon>UserProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserReport.xaml.cs">
+      <DependentUpon>UserReport.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\VaccineDetailsPage.xaml.cs">
       <DependentUpon>VaccineDetailsPage.xaml</DependentUpon>
@@ -194,14 +197,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\UserReports.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ReportIssue.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\AdminLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -226,6 +221,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\ReportIssue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\SignUp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -233,6 +232,10 @@
     <Page Include="Views\UserProfile.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\VaccineDetailsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -402,7 +405,13 @@
     <Resource Include="Resources\images\searchbutton.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\images\QR_Placeholder_Code-removebg-preview.png" />
+    <Resource Include="Resources\images\qr_placeholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\editButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\deleteButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

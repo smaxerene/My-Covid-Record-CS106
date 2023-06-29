@@ -69,15 +69,31 @@
 
                 <!--Home, Searchbar-->
                 <StackPanel Orientation="Horizontal">
-                    <Button x:Name="HomeButton" Opacity="0.995" BorderThickness="0" Background="White" Click="Home_Click">
+                    <Button x:Name="HomeButton" Opacity="0.995" BorderThickness="0" Background="White"  Click="Home_Click">
                         <Image Source="/Resources/images/homeButton.png"/>
                     </Button>
 
                     <Grid Margin="5,10" Width="529">
-                        <TextBox Template="{StaticResource RoundTextboxCornterTemplate}" FontSize="25" Height="50" Width="512" />
+                        <TextBox Name="SearchTermTextBox" Template="{StaticResource RoundTextboxCornterTemplate}" VerticalContentAlignment="Center" FontSize="25" Height="50" Width="512" />
                         <Button x:Name="SearchButton"  BorderThickness="0" HorizontalAlignment="Right" Background="White" Margin="10,10,12,9.6" >
                             <Image Source="/Resources/images/searchbutton.png" Width="38" />
                         </Button>
+
+                        <TextBlock IsHitTestVisible="False" Text="  Enter Search Term Here" 
+                               VerticalAlignment="Center" HorizontalAlignment="Left" 
+                               FontFamily="Inter"
+                               Margin="10,0,0,0" Foreground="DarkGray">
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Text, ElementName=SearchTermTextBox}" Value="">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
                     </Grid>
                 </StackPanel>
 
@@ -119,7 +135,6 @@
                                         <Button Content="Generate Vaccine Certificate" Click="Certificate_Click" HorizontalAlignment="Center"  Background="White"  Margin="-57,150,-50,170" Width="223"/>
                                         <Button Content="Vaccine Details" Click="Notif_Click" HorizontalAlignment="Center"   Background="White"  Margin="-57,175,-50,145" Width="223"/>
                                         <Button Content="Report an Issue" Click="Report_Click" HorizontalAlignment="Center"  Background="White" Margin="-57,200,-50,121" Width="223"/>
-                                        <Button Content="Settings" Click="Settings_Click"  HorizontalAlignment="Center"  Background="White" Margin="-57,224,-50,97" Width="223"/>
                                     </Grid>
 
                                     <Grid>
@@ -151,11 +166,11 @@
 
                 <StackPanel Grid.Column="1">
                     <Grid>
-                        <Rectangle Fill="#FFCC00" Height="426" Stroke="Black" VerticalAlignment="Top" Width="297" Margin="58,10,57.8,0"/>
+                        <Rectangle Fill="#FFCC00" Height="426" VerticalAlignment="Top" Width="297" RadiusX="10" RadiusY="10" Margin="58,10,57.8,0"/>
                         <Image Height="57" Source="/Resources/images/NZ Gov Logo.png" Margin="58,28,57.8,363" />
                         <Image Height="30" Source="/Resources/images/NZGovNameMaori.png" Margin="10,85,-10.2,333"/>
                         <Image  Height="18" Source="/Resources/images/NZGovName.png" Margin="0,117,-0.2,313"/>
-                        <Rectangle Fill="#FFFFFF" Height="160" Stroke="Black"  Width="173" Margin="120,232,119.8,54.4"/>
+                        <Rectangle Fill="#FFFFFF" Height="160" Stroke="Gray"  Width="173" Margin="120,232,119.8,54.4"/>
                         <TextBlock  TextAlignment="Center" Width="260" FontFamily="Inter" FontWeight="Bold" FontSize="25" Margin="75,157,77.8,231"><Run Text="My Covid Record"/><LineBreak/><Run Text="QR Code"/></TextBlock>
                     </Grid>
                 </StackPanel>
