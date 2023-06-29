@@ -206,9 +206,6 @@
     <Compile Include="Views\AdminRecording.xaml.cs">
       <DependentUpon>AdminRecording.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Certificate.xaml.cs">
-      <DependentUpon>Certificate.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Homepage.xaml.cs">
       <DependentUpon>Homepage.xaml</DependentUpon>
     </Compile>
@@ -260,10 +257,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AdminRecording.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\Certificate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
