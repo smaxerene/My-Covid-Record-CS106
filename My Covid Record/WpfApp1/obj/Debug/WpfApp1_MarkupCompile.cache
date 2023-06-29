@@ -4,30 +4,17 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\
-=======
-C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\
->>>>>>> Dave
 WpfApp1
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\App.xaml
-12-1726174453
-
-18-1020009032
-472073367860
-MainWindow.xaml;Views\AdminLogin.xaml;Views\AdminRecording.xaml;Views\Certificate.xaml;Views\Homepage.xaml;Views\Login.xaml;Views\QRPage.xaml;Views\ReportIssue.xaml;Views\SignUp.xaml;Views\UserProfile.xaml;Views\UserReport.xaml;Views\VaccineDetailsPage.xaml;
-=======
-C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\App.xaml
 141934420649
 7-1662125674
-191068407853
-79-1315676340
+20551243999
+811310435301
 MainWindow.xaml;Views\Adminchangeuser.xaml;Views\EditingUserProfile.xaml;Views\UserReports.xaml;Views\ReportRecieves.xaml;Views\AdminLogin.xaml;Views\AdminRecording.xaml;Views\Certificate.xaml;Views\Homepage.xaml;Views\Login.xaml;Views\QRPage.xaml;Views\SignUp.xaml;Views\UserProfile.xaml;Views\VaccineDetailsPage.xaml;
->>>>>>> Dave
 
 False
 
