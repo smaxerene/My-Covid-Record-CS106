@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 
 namespace WpfApp1.Views
 {
+
     /// <summary>
     /// Interaction logic for AdminLogin.xaml
     /// </summary>
@@ -24,7 +25,6 @@ namespace WpfApp1.Views
         {
             InitializeComponent();
         }
-
         private void AdminLogin_Click(object sender, RoutedEventArgs e)
         {
             App.Current.MainWindow.Content = new AdminRecording();

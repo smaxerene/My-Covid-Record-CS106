@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\
 WpfApp1
 none
 false
 DEBUG;TRACE
-C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\App.xaml
-12-1726174453
-
-19-1862368399
-472073367860
-MainWindow.xaml;Views\AdminLogin.xaml;Views\AdminRecording.xaml;Views\Certificate.xaml;Views\Homepage.xaml;Views\Login.xaml;Views\QRPage.xaml;Views\ReportIssue.xaml;Views\SignUp.xaml;Views\UserProfile.xaml;Views\UserReport.xaml;Views\VaccineDetailsPage.xaml;
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\App.xaml
+141934420649
+7-1662125674
+21-291115368
+81-2106580505
+MainWindow.xaml;Views\Adminchangeuser.xaml;Views\EditingUserProfile.xaml;Views\UserReports.xaml;Views\ReportRecieves.xaml;Views\AdminLogin.xaml;Views\AdminRecording.xaml;Views\Certificate.xaml;Views\Homepage.xaml;Views\Login.xaml;Views\QRPage.xaml;Views\SignUp.xaml;Views\UserProfile.xaml;Views\VaccineDetailsPage.xaml;
 
 True
 

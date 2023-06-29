@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for ReportIssue.xaml
+    /// Interaction logic for EditingUserProfile.xaml
     /// </summary>
-    public partial class ReportIssue : Window
+    public partial class EditingUserProfile : Window
     {
-        public ReportIssue()
+        public EditingUserProfile()
         {
             InitializeComponent();
         }

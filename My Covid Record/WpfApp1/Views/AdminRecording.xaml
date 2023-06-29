@@ -1,19 +1,19 @@
-﻿<Window x:Class="WpfApp1.AdminRecording"
+﻿<Page x:Class="WpfApp1.Views.AdminRecording"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:local="clr-namespace:WpfApp1.Views"
         mc:Ignorable="d"
         Title="AdminRecording" Height="1080" Width="1900">
 
-    <Window.Resources>
+    <Page.Resources>
         <Style x:Key="DataGridColumnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
             <Setter Property="FontSize" Value="16" />
             <Setter Property="HorizontalContentAlignment" Value="Center" />
         </Style>
-    </Window.Resources>
-
+    </Page.Resources>
+    
     <Grid Margin="0,234,-0.4,-215.6">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="271*"/>
@@ -36,7 +36,7 @@
                 <RowDefinition Height="44*"/>
                 <RowDefinition Height="31*"/>
             </Grid.RowDefinitions>
-            <TextBox x:Name="searchTextBox" Height="30" Margin="1490,11.1,-739,-10"
+            <TextBox x:Name="searchTextBox" Height="30" Margin="1495,2,-744.267,-0.8"
                      Background="White" BorderBrush="Black" BorderThickness="1" Grid.Row="1">
                 <TextBox.Style>
                     <Style TargetType="TextBox">
@@ -62,10 +62,28 @@
                 </TextBlock.Style>
             </TextBlock>
         </Grid>
+        <TextBlock  Text="Reports" FontWeight="Black" FontSize="20" Grid.Column="1" Margin="309,146,23.305,701.4" Grid.Row="2" RenderTransformOrigin="0.5,0.5"/>
+        <TextBlock  Text="Records" FontWeight="Black" FontSize="20" Grid.Column="1" Margin="154,147,178.305,700.4" Grid.Row="2" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.169"/>
+                    <RotateTransform Angle="0.145"/>
+                    <TranslateTransform Y="-0.797"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
+        <!--<*************************************************************>-->
+        <Button Click="Button_Click" Margin="161,110,186.305,727.4" Grid.RowSpan="3" Background="White" Grid.Column="1" BorderBrush="Transparent" BorderThickness="0">
+            <Image Source="/Resources/images/medical.png"></Image>
+        </Button>
+        <Button Click="Button_Click_1" Margin="313,110,34.305,727.4" Grid.RowSpan="3" Background="White" Grid.Column="1" BorderBrush="Transparent" BorderThickness="0">
+            <Image Source="/Resources/images/report.png"></Image>
+        </Button>
+        <!--<*************************************************************>-->
         <Line X1="0" Y1="0" X2="12000" Y2="0" Stroke="Black" StrokeThickness="10" Grid.ColumnSpan="3" Margin="0,147,0.6,685.4" Grid.Row="2" />
         <TextBlock Text="Account" FontSize="25
                    " FontWeight="Bold" Grid.Column="2" Margin="678.4,79.4,-692.4,731" Grid.Row="2" ></TextBlock>
-        <Button Name="SearchButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="28" Margin="519,94.4,0,0" Height="25" BorderThickness="0"  Background="White" Grid.Row="2" Grid.ColumnSpan="2">
+        <Button Name="SearchButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="28" Margin="527,106,0,0" Height="25" BorderThickness="0"  Background="White" Grid.Row="2" Grid.ColumnSpan="2">
             <Image Source="/Resources/images/searchbutton.png" RenderTransformOrigin="0.674,-0.028"></Image>
         </Button>
         <TextBlock FontWeight="Bold" HorizontalAlignment="Left" TextWrapping="Wrap" Text="My Covid Record" VerticalAlignment="Top" Margin="41.133,-10,0,0" FontFamily="Inter" Width="764" FontSize="80" TextAlignment="Center" Height="96" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="1"/>
@@ -87,7 +105,7 @@
                 <TextBlock Text="Confirm" Foreground="Black" Margin="-105,-3,0,0" />
             </StackPanel>
         </Border>
-        <Border Background="Red" Margin="340.133,173.4,801.6,569" CornerRadius="10" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="1">
+        <Border Background="Red" Margin="340,173,796.505,569.4" CornerRadius="10" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="1">
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                 <TextBlock Text="{Binding UnvaccinatedCount}" FontSize="22" FontWeight="Bold" Foreground="Black" Margin="0" />
                 <TextBlock Text="Unvaccinated" Foreground="Black" Margin="-81,-5,0,0" />
@@ -144,4 +162,4 @@
         <!-- Separate StackPanel -->
 
     </Grid>
-</Window>
+</Page>

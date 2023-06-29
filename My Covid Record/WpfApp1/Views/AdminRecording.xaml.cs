@@ -9,9 +9,9 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace WpfApp1
+namespace WpfApp1.Views
 {
-    public partial class AdminRecording : Window, INotifyPropertyChanged
+    public partial class AdminRecording : Page, INotifyPropertyChanged
     {
         private Item selectedItem;
         public Item SelectedItem
@@ -183,6 +183,16 @@ namespace WpfApp1
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Content = new AdminRecording();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Content = new ReportRecieves();
+        }
     }
 
     public class Item

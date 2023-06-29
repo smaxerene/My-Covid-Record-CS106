@@ -382,6 +382,7 @@ C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid 
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
 C:\Users\270202754\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.exe
+<<<<<<< HEAD
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Threading.Tasks.Extensions.xml
@@ -583,3 +584,220 @@ C:\Users\Samantha\Desktop\Draft\CS106Final\My Covid Record\WpfApp1\obj\Debug\Wpf
 C:\Users\Samantha\Desktop\Draft\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
 C:\Users\Samantha\Desktop\Draft\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+=======
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\EditingUserProfile.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\UserReports.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\ReportRecieves.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\AdminLogin.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\AdminRecording.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\Certificate.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\Homepage.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\Login.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\QRPage.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\SignUp.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\UserProfile.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\VaccineDetailsPage.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\App.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1_Content.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\EditingUserProfile.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\UserReports.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\ReportRecieves.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\AdminLogin.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\AdminRecording.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\Certificate.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\Homepage.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\Login.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\QRPage.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\SignUp.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\UserProfile.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\VaccineDetailsPage.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Resources\images\rejected.png
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Resources\images\pie-chart.png
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Resources\images\warning.png
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Resources\images\confirm.png
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.EntityFrameworkCore.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Npgsql.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\QRCoder.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Buffers.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Collections.Immutable.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Memory.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Text.Json.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.ValueTuple.dll
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.EntityFrameworkCore.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.EntityFrameworkCore.Relational.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Npgsql.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Buffers.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Collections.Immutable.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Memory.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Text.Json.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.ValueTuple.xml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\Adminchangeuser.g.cs
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\Adminchangeuser.baml
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Resources\images\menu.png
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Resources\images\medical.png
+C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Resources\images\report.png
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.AssemblyReference.cache
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\Adminchangeuser.g.cs
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\EditingUserProfile.g.cs
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\UserReports.g.cs
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\ReportRecieves.g.cs
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\AdminLogin.g.cs
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\AdminRecording.g.cs
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\Certificate.g.cs
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\Homepage.g.cs
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\Login.g.cs
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\QRPage.g.cs
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\SignUp.g.cs
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\UserProfile.g.cs
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\VaccineDetailsPage.g.cs
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\App.g.cs
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1_Content.g.cs
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\Adminchangeuser.baml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\EditingUserProfile.baml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\UserReports.baml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\ReportRecieves.baml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\AdminLogin.baml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\AdminRecording.baml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\Certificate.baml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\Homepage.baml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\Login.baml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\QRPage.baml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\SignUp.baml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\UserProfile.baml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\Views\VaccineDetailsPage.baml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Resources\images\medical.png
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Resources\images\rejected.png
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Resources\images\pie-chart.png
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Resources\images\menu.png
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Resources\images\report.png
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Resources\images\warning.png
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Resources\images\confirm.png
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.EntityFrameworkCore.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Npgsql.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\QRCoder.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Buffers.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Collections.Immutable.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Memory.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Text.Json.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.ValueTuple.dll
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.EntityFrameworkCore.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.EntityFrameworkCore.Relational.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\Npgsql.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Buffers.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Collections.Immutable.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Memory.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Text.Json.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\bin\Debug\System.ValueTuple.xml
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
+C:\Users\daveh\OneDrive\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\obj\Debug\WpfApp1.exe
+>>>>>>> Dave
