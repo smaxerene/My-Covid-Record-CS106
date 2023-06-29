@@ -10,19 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\270200797\OneDrive - UP Education\Documents\GitHub\CS106Final\My Covid Record\WpfApp1\App.xaml
-<<<<<<< Updated upstream
 141934420649
 7-1662125674
-191068407853
+20226048486
 79-1315676340
 MainWindow.xaml;Views\Adminchangeuser.xaml;Views\EditingUserProfile.xaml;Views\UserReports.xaml;Views\ReportRecieves.xaml;Views\AdminLogin.xaml;Views\AdminRecording.xaml;Views\Certificate.xaml;Views\Homepage.xaml;Views\Login.xaml;Views\QRPage.xaml;Views\SignUp.xaml;Views\UserProfile.xaml;Views\VaccineDetailsPage.xaml;
-=======
-13-1748331258
-4-1497612661
-19718068968
-48-597675914
-MainWindow.xaml;Views\EditingUserProfile.xaml;Views\UserReports.xaml;Views\ReportRecieves.xaml;Views\AdminLogin.xaml;Views\AdminRecording.xaml;Views\Certificate.xaml;Views\Homepage.xaml;Views\Login.xaml;Views\QRPage.xaml;Views\SignUp.xaml;Views\UserProfile.xaml;Views\VaccineDetailsPage.xaml;
->>>>>>> Stashed changes
 
 True
 
