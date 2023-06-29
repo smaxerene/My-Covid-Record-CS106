@@ -1,0 +1,70 @@
+﻿<Page x:Class="WpfApp1.Views.ReportRecieves"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Views"
+        mc:Ignorable="d"
+        Title="ReportRecieves" Height="1080" Width="1920">
+    <Grid>
+        <Border BorderBrush="Black" Background="#FFB300" BorderThickness="1" HorizontalAlignment="Left" Height="597" Margin="265,429,0,0" VerticalAlignment="Top" Width="1475">
+            <Border BorderBrush="Black" Background="DarkCyan" BorderThickness="1" HorizontalAlignment="Left" Height="548" Margin="32,26,0,0" VerticalAlignment="Top" Width="1412">
+
+            </Border>
+        </Border>
+        <Button Click="Button_Click_2" Margin="193,258,1682,786" BorderBrush="Transparent" BorderThickness="0">
+            <Image Source="/Resources/images/menu.png" />
+        </Button>
+        <Image Height="60"
+                   HorizontalAlignment="Right"
+                    VerticalAlignment="Center" 
+                   Source="/Resources/images/NZ Gov.png" Margin="0,0,0,1020"/>
+        <Image HorizontalAlignment="Left" 
+                   VerticalAlignment="Center" 
+                   Width="60"
+               Source="/Resources/images/NZ Gov Logo.png" Margin="10,0,0,1023" />
+        <Image 
+                Source="/Resources/images/My Covid Record Logo.png"  
+                Height="120"
+                HorizontalAlignment="Right" Margin="0,79,1093,881"
+                />
+        <Label Content="My Covid Record" 
+               VerticalAlignment="Center" 
+                FontFamily="Inter" 
+                Margin="827,105,-767,881"
+                FontWeight="Bold" FontSize="70"/>
+        <TextBox HorizontalAlignment="Left" BorderBrush="Black" Height="28" Margin="265,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="313"/>
+
+        <Line X1="0" Y1="0" X2="2000" Y2="0" Stroke="Black"   StrokeThickness="5" Margin="-8,390,0,665" />
+        <Button Click="Button_Click_3" Margin="390,331,1448,690" Background="White" BorderBrush="Transparent" BorderThickness="0">
+            <Image Source="/Resources/images/medical.png"></Image>
+        </Button>
+
+        <Button Click="Button_Click_4" Margin="574,331,1271,690" Background="White" BorderBrush="Transparent" BorderThickness="0">
+            <Image Source="/Resources/images/report.png"></Image>
+        </Button>
+
+
+        <TextBox HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="30"  Margin="796,944,924,0"/>
+        <ListView x:Name="reportListView" FontSize="30" Margin="321,471,232,106" ItemsSource="{Binding ReportItems}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" Width="150" DisplayMemberBinding="{Binding ReportId}" />
+                    <GridViewColumn Header="Subject" Width="220" DisplayMemberBinding="{Binding Subject}" />
+                    <GridViewColumn Header="Email" Width="320" DisplayMemberBinding="{Binding Email}" />
+                    <GridViewColumn Header="Description" Width="450" DisplayMemberBinding="{Binding Description}" />
+                    <GridViewColumn Header="Actions" Width="200">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Remove" Click="RemoveButton_Click" Tag="{Binding ReportId}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Account"  HorizontalAlignment="Left" Height="28" Margin="1562,266,0,0" VerticalAlignment="Top" Width="252" Click="Button_Click"/>
+        <TextBlock Text="Records" FontSize="30" Margin="390,388,1391,637" FontFamily="Bold"></TextBlock>
+        <TextBlock Text="Reports" FontSize="30" Margin="574,388,1207,637" FontFamily="Bold"></TextBlock>
+    </Grid>
+</Page>

@@ -10,29 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfApp1.Views;
 
-namespace WpfApp1
+namespace WpfApp1.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Adminchangeuser.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Adminchangeuser : Window
     {
-        internal object contentFrame;
-
-        public MainWindow()
+        public Adminchangeuser()
         {
             InitializeComponent();
-
-            this.Content = new Login();
-
-          
-
         }
-
-        public sealed class NavigationService { }
     }
 }

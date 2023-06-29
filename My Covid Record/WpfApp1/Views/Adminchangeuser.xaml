@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp1.Views.Adminchangeuser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Views"
+        mc:Ignorable="d"
+        Title="Adminchangeuser" Height="450" Width="800">
+    <Grid>
+        <Image Source="/Resources/images/menu.png" Margin="19,29,745.6,375"></Image>
+        <Line X1="0" Y1="0" X2="1200" Y2="0" Stroke="Black" StrokeThickness="5" Margin="-9,64,-0.4,350" />
+        <Line X1="0" Y1="0" X2="1200" Y2="0" Stroke="Black" StrokeThickness="3" Margin="-362,665,803.6,-251" RenderTransformOrigin="0.5,0.5" >
+            <Line.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="89.776"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Line.RenderTransform>
+        </Line>
+        <Line X1="0" Y1="0" X2="555" Y2="0" Stroke="Black" StrokeThickness="1" Margin="237,117,-246.4,297" />
+        <Line X1="0" Y1="0" X2="555" Y2="0" Stroke="Black" StrokeThickness="1" Margin="237,272,-246.4,142" />
+    </Grid>
+</Window>

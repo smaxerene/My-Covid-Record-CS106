@@ -24,7 +24,6 @@ namespace WpfApp1.Views
         {
             InitializeComponent();
         }
-
         //Login Button
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -59,7 +58,6 @@ namespace WpfApp1.Views
                         App.Current.Properties["CurrentUserId"] = isUserThere.Id;
                         App.Current.MainWindow.Content = new Homepage();
                     }
-
                 }
             }
         }
