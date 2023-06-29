@@ -189,18 +189,14 @@ namespace WpfApp1.Views
         private void Download_Click(object sender, RoutedEventArgs e)
         {
             // Create a RenderTargetBitmap with the size of the Border element
-            var renderTargetBitmap = new RenderTargetBitmap((int)myCertificate.ActualWidth, (int)myCertificate.ActualHeight, 50, 50, PixelFormats.Default);
+            var renderTargetBitmap = new RenderTargetBitmap((int)myCertificate.ActualWidth, (int)myCertificate.ActualHeight, 96, 96, PixelFormats.Default);
 
             // Render the Border onto the RenderTargetBitmap
             renderTargetBitmap.Render(myCertificate);
 
             // Create a PngBitmapEncoder to encode the RenderTargetBitmap as a PNG image
-            //PngBitmapEncoder encoder = new PngBitmapEncoder();
-            //encoder.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
-
-            var frame = BitmapFrame.Create(renderTargetBitmap);
-            var encoder = new PngBitmapEncoder();
-            encoder.Frames.Add(frame);
+            PngBitmapEncoder encoder = new PngBitmapEncoder();
+            encoder.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
 
             // Create a SaveFileDialog to prompt the user to choose the location to save the file
             SaveFileDialog saveFileDialog = new SaveFileDialog();

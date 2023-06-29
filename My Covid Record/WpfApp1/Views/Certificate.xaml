@@ -304,125 +304,127 @@
             </Grid>
 
             <!--Certificate-->
-            <Border x:Name="myCertificate" Background="White" BorderBrush="Gainsboro" BorderThickness="10" Width="900" Padding="20">
-                <Grid >
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
+            <Border x:Name="myCertificate" Height="auto">
+                <Border Background="White" BorderBrush="Gainsboro" BorderThickness="10" Width="900" Padding="20">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
 
-                    <Image VerticalAlignment="Top" Source="/Resources/images/NZ.png"  Height="75" HorizontalAlignment="Left"/>
-                    <StackPanel Orientation="Horizontal" Grid.Row="1" 
+                        <Image VerticalAlignment="Top" Source="/Resources/images/NZ.png"  Height="75" HorizontalAlignment="Left"/>
+                        <StackPanel Orientation="Horizontal" Grid.Row="1" 
                             HorizontalAlignment="Center">
-                        <Image Source="/Resources/images/Custom_COVID-19_Logo-removebg-preview.png" 
+                            <Image Source="/Resources/images/Custom_COVID-19_Logo-removebg-preview.png" 
                            Height="75" Margin="0,0,20,0"/>
-                        <TextBlock Text="My Covid Record Certificate" FontWeight="ExtraBold" 
+                            <TextBlock Text="My Covid Record Certificate" FontWeight="ExtraBold" 
                                VerticalAlignment="Center"
                                TextWrapping="Wrap" TextAlignment="Center" FontFamily="Inter" FontSize="48"/>
-                    </StackPanel>
+                        </StackPanel>
 
-                    <Border Background="White" BorderBrush="gray" BorderThickness="1" Padding="20" Grid.Row="2" CornerRadius="4" Margin="0,5,0,0">
+                        <Border Background="White" BorderBrush="gray" BorderThickness="1" Padding="20" Grid.Row="2" CornerRadius="4" Margin="0,5,0,0">
 
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
 
-                            <!--Place the QR Placeholder image here-->
-                            <TextBlock Text="Personal Details" Grid.ColumnSpan="4"
+                                <!--Place the QR Placeholder image here-->
+                                <TextBlock Text="Personal Details" Grid.ColumnSpan="4"
                                    FontFamily="Inter" FontWeight="Bold" FontSize="30"/>
 
-                            <Rectangle Grid.Row="1" Width="100" Height="100">
-                                <Rectangle.Fill>
-                                    <ImageBrush ImageSource="/Resources/images/profile.png"/>
-                                </Rectangle.Fill>
-                            </Rectangle>
+                                <Rectangle Grid.Row="1" Width="100" Height="100">
+                                    <Rectangle.Fill>
+                                        <ImageBrush ImageSource="/Resources/images/profile.png"/>
+                                    </Rectangle.Fill>
+                                </Rectangle>
 
-                            <!--<Image Grid.Row="1"
+                                <!--<Image Grid.Row="1"
                             Source="/Resources/images/qr_placeholder.png" Height="100" Width="100" /> BROKEN!!!!! NEEDS WORK!!!!!-->
 
-                            <StackPanel Grid.Row="1" Grid.Column="1">
-                                <Grid Margin="10,0,0,0">
-                                    <StackPanel>
-                                        <TextBlock Text="Name" FontWeight="DemiBold" FontSize="18"/>
-                                        <TextBox Name="Name" IsReadOnly="{Binding IsReadOnly, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" FontSize="14"/>
-                                    </StackPanel>
-                                </Grid>
+                                <StackPanel Grid.Row="1" Grid.Column="1">
+                                    <Grid Margin="10,0,0,0">
+                                        <StackPanel>
+                                            <TextBlock Text="Name" FontWeight="DemiBold" FontSize="18"/>
+                                            <TextBox Name="Name" IsReadOnly="{Binding IsReadOnly, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" FontSize="14"/>
+                                        </StackPanel>
+                                    </Grid>
 
-                                <Grid Margin="10,10,0,0">
-                                    <StackPanel>
-                                        <TextBlock Text="Date of Birth" FontWeight="DemiBold" FontSize="18"/>
-                                        <TextBox Name="Birthday" IsReadOnly="{Binding IsReadOnly, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" FontSize="14"/>
-                                    </StackPanel>
-                                </Grid>
-                            </StackPanel>
+                                    <Grid Margin="10,10,0,0">
+                                        <StackPanel>
+                                            <TextBlock Text="Date of Birth" FontWeight="DemiBold" FontSize="18"/>
+                                            <TextBox Name="Birthday" IsReadOnly="{Binding IsReadOnly, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" FontSize="14"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </StackPanel>
 
-                            <StackPanel Grid.Row="1" Grid.Column="2">
-                                <Grid Margin="10,0,0,0">
-                                    <StackPanel>
-                                        <TextBlock Text="Address" FontWeight="DemiBold" FontSize="18"/>
-                                        <TextBox Name="Address" IsReadOnly="{Binding IsReadOnly, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" FontSize="14"/>
-                                    </StackPanel>
-                                </Grid>
-                                <Grid  Margin="10,10,0,0">
-                                    <StackPanel>
-                                        <TextBlock Text="Date Issued" FontWeight="DemiBold" FontSize="18"/>
-                                        <Label FontSize="14">
-                                            <Label.Content>
-                                                <TextBlock Text="{Binding Source= {x:Static system:DateTime.Now}, 
+                                <StackPanel Grid.Row="1" Grid.Column="2">
+                                    <Grid Margin="10,0,0,0">
+                                        <StackPanel>
+                                            <TextBlock Text="Address" FontWeight="DemiBold" FontSize="18"/>
+                                            <TextBox Name="Address" IsReadOnly="{Binding IsReadOnly, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" FontSize="14"/>
+                                        </StackPanel>
+                                    </Grid>
+                                    <Grid  Margin="10,10,0,0">
+                                        <StackPanel>
+                                            <TextBlock Text="Date Issued" FontWeight="DemiBold" FontSize="18"/>
+                                            <Label FontSize="14">
+                                                <Label.Content>
+                                                    <TextBlock Text="{Binding Source= {x:Static system:DateTime.Now}, 
                                                     ConverterCulture='en-NZ',
                                                     StringFormat= ' {0}' }"/>
-                                            </Label.Content>
-                                        </Label>
+                                                </Label.Content>
+                                            </Label>
 
-                                    </StackPanel>
-                                </Grid>
-                            </StackPanel>
+                                        </StackPanel>
+                                    </Grid>
+                                </StackPanel>
 
-                            <StackPanel Grid.Row="1" Grid.Column="3">
-                                <TextBlock Text="Certificate ID" FontWeight="DemiBold" FontSize="18"/>
-                                <TextBlock x:Name="RandomNumberTextBlock" FontSize="14"/>
-                            </StackPanel>
+                                <StackPanel Grid.Row="1" Grid.Column="3">
+                                    <TextBlock Text="Certificate ID" FontWeight="DemiBold" FontSize="18"/>
+                                    <TextBlock x:Name="RandomNumberTextBlock" FontSize="14"/>
+                                </StackPanel>
 
-                        </Grid>
-                    </Border>
-
-                    <!--Vaccine Doses-->
-                    <Border Background="White" BorderBrush="gray" BorderThickness="1" Padding="0,20" Grid.Row="3" CornerRadius="4" Margin="0,20">
-
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="800"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-
-                            <Grid Grid.Column="1">
-                                <DataGrid x:Name="VaccineData" ItemsSource="{Binding MyData}" SelectedItem="{Binding SelectedMyData}" Grid.ColumnSpan="2" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"
-                                           ColumnHeaderStyle="{DynamicResource ColumnHeaderStyle}" RowStyle="{DynamicResource DataGridRowStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}"  Style="{DynamicResource DataGridStyle1}" Margin="0,0,0,15">
-                                    <DataGrid.Columns>
-                                        <DataGridTextColumn Header="Dose No." Width="100" Binding="{Binding DoseNo, UpdateSourceTrigger=PropertyChanged}"/>
-                                        <DataGridTextColumn Header="Date of Vaccination" Width="170" Binding="{Binding Date, UpdateSourceTrigger=PropertyChanged}"/>
-                                        <DataGridTextColumn Header="Vaccine" Width="190" Binding="{Binding Vaccine, UpdateSourceTrigger=PropertyChanged}"/>
-                                        <DataGridTextColumn Header="Brand" Width="150" Binding="{Binding Brand, UpdateSourceTrigger=PropertyChanged}"/>
-                                        <DataGridTextColumn Header="Country of Vaccination" Width="auto"  Binding="{Binding Country, UpdateSourceTrigger=PropertyChanged}"/>
-                                    </DataGrid.Columns>
-                                </DataGrid>
                             </Grid>
+                        </Border>
 
-                        </Grid>
-                    </Border>
-                </Grid>
+                        <!--Vaccine Doses-->
+                        <Border Background="White" BorderBrush="gray" BorderThickness="1" Padding="0,20" Grid.Row="3" CornerRadius="4" Margin="0,20">
 
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="800"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid Grid.Column="1">
+                                    <DataGrid x:Name="VaccineData" ItemsSource="{Binding MyData}" SelectedItem="{Binding SelectedMyData}" Grid.ColumnSpan="2" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"
+                                           ColumnHeaderStyle="{DynamicResource ColumnHeaderStyle}" RowStyle="{DynamicResource DataGridRowStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}"  Style="{DynamicResource DataGridStyle1}" Margin="0,0,0,15">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Header="Dose No." Width="100" Binding="{Binding DoseNo, UpdateSourceTrigger=PropertyChanged}"/>
+                                            <DataGridTextColumn Header="Date of Vaccination" Width="170" Binding="{Binding Date, UpdateSourceTrigger=PropertyChanged}"/>
+                                            <DataGridTextColumn Header="Vaccine" Width="190" Binding="{Binding Vaccine, UpdateSourceTrigger=PropertyChanged}"/>
+                                            <DataGridTextColumn Header="Brand" Width="150" Binding="{Binding Brand, UpdateSourceTrigger=PropertyChanged}"/>
+                                            <DataGridTextColumn Header="Country of Vaccination" Width="auto"  Binding="{Binding Country, UpdateSourceTrigger=PropertyChanged}"/>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </Grid>
+
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+                </Border>
             </Border>
 
             <Grid>

@@ -29,7 +29,7 @@ namespace WpfApp1.Views
         {
             InitializeComponent();
 
-            DataContext = new SignUp();
+            //DataContext = new SignUp();
         }
 
         //Submit
