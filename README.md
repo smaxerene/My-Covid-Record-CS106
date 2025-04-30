@@ -1,4 +1,4 @@
-# My Covid Record
+# My Covid Record - CS106
 
 Overview:
 
